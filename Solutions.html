@@ -65,42 +65,42 @@
         }
 
         #grid-blocks>div:nth-of-type(1)>.bg {
-            background-image: url(./imgs/grid-blocks-1.svg);
+            background-image: url(./imgs/solutions/grid-blocks-1.svg);
         }
 
         #grid-blocks>div:nth-of-type(2)>.bg {
-            background-image: url(./imgs/grid-blocks-2.svg);
+            background-image: url(./imgs/solutions/grid-blocks-2.svg);
         }
 
         #grid-blocks>div:nth-of-type(3)>.bg {
-            background-image: url(./imgs/grid-blocks-3.svg);
+            background-image: url(./imgs/solutions/grid-blocks-3.svg);
         }
 
         #grid-blocks>div:nth-of-type(4)>.bg {
-            background-image: url(./imgs/grid-blocks-4.png);
+            background-image: url(./imgs/solutions/grid-blocks-4.png);
         }
 
         #grid-blocks>div:nth-of-type(5)>.bg {
-            background-image: url(./imgs/grid-blocks-5.svg);
+            background-image: url(./imgs/solutions/grid-blocks-5.svg);
         }
 
         #grid-blocks>div:nth-of-type(6)>.bg {
-            background-image: url(./imgs/grid-blocks-6.svg);
+            background-image: url(./imgs/solutions/grid-blocks-6.svg);
             background-size: 80%;
             background-repeat: no-repeat;
             background-position: bottom right;
         }
 
         #grid-blocks>div:nth-of-type(7)>.bg {
-            background-image: url(./imgs/grid-blocks-7.png);
+            background-image: url(./imgs/solutions/grid-blocks-7.png);
         }
 
         #grid-blocks>div:nth-of-type(8)>.bg {
-            background-image: url(./imgs/grid-blocks-8.svg);
+            background-image: url(./imgs/solutions/grid-blocks-8.svg);
         }
 
         #grid-blocks>div:nth-of-type(9)>.bg {
-            background-image: url(./imgs/grid-blocks-9.svg);
+            background-image: url(./imgs/solutions/grid-blocks-9.svg);
             background-size: contain;
             background-position: bottom;
             background-repeat: no-repeat;
@@ -116,7 +116,7 @@
 
         #grid-blocks>div .bg-hover::before {
             content: "";
-            background-image: url(./imgs/grid-blocks-line.svg);
+            background-image: url(./imgs/solutions/grid-blocks-line.svg);
             position: absolute;
             left: 0;
             right: 0;
@@ -144,6 +144,19 @@
 
         #grid-blocks>div:not(:hover) .bg-hover {
             opacity: 0;
+        }
+
+        #balls {
+            background-image: url(./imgs/solutions/bg-balls.svg);
+            gap: 16%;
+        }
+
+        #balls>div:nth-child(1)>img {
+            margin-top: 90%;
+        }
+
+        #balls>div:nth-child(2)>img {
+            margin-top: 45%;
         }
     </style>
 </head>
@@ -300,6 +313,42 @@
                     </div>
                     <div class="bg-hover absolute inset-0">
                         <p>API 整合式介面<br>提供超過 340 種以上功能</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="balls" class="max-w-screen-lg m-auto mb-20 grid grid-cols-3">
+                <div>
+                    <img src="./imgs/solutions/ball-1.png" />
+                    <div class="mt-12">
+                        <img src="./imgs/solutions/singularity-core.png" />
+                        <div class="mt-4 mb-8">
+                            <p class="opacity-80 mb-1">Endpoint Protection</p>
+                            <p>取代無效的傳統防毒軟體</p>
+                        </div>
+                        <p class="opacity-80">Singularity Core License<br>提供最核心的端點防護功能。</p>
+                    </div>
+                </div>
+                <div>
+                    <img src="./imgs/solutions/ball-2.png" />
+                    <div class="mt-12">
+                        <img src="./imgs/solutions/singularity-control.png" />
+                        <div class="mt-4 mb-8">
+                            <p class="opacity-80 mb-1">IT OPS Hygiene</p>
+                            <p>整合並強化端點軟硬體控管</p>
+                        </div>
+                        <p class="opacity-80">除了包含 Core License 的功能外，並提供對端點安全性及軟硬體控管等額外功能</p>
+                    </div>
+                </div>
+                <div>
+                    <img src="./imgs/solutions/ball-3.png" />
+                    <div class="mt-12">
+                        <img src="./imgs/solutions/singularity-complete.png" />
+                        <div class="mt-4 mb-8">
+                            <p class="opacity-80 mb-1">Security Operations</p>
+                            <p">增加EDR 功能以強化可見性、主動威脅獵捕及事件回應能力</p>
+                        </div>
+                        <p class="opacity-80">在 Core 及 Control 之上，更提供 Storyline™ 專利技術將端點系統的處理程序實時紀錄、儲存並自動進行關</p>
                     </div>
                 </div>
             </section>
