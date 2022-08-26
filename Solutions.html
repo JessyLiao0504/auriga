@@ -43,6 +43,28 @@
         button {
             box-shadow: inset 0px 4px 4px rgba(234, 105, 255, 0.25);
         }
+
+        #grid-blocks>div {
+            border-radius: 2px;
+            background: linear-gradient(162.7deg, #2D2E46 10.24%, #1A1B2F 45.02%, #000000 98.1%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+
+        #grid-blocks>div>span{
+            z-index: 10;
+        }
+
+        #grid-blocks>div>div{
+            background-size: cover;
+            background-position: center;
+        }
+
+        #grid-blocks>div:nth-of-type(1)>div {
+            background-image: url(./imgs/grid-blocks-1.png);
+        }
     </style>
 </head>
 
@@ -118,12 +140,28 @@
                 <img class="-z-10" src="./imgs/border-bg.svg" />
                 <!-- <object class="absolute inset-0 w-full h-full -z-10" data="./imgs/border-bg.svg" type="image/svg+xml"></object> -->
             </section>
-            <section class="text-center">
+            <section class="text-center mb-20">
                 <h2 class="text-4xl">脫穎而出</h2>
                 <h3 class="border-b border-light-green inline-block mt-4 mb-10">使用 Sention One 降低風險並提高效率</h3>
                 <div>
                     <p class="purple-quote">透過全球各地提供的 SaaS 雲端平台統一進行管理，直覺化操作介面及彈性化管理方式，可滿足企業的各式需求。</p>
                 </div>
+            </section>
+
+            <section id="grid-blocks"
+                class="max-w-screen-lg m-auto grid grid-cols-9 grid-flow-dense auto-rows-5vw gap-4">
+                <div class="col-span-4 row-span-2">
+                    <span>權限彈性高</span>
+                    <div class="absolute inset-0"></div>
+                </div>
+                <div class="col-span-3">長期保留</div>
+                <div class="col-span-3">整合威脅情資</div>
+                <div class="col-span-2 row-span-2">數據擷取量化</div>
+                <div class="col-span-3 row-span-4">生態鏈整合</div>
+                <div class="col-span-3 row-span-2">靈活的架構</div>
+                <div class="col-span-3 row-span-2">情節調整</div>
+                <div class="col-span-4 row-span-2">跨機制授權</div>
+                <div class="col-span-2 row-span-2">API 整合</div>
             </section>
         </main>
     </div>
