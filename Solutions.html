@@ -1,0 +1,132 @@
+<html lang="zh">
+
+<head>
+    <title>Auriga</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta data-hid="description" name="description" content="">
+    <meta name="format-detection" content="telephone=no">
+    <meta data-hid="charset" charset="utf-8">
+    <meta data-hid="mobile-web-app-capable" name="mobile-web-app-capable" content="yes">
+    <meta data-hid="apple-mobile-web-app-title" name="apple-mobile-web-app-title" content="auriga">
+    <meta data-hid="og:type" name="og:type" property="og:type" content="website">
+    <meta data-hid="og:title" name="og:title" property="og:title" content="auriga">
+    <meta data-hid="og:site_name" name="og:site_name" property="og:site_name" content="auriga">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="stylesheet" href="style.css">
+
+    <style type="text/css">
+        /* body>div {
+            background-size: 100% 60vw;
+            background-image: linear-gradient(358.94deg, #1A183D 7.21%, rgba(0, 0, 0, 0) 64.59%), url(./imgs/tubes.jpg);
+            background-blend-mode: normal;
+            filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+            background-repeat: no-repeat;
+        } */
+
+        #first-bg {
+            background-image: linear-gradient(358.94deg, #1A183D 7.21%, rgba(0, 0, 0, 0) 64.59%), url(./imgs/tubes.png);
+            background-blend-mode: lighten;
+            background-position: top center;
+            background-size: 105%;
+            filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+            background-repeat: no-repeat;
+            top: -108px;
+        }
+
+        body main>section:first-child {
+            padding-top: 9%;
+            padding-bottom: 16%;
+            margin-bottom: 3%;
+        }
+
+        button {
+            box-shadow: inset 0px 4px 4px rgba(234, 105, 255, 0.25);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="text-white">
+        <header class="max-w-screen-xl flex justify-between py-8 px-10 m-auto">
+            <div><img src="imgs/logo.svg"></div>
+            <ul class="flex gap-12">
+                <li>Our Team</li>
+                <li>Solutions</li>
+                <li>Blog</li>
+                <li>Careers</li>
+                <li>Demo Request</li>
+            </ul>
+        </header>
+        <main class="m-auto tracking-widest leading-normal text-base">
+            <section class="relative">
+                <div class="max-w-screen-lg m-auto">
+                    <p class="border py-2 px-16 inline-block text-4xl light-green font-din">New World ・ New
+                        Cybersecurity</p>
+                    <h2 class="font-din text-5xl mt-16">SentinelOne Singularity XDR</h2>
+                    <h3 class="font-din text-xl mt-2 mb-20">The Future of Cybersecurity is Autonomous</h3>
+                    <p class="mb-20">駭客攻擊活動與滲透手法一日千里，傳統事件處理與回應機制已不足以面對快速演變的攻擊層面與手法<br>
+                        SentinelOne Singularity XDR 提供更快、更全面、更即時且全面自動化的威脅回應機制<br>
+                        透過全面自動化的 AI 偵測引擎，為端點提供最精準、完善的防護</p>
+                    <button type="button" class="py-4 px-16 btn-purple rounded">2022 MITAC 結果</button>
+                </div>
+                <div class="absolute inset-0 -z-10" id="first-bg"></div>
+            </section>
+
+            <section class="flex">
+                <div class="flex-grow opacity-80 text-center">
+                    <img class="mix-blend-screen" src="./imgs/pattern.png" />
+                </div>
+                <div class="w-1/2 pl-8">
+                    <img src="./imgs/xdr.png" />
+                    <p>以更有效率的方式應對日益複雜的資安威脅<br>並保障企業資訊安全</p>
+                    <ul class="icons-list">
+                        <li class="flex">
+                            <div class="img">
+                                <img src="./imgs/eye.svg" />
+                            </div>
+                            <div>
+                                <h3>SEE</h3>
+                                <p>最大化探索企業環境架構、提供高可視性<br>全面掌握企業內部所有可能資安風險</p>
+                            </div>
+                        </li>
+                        <li class="flex">
+                            <div class="img">
+                                <img src="./imgs/frame.svg" />
+                            </div>
+                            <div>
+                                <h3>PROTECT</h3>
+                                <p>AI 偵測模組、全自動化事件處理、一鍵還原<br>有效防護所有層面的威脅事件</p>
+                            </div>
+                        </li>
+                        <li class="flex">
+                            <div class="img">
+                                <img src="./imgs/resolve.svg" />
+                            </div>
+                            <div>
+                                <h3>RESOLVE</h3>
+                                <p>專利 Storyline 技術、串聯並完整呈現威脅事件<br>​降低後續調查作業時間與人力耗損</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <section class="max-w-screen-lg m-auto relative mb-24">
+                <p class="absolute inset-0 border-bg-p flex items-center justify-center">SentinelOne Singularity XDR
+                    為端點防護、端點事件偵測與回應、IoT 設備防護、雲端防護及 IT 團隊的運作提供不同的解決方案，並將多種技術整合至統一的管理平台，針對 Windows、MacOS、Linux 及
+                    Kubernetes 提供高效率的 Agent 並針對客戶不同環境架構 (包含實體環境、虛擬環境、VDI、客戶數據中心、混合式數據中心及雲端服務供應商......等) 進行佈署。</p>
+                <img class="-z-10" src="./imgs/border-bg.svg" />
+                <!-- <object class="absolute inset-0 w-full h-full -z-10" data="./imgs/border-bg.svg" type="image/svg+xml"></object> -->
+            </section>
+            <section class="text-center">
+                <h2 class="text-4xl">脫穎而出</h2>
+                <h3 class="border-b border-light-green inline-block mt-4 mb-10">使用 Sention One 降低風險並提高效率</h3>
+                <div>
+                    <p class="purple-quote">透過全球各地提供的 SaaS 雲端平台統一進行管理，直覺化操作介面及彈性化管理方式，可滿足企業的各式需求。</p>
+                </div>
+            </section>
+        </main>
+    </div>
+</body>
+
+</html>
