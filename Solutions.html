@@ -46,24 +46,104 @@
 
         #grid-blocks>div {
             border-radius: 2px;
-            background: linear-gradient(162.7deg, #2D2E46 10.24%, #1A1B2F 45.02%, #000000 98.1%);
+            background-image: linear-gradient(162.7deg, #2D2E46 10.24%, #1A1B2F 45.02%, #000000 98.1%);
             display: flex;
             justify-content: center;
             align-items: center;
             position: relative;
+            background-blend-mode: color, normal;
+            transition: all 1s;
         }
 
-        #grid-blocks>div>span{
+        #grid-blocks>div>:first-child {
             z-index: 10;
         }
 
-        #grid-blocks>div>div{
+        #grid-blocks>div>.bg {
             background-size: cover;
             background-position: center;
         }
 
-        #grid-blocks>div:nth-of-type(1)>div {
-            background-image: url(./imgs/grid-blocks-1.png);
+        #grid-blocks>div:nth-of-type(1)>.bg {
+            background-image: url(./imgs/grid-blocks-1.svg);
+        }
+
+        #grid-blocks>div:nth-of-type(2)>.bg {
+            background-image: url(./imgs/grid-blocks-2.svg);
+        }
+
+        #grid-blocks>div:nth-of-type(3)>.bg {
+            background-image: url(./imgs/grid-blocks-3.svg);
+        }
+
+        #grid-blocks>div:nth-of-type(4)>.bg {
+            background-image: url(./imgs/grid-blocks-4.png);
+        }
+
+        #grid-blocks>div:nth-of-type(5)>.bg {
+            background-image: url(./imgs/grid-blocks-5.svg);
+        }
+
+        #grid-blocks>div:nth-of-type(6)>.bg {
+            background-image: url(./imgs/grid-blocks-6.svg);
+            background-size: 80%;
+            background-repeat: no-repeat;
+            background-position: bottom right;
+        }
+
+        #grid-blocks>div:nth-of-type(7)>.bg {
+            background-image: url(./imgs/grid-blocks-7.png);
+        }
+
+        #grid-blocks>div:nth-of-type(8)>.bg {
+            background-image: url(./imgs/grid-blocks-8.svg);
+        }
+
+        #grid-blocks>div:nth-of-type(9)>.bg {
+            background-image: url(./imgs/grid-blocks-9.svg);
+            background-size: contain;
+            background-position: bottom;
+            background-repeat: no-repeat;
+        }
+
+        #grid-blocks>div .bg-hover {
+            background-image: linear-gradient(180deg, #39F0BA 0%, #11001D 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: opacity .7s;
+        }
+
+        #grid-blocks>div .bg-hover::before {
+            content: "";
+            background-image: url(./imgs/grid-blocks-line.svg);
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+        }
+
+        #grid-blocks>div:hover .bg-hover {
+            opacity: 1;
+        }
+
+        #grid-blocks>div span {
+            transition: transform .6s;
+            display: inline-block;
+        }
+
+        #grid-blocks>div:hover span {
+            transform: translateY(-1.2em);
+        }
+
+        #grid-blocks>div p {
+            transform: translateY(1.2em);
+            filter: brightness(0.8) opacity(0.9);
+        }
+
+        #grid-blocks>div:not(:hover) .bg-hover {
+            opacity: 0;
         }
     </style>
 </head>
@@ -149,19 +229,79 @@
             </section>
 
             <section id="grid-blocks"
-                class="max-w-screen-lg m-auto grid grid-cols-9 grid-flow-dense auto-rows-5vw gap-4">
+                class="max-w-screen-lg m-auto grid grid-cols-9 grid-flow-dense auto-rows-5vw gap-4 text-center mb-20">
                 <div class="col-span-4 row-span-2">
                     <span>權限彈性高</span>
-                    <div class="absolute inset-0"></div>
+                    <div class="bg absolute inset-0">
+                    </div>
+                    <div class="bg-hover absolute inset-0">
+                        <p>管理者權限控制可<br>針對客戶需求進行調整</p>
+                    </div>
                 </div>
-                <div class="col-span-3">長期保留</div>
-                <div class="col-span-3">整合威脅情資</div>
-                <div class="col-span-2 row-span-2">數據擷取量化</div>
-                <div class="col-span-3 row-span-4">生態鏈整合</div>
-                <div class="col-span-3 row-span-2">靈活的架構</div>
-                <div class="col-span-3 row-span-2">情節調整</div>
-                <div class="col-span-4 row-span-2">跨機制授權</div>
-                <div class="col-span-2 row-span-2">API 整合</div>
+                <div class="col-span-3">
+                    <span>長期保留</span>
+                    <div class="bg absolute inset-0">
+                    </div>
+                    <div class="bg-hover absolute inset-0">
+                        <p>365 日威脅事件<br>資料保留期</p>
+                    </div>
+                </div>
+                <div class="col-span-3">
+                    <span>整合威脅情資</span>
+                    <div class="bg absolute inset-0">
+                    </div>
+                    <div class="bg-hover absolute inset-0">
+                        <p>高度整合 SentinelOne 威脅情資<br>與 MITRE ATT&CK® 威脅指標</p>
+                    </div>
+                </div>
+                <div class="col-span-2 row-span-2">
+                    <span>數據擷取量化</span>
+                    <div class="bg absolute inset-0">
+                    </div>
+                    <div class="bg-hover absolute inset-0">
+                        <p>Dashboard 針對威脅事件<br>提供數據量化</p>
+                    </div>
+                </div>
+                <div class="col-span-3 row-span-4">
+                    <span>生態鏈整合</span>
+                    <div class="bg absolute inset-0">
+                    </div>
+                    <div class="bg-hover absolute inset-0">
+                        <p>Singularity Marketplace<br>生態鏈提供<br>多項不同產品與一鍵整合 Apps</p>
+                    </div>
+                </div>
+                <div class="col-span-3 row-span-2">
+                    <span>靈活的架構</span>
+                    <div class="bg absolute inset-0">
+                    </div>
+                    <div class="bg-hover absolute inset-0">
+                        <p>全球性 SaaS<br>平台建置高可用性</p>
+                    </div>
+                </div>
+                <div class="col-span-3 row-span-2">
+                    <span>情節調整</span>
+                    <div class="bg absolute inset-0">
+                    </div>
+                    <div class="bg-hover absolute inset-0">
+                        <p>針對不同情境調整通知，<br>可選擇透過 Email 或 Syslog 發送</p>
+                    </div>
+                </div>
+                <div class="col-span-4 row-span-2">
+                    <span>跨機制授權</span>
+                    <div class="bg absolute inset-0">
+                    </div>
+                    <div class="bg-hover absolute inset-0">
+                        <p>管理者登入與授權機制彈性調整<br>可選用機制包含： SSO、MFA、RBAC</p>
+                    </div>
+                </div>
+                <div class="col-span-2 row-span-2">
+                    <span>API 整合</span>
+                    <div class="bg absolute inset-0">
+                    </div>
+                    <div class="bg-hover absolute inset-0">
+                        <p>API 整合式介面<br>提供超過 340 種以上功能</p>
+                    </div>
+                </div>
             </section>
         </main>
     </div>
