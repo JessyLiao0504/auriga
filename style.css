@@ -215,6 +215,18 @@ main {}
     gap: 3rem;
 }
 
+.gap-y-4 {
+    row-gap: 1rem;
+}
+
+.gap-y-8 {
+    row-gap: 2rem;
+}
+
+.gap-y-12 {
+    row-gap: 3rem;
+}
+
 .border {
     border-width: 1px;
 }
@@ -323,11 +335,11 @@ main {}
     margin-bottom: .5rem;
 }
 
-.mb-4{
+.mb-4 {
     margin-bottom: 1rem;
 }
 
-.mb-7{
+.mb-7 {
     margin-bottom: 1.75rem;
 }
 
@@ -339,7 +351,7 @@ main {}
     margin-bottom: 2.5rem;
 }
 
-.mb-12{
+.mb-12 {
     margin-bottom: 3rem;
 }
 
@@ -351,15 +363,15 @@ main {}
     margin-bottom: 6rem;
 }
 
-.mb-28{
+.mb-28 {
     margin-bottom: 7rem;
 }
 
-.mb-52{
+.mb-52 {
     margin-bottom: 13rem;
 }
 
-.mb-56{
+.mb-56 {
     margin-bottom: 14rem;
 }
 
@@ -538,7 +550,7 @@ li {
 }
 
 .dot-purple-wrap::before,
-.dot-purple-wrap::after{
+.dot-purple-wrap::after {
     content: "";
     display: inline-block;
     width: 8px;
@@ -547,9 +559,17 @@ li {
     background-color: var(--purple);
 }
 
-.dot-purple-wrap::before{
+.dot-purple-wrap::before {
     margin-right: .8em;
 }
-.dot-purple-wrap::after{
+
+.dot-purple-wrap::after {
     margin-left: .8em;
+}
+
+.grid-list li>div {
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
 }
