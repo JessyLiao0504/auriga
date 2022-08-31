@@ -153,6 +153,10 @@
             gap: 16%;
         }
 
+        #balls>div>img{
+            cursor: pointer;
+        }
+
         #balls>div:nth-child(1)>img {
             margin-top: 90%;
         }
@@ -176,12 +180,70 @@
             left: -28px;
         }
 
+        #dt-slider {
+            position: relative;
+        }
+
+        #dt-slider .arrows {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            left: 0;
+            right: 0;
+            top: 50%;
+        }
+
+        #dt-slider .arrows>button {
+            background: none;
+            box-shadow: none;
+            border-left: 1px solid;
+            border-top: 1px solid;
+            padding: .6em;
+        }
+
+        #dt-slider .arrows>button::before{
+            content: "";
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            transform: scale(2);
+        }
+
+        #dt-slider .arrows>:first-child {
+            transform: translateX(-2.5vw) rotate(-45deg);
+        }
+
+        #dt-slider .arrows>:last-child {
+            transform: translateX(2.5vw) rotate(135deg);
+        }
+
         @media screen and (max-width: 767px) {
             #dt-slider {
                 height: 240px;
+                overflow: hidden;
             }
         }
     </style>
+    <script>
+        function dt_scroll(direction = '+') {
+            document.querySelector('#dt-slider>ul').scrollBy({
+                top: 0,
+                left: `${direction}200`,
+                behavior: 'smooth'
+            });
+        }
+
+        function scrollToTarget(selector = ''){
+            if(selector){
+                if(document.querySelector(selector)) document.querySelector(selector).scrollIntoView({
+                    behavior: "smooth"
+                });
+            }
+        }
+    </script>
     <!-- <script>
         document.addEventListener('DOMContentLoaded', () => {
             new Splide('.splide', {
@@ -350,7 +412,7 @@
 
         <section id="balls" class="max-w-screen-lg m-auto mb-20 grid grid-cols-3">
             <div>
-                <img src="./imgs/solutions/ball-1.png" />
+                <img onclick="scrollToTarget('#singularity-core')" src="./imgs/solutions/ball-1.png" />
                 <div class="mt-12">
                     <div class="img">
                         <img src="./imgs/solutions/singularity-core.png" />
@@ -363,7 +425,7 @@
                 </div>
             </div>
             <div>
-                <img src="./imgs/solutions/ball-2.png" />
+                <img onclick="scrollToTarget('#singularity-control')" src="./imgs/solutions/ball-2.png" />
                 <div class="mt-12">
                     <div class="img">
                         <img src="./imgs/solutions/singularity-control.png" />
@@ -376,7 +438,7 @@
                 </div>
             </div>
             <div>
-                <img src="./imgs/solutions/ball-3.png" />
+                <img onclick="scrollToTarget('#singularity-complete')" src="./imgs/solutions/ball-3.png" />
                 <div class="mt-12">
                     <div class="img">
                         <img src="./imgs/solutions/singularity-complete.png" />
@@ -396,7 +458,7 @@
                 <h3 class="border-b border-light-green inline-block mt-4 mb-10 px-6">使用Sention One 的詳細資訊</h3>
             </header>
 
-            <div class="mb-24">
+            <div id="singularity-core" class="mb-24">
                 <div>
                     <img src="./imgs/solutions/singularity-core.png" />
                     <p class="mt-6 mb-8">Singularity Core License 提供最核心的端點防護功能。<br>Core License 提供更有效率且更簡易管理的端點防護
@@ -406,13 +468,12 @@
                             預防並即時偵測各種可能的攻擊或威脅</li>
                         <li>Agent 自動化事件處理　針對惡意程式或攻擊事件即時進行偵測及阻擋
                         </li>
-                        <li>快速復原　透過管理平台一鍵完成緩解或在 Windows OS
-                            上完成一鍵還原</li>
+                        <li>快速復原　透過管理平台一鍵完成緩解或在 Windows OS 上完成一鍵還原</li>
                     </ul>
                 </div>
             </div>
 
-            <div class="mb-24">
+            <div id="singularity-control" class="mb-24">
                 <div>
                     <img src="./imgs/solutions/singularity-control.png" />
                     <p class="mt-6 mb-8">Singularity Control License 除了包含 Core License 的功能外，並提供對端點安全性及軟硬體控管等額外功能：
@@ -420,13 +481,12 @@
                     <ul class="leading-9 square-before-list bg-purple-before-list mr-4-before-list">
                         <li>防火牆控管　針對進出端點的網路連線行為與方向進行控管</li>
                         <li>裝置控管　針對 USB 裝置及藍牙相關裝置進行存取權限控管</li>
-                        <li>應用程式弱點管理　對端點安裝軟體清單提供 CVE®
-                            資料庫弱點比對清單及詳細資料</li>
+                        <li>應用程式弱點管理　對端點安裝軟體清單提供 CVE® 資料庫弱點比對清單及詳細資料</li>
                     </ul>
                 </div>
             </div>
 
-            <div class="mb-24">
+            <div id="singularity-complete" class="mb-24">
                 <div>
                     <img src="./imgs/solutions/singularity-complete.png" />
                     <p class="mt-6 mb-2">Complete License 在 Core 及 Control License 之上，更提供 Storyline™
@@ -434,13 +494,10 @@
                     <p class="mb-8">Complete License 透過將事件自動化進行關聯並整合 MITRE ATT&CK® 框架，降低資安人員、 SOC 分析團隊、 APT
                         分析人員和事件處理人員的工作壓力，即便是最高標準及需求的國際企業也選擇使用 Singularity Complete License 來滿足其資安需求。</p>
                     <ul class="leading-9 square-before-list bg-purple-before-list mr-4-before-list">
-                        <li>專利 Storyline™ 技術　快速對事件進行根本原因分析 (RCA)
-                            及事件重點關聯</li>
-                        <li>整合 ActiveEDR® 可見性　整合端點正常行為與威脅事件資料
-                        </li>
+                        <li>專利 Storyline™ 技術　快速對事件進行根本原因分析 (RCA) 及事件重點關聯</li>
+                        <li>整合 ActiveEDR® 可見性　整合端點正常行為與威脅事件資料</li>
                         <li>可根據企業需求調整 資料保留期限從 14 到 365+ 日以上</li>
-                        <li>透過 MITRE ATT&CK® 技術進行威脅獵捕 ‧管理者可手動將
-                            Storyline™ 資料標記為威脅並透過端點防護對其進行處理</li>
+                        <li>透過 MITRE ATT&CK® 技術進行威脅獵捕 ‧管理者可手動將 Storyline™ 資料標記為威脅並透過端點防護對其進行處理</li>
                     </ul>
                 </div>
             </div>
@@ -470,7 +527,7 @@
             <h2>SentinelOne 至今己服務了上萬家以上的客戶<br>持續確保客戶的資訊安全無慮</h2>
             <p class="mt-4">我們在數百萬個端點上保護數萬億美金的企業價值，<br>您成功了，我們就成功了。</p>
 
-            <div id="dt-slider" class="overflow-hidden my-12">
+            <div id="dt-slider" class="my-12">
                 <ul class="flex max-w-full overflow-auto gap-4 py-4">
                     <li class="shrink-0"><img class="rounded-lg" src="./imgs/solutions/slide.jpg" /></li>
                     <li class="shrink-0"><img class="rounded-lg" src="./imgs/solutions/slide.jpg" /></li>
@@ -483,6 +540,11 @@
                     <li class="shrink-0"><img class="rounded-lg" src="./imgs/solutions/slide.jpg" /></li>
                     <li class="shrink-0"><img class="rounded-lg" src="./imgs/solutions/slide.jpg" /></li>
                 </ul>
+
+                <div class="arrows absolute">
+                    <button type="button" onclick="dt_scroll('-')"></button>
+                    <button type="button" onclick="dt_scroll()"></button>
+                </div>
             </div>
         </section>
 
@@ -587,7 +649,7 @@
 
         <div class="text-center my-32">
             <button type="button"
-                class="py-3 px-10 btn-purple-1 rounded-sm shadow-none arrow-after ml-4-after absolute-after">更多服務</button>
+                class="relative py-3 px-10 px-12:hover btn-purple-1 rounded-sm shadow-none arrow-after r-4-after absolute-after">更多服務</button>
         </div>
     </main>
 
