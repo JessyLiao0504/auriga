@@ -1,6 +1,7 @@
 :root {
     --light-green: #39F0BA;
     --purple: #6B0AEA;
+    --light-blue: #57E1FF80;
     --main-bg: linear-gradient(180deg, #1B1B41 0%, #11001D 100%);
 }
 
@@ -16,6 +17,14 @@
 
 img {
     max-width: 100%;
+}
+
+a{
+    text-decoration: none;
+}
+
+a:visited{
+    color: inherit;
 }
 
 button {
@@ -61,6 +70,25 @@ h3 {
 
 header {
     height: 108px;
+}
+
+header nav li.active{
+    position: relative;
+}
+
+header nav li.active::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -.3em;
+    width: 100%;
+    height: 2px;
+    background-image: linear-gradient(270deg, #B14FFF 87.87%, rgba(177, 79, 255, 0) 97.34%);
+    transform: scaleX(1.4);
+}
+
+header nav li:not(.active){
+    color: #9F9F9F;
 }
 
 main {}
@@ -255,6 +283,9 @@ main {}
 .border-t{
     border-top-width: 1px;
 }
+.border-t-6{
+    border-top-width: 6px;
+}
 
 .border-b {
     border-bottom-width: 1px;
@@ -326,6 +357,10 @@ main {}
     padding-left: 2rem;
 }
 
+.pb-20 {
+    padding-bottom: 5rem;
+}
+
 .m-auto {
     margin: auto;
 }
@@ -355,6 +390,11 @@ main {}
     margin-bottom: 8rem;
 }
 
+.my-56 {
+    margin-top: 14rem;
+    margin-bottom: 14rem;
+}
+
 .mt-2 {
     margin-top: 0.5rem;
 }
@@ -377,6 +417,14 @@ main {}
 
 .mt-16 {
     margin-top: 4rem;
+}
+
+.mt-56 {
+    margin-top: 14rem;
+}
+
+.mt-half{
+    margin-top: .6em;
 }
 
 .mb-1 {
@@ -471,6 +519,10 @@ main {}
     font-size: 1.25rem;
 }
 
+.text-3xl{
+    font-size: 1.875rem;
+}
+
 .text-4xl {
     font-size: 2.25rem;
 }
@@ -485,6 +537,10 @@ main {}
 
 .tracking-widest {
     letter-spacing: .1em;
+}
+
+.tracking-text{
+    letter-spacing: .8em;
 }
 
 .leading-9 {
@@ -536,6 +592,10 @@ main {}
     border-color: var(--light-green);
 }
 
+.border-light-blue{
+    border-color: var(--light-blue);
+}
+
 .btn-purple {
     background-image: linear-gradient(93.58deg, #9C2BD1 -66.44%, #2B1998 92.03%);
 }
@@ -562,6 +622,10 @@ li {
 
 .h-full {
     height: 100%;
+}
+
+.h-text{
+    height: 1em;
 }
 
 .w-full {
