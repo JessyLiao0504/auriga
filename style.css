@@ -447,6 +447,10 @@ main {}
     margin-right: 1.5rem;
 }
 
+.pointer-events-none{
+    pointer-events: none;
+}
+
 .align-text-bottom{
     vertical-align: text-bottom;
 }
@@ -513,6 +517,10 @@ main {}
 
 .rounded-xl {
     border-radius: .75rem;
+}
+
+.rounded-full{
+    border-radius: 99999px;
 }
 
 .font-din {
@@ -593,6 +601,10 @@ li {
 
 .-z-10 {
     z-index: -10;
+}
+
+.z-10{
+    z-index: 10;
 }
 
 .border-bg-p {
@@ -740,4 +752,23 @@ li {
 .px-12\:hover:hover,
 .px-16\:hover:hover{
     filter: drop-shadow(0px 0px 12px rgba(177, 79, 255, 0.4));
+}
+
+.play-dot{
+    animation: fadeInOut .9s ease-in-out ;
+}
+
+@keyframes fadeInOut {
+    0% {
+        opacity: 0;
+    }
+    10% {
+        opacity: .7;
+    }
+    29% {
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
 }
