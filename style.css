@@ -149,9 +149,17 @@ main {}
     position: absolute;
 }
 
+.r-0{
+    right: 0;
+}
+
 .r-4,
 .r-4-after::after{
     right: 1rem;
+}
+
+.b-0{
+    bottom: 0;
 }
 
 .flex {
