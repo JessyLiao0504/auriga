@@ -52,6 +52,7 @@ menu {
 
 body {
     background: var(--main-bg);
+    margin: 0;
 }
 
 h1,
