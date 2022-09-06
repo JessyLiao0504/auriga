@@ -227,8 +227,8 @@ main {}
     grid-row: span 4 / span 4;
 }
 
-.auto-rows-5vw {
-    grid-auto-rows: 5vw;
+.auto-rows-6vw {
+    grid-auto-rows: 6vw;
 }
 
 .justify-between {
