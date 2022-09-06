@@ -56,7 +56,7 @@ window.addEventListener('mousemove', e => {
     const spread = Math.round(Math.random() * 8) + 3;
     const blur = spread * (Math.round(Math.random() * 12) + 2);
     const hue = Math.random() * 180;
-    const brightness = Math.random() + 0.3;
+    const brightness = Math.random() + 0.4;
     elem.classList.add('absolute', 'bg-light-green', 'inline-block', 'rounded-full', 'play-dot');
     elem.style = `top: ${e.pageY}; left: ${e.pageX}; box-shadow: 0 0 ${blur}px ${spread}px rgba(57, 240, 185, .9); filter: hue-rotate(${hue}deg) brightness(${brightness});`;
 

@@ -831,7 +831,7 @@ li {
 }
 
 .play-dot{
-    animation: fadeInOut .9s ease-in-out forwards;
+    animation: fadeInOut .9s ease-in-out;
 }
 
 .obs-hover{
