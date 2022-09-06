@@ -12,7 +12,7 @@ function scrollToTarget(selector = '') {
 }
 
 function registerObserver(selector) {
-    window.addEventListener('scroll', eve => {
+    window.addEventListener('scroll', () => {
         const activeItem = document.querySelector(`${selector}.active`);
 
         let items = Array.from(document.querySelectorAll(`${selector}`));
@@ -40,6 +40,15 @@ function registerObserver(selector) {
             }
         }
     });
+
+    document.addEventListener('DOMContentLoaded', () => {
+        document.querySelectorAll(selector).forEach(ele => {
+            ele.classList.add('obs-hover');
+            ele.addEventListener('click', () => {
+                ele.scrollIntoView({behavior: "smooth", block: "center"});
+            });
+        });
+    });
 }
 
 window.addEventListener('mousemove', e => {
@@ -47,7 +56,7 @@ window.addEventListener('mousemove', e => {
     const spread = Math.round(Math.random() * 8) + 3;
     const blur = spread * (Math.round(Math.random() * 12) + 2);
     elem.classList.add('absolute', 'bg-light-green', 'inline-block', 'rounded-full', 'play-dot');
-    elem.style = `top: ${e.pageY}; left: ${e.pageX}; box-shadow: 0 0 ${blur}px ${spread}px rgba(57, 240, 185, .9); filter: hue-rotate(${Math.random() * 180}deg) brightness(${Math.random() * 1 + 0.3});`;
+    elem.style = `top: ${e.pageY}; left: ${e.pageX}; box-shadow: 0 0 ${blur}px ${spread}px rgba(57, 240, 185, .9); filter: hue-rotate(${Math.random() * 180}deg) brightness(${Math.random() * 1 + 0.4});`;
 
     document.getElementById('bg-play').append(elem);
     setTimeout(function () {
