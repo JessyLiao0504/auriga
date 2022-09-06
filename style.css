@@ -93,8 +93,6 @@ header nav li:not(.active){
     color: #9F9F9F;
 }
 
-main {}
-
 .bg-main {
     background: var(--main-bg);
 }
@@ -833,7 +831,7 @@ li {
 }
 
 .play-dot{
-    animation: fadeInOut .9s ease-in-out ;
+    animation: fadeInOut .9s ease-in-out forwards;
 }
 
 .obs-hover{
