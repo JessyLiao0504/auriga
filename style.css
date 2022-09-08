@@ -668,6 +668,10 @@ li {
     mix-blend-mode: lighten;
 }
 
+.select-none{
+    user-select: none;
+}
+
 .inset-0 {
     left: 0;
     right: 0;
@@ -833,6 +837,9 @@ li {
 .play-dot{
     animation: fadeInOut .9s ease-in-out;
 }
+.play-dot-1{
+    animation: play-dot-2 .9s ease-in-out both infinite;
+}
 
 .obs-hover{
     cursor: pointer;
@@ -854,4 +861,8 @@ li {
     100%{
         opacity: 0;
     }
+}
+
+@keyframes play-dot-2 {
+    
 }
