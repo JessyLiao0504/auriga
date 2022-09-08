@@ -838,7 +838,7 @@ li {
     animation: fadeInOut .9s ease-in-out;
 }
 .play-dot-1{
-    animation: play-dot-2 .9s ease-in-out both infinite;
+    animation: play-dot-1 .9s ease-in-out both infinite;
 }
 
 .obs-hover{
@@ -863,6 +863,13 @@ li {
     }
 }
 
-@keyframes play-dot-2 {
-    
+@keyframes play-dot-1 {
+    from{
+        opacity: 0;
+        transform: scale3d(0, 0,0);
+    }
+    to{
+        opacity: 1;
+        transform: scale3d(1,1,1) translate(30px, 20px);
+    }
 }

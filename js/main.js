@@ -82,20 +82,27 @@ function holdingEffects(e) {
         holdInt = setInterval(() => {
             const elem = document.createElement('div');
             const spread = Math.round(Math.random() * 4) + 2;
-            const blur = spread * (Math.round(Math.random() * 6) + 3);
+            const blur = spread * 1.5;
             const hue = Math.random() * 180;
             const brightness = Math.random() + 0.8;
 
-            const posX = aurigaConfigs.pointerX + Math.round(Math.random() * 50) -25;
-            const posY = aurigaConfigs.pointerY + Math.round(Math.random() * 60) -30;
-            elem.classList.add('absolute', 'bg-light-green', 'inline-block', 'rounded-full', 'play-dot-1');
-            elem.style = `top: ${posY}; left: ${posX}; box-shadow: 0 0 ${blur}px ${spread}px rgba(57, 240, 185, .9); filter: hue-rotate(${hue}deg) brightness(${brightness});`;
+            // const posX = aurigaConfigs.pointerX + Math.round(Math.random() * 50) -25;
+            // const posY = aurigaConfigs.pointerY + Math.round(Math.random() * 60) -30;
+            const posX = aurigaConfigs.pointerX;
+            const posY = aurigaConfigs.pointerY;
 
+            const childElem = document.createElement('div');
+            childElem.classList.add('bg-light-green', 'rounded-full', 'play-dot-1');
+            childElem.style = `box-shadow: 20px 0 ${blur}px ${spread}px rgba(100, 224, 255, 0.74); filter: hue-rotate(${hue}deg) brightness(${brightness});`;
+
+            elem.classList.add('absolute', 'inline-block');
+            elem.style = `top: ${posY}; left: ${posX}; transform: rotate(${Math.random() * 360}deg);`;
+            elem.append(childElem);
             document.getElementById('bg-play').append(elem);
             setTimeout(function () {
                 elem.remove();
             }, 2000);
-        }, 100);
+        }, 120);
     } else {
         clearInterval(holdInt);
     }
