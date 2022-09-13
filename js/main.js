@@ -93,7 +93,7 @@ function holdingEffects(e) {
 
             const childElem = document.createElement('div');
             childElem.classList.add('bg-light-green', 'rounded-full', 'play-dot-1');
-            childElem.style = `box-shadow: 20px 0 ${blur}px ${spread}px rgba(100, 224, 255, 0.74); filter: hue-rotate(${hue}deg) brightness(${brightness});`;
+            childElem.style = `font-size: ${blur}px; box-shadow: 20px 0 ${blur}px ${spread}px rgba(100, 224, 255, 0.74); filter: hue-rotate(${hue}deg) brightness(${brightness});`;
 
             elem.classList.add('absolute', 'inline-block');
             elem.style = `top: ${posY}; left: ${posX}; transform: rotate(${Math.random() * 360}deg);`;
@@ -101,7 +101,7 @@ function holdingEffects(e) {
             document.getElementById('bg-play').append(elem);
             setTimeout(function () {
                 elem.remove();
-            }, 2000);
+            }, 1000);
         }, 120);
     } else {
         clearInterval(holdInt);
