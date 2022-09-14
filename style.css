@@ -257,6 +257,10 @@ header nav li:not(.active) {
     align-items: center;
 }
 
+.self-center{
+    align-self: center;
+}
+
 .gap-4 {
     gap: 1rem;
 }
@@ -543,8 +547,16 @@ header nav li:not(.active) {
     vertical-align: text-bottom;
 }
 
+.text-left{
+    text-align: left;
+}
+
 .text-center {
     text-align: center;
+}
+
+.text-justify{
+    text-align: justify;
 }
 
 .text-base {
@@ -733,7 +745,6 @@ li {
 .border-bg-p {
     width: 86%;
     margin: auto;
-    text-align: justify;
 }
 
 .purple-quote {
