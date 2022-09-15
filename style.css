@@ -317,6 +317,14 @@ header nav li:not(.active) {
     border-bottom-width: 1px;
 }
 
+.p-1,
+.p-1-before::before{
+    padding: .25rem;
+}
+.p-4{
+    padding: 1rem;
+}
+
 .px-4 {
     padding-left: 1rem;
     padding-right: 1rem;
@@ -522,6 +530,15 @@ header nav li:not(.active) {
 .mx-4 {
     margin-left: 1rem;
     margin-right: 1rem;
+}
+.mx-6 {
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+}
+
+.mx-8{
+    margin-left: 2rem;
+    margin-right: 2rem;
 }
 
 .ml-4,
@@ -903,6 +920,14 @@ li {
 
 .obs-hover:not(.active):hover {
     transform: translateX(-8px);
+}
+
+i.hexagon::before{
+    content: "";
+    display: inline-block;
+    background-color: #6B0AEA;
+    clip-path: polygon(25% 5%, 75% 5%, 100% 50%, 75% 95%, 25% 95%, 0% 50%);
+    vertical-align: middle;
 }
 
 @keyframes fadeInOut {
