@@ -22,6 +22,139 @@
         .bg-dark {
             background-image: linear-gradient(180deg, rgba(27, 27, 65, 0.8) 0%, rgba(17, 0, 29, 0.8) 100%);
         }
+
+        .info-card {
+            position: relative;
+            transition: filter .6s;
+        }
+
+        .info-card:hover{
+            filter: drop-shadow(0px 0px 16px rgba(57, 240, 186, 0.72));
+        }
+
+        .info-card .card-wrap {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 6% 8%;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .info-card .card-wrap::before {
+            content: "";
+            position: absolute;
+            left: 50%;
+            top: 31%;
+            height: 35%;
+            width: 1px;
+            border-left: 1px solid;
+            background-image: linear-gradient(137.87deg, #88C2B1 115.1%, #11001D 126.87%);
+            opacity: .8;
+        }
+
+        .info-card .card-block {
+            line-height: 2;
+            flex-shrink: 0;
+            width: 42%;
+        }
+
+        .info-card .card-block:last-child {
+            padding-top: 8%;
+        }
+
+        .info-card ul>li:not(:last-child) {
+            margin-bottom: .6em;
+        }
+
+        .info-card .card-block li {
+            text-indent: -2em;
+            margin-left: 2em;
+        }
+
+        .card-title {
+            position: absolute;
+            right: 0;
+            left: 40%;
+            top: 0;
+            font-family: 'DIN Condensed';
+            height: 15%;
+            background-image: linear-gradient(-140deg, #39F0BA -2.34%, #11001D 118.8%);
+            border-radius: 6px;
+            text-align: center;
+            padding-left: 18%;
+            font-size: 1.6em;
+            letter-spacing: .1em;
+            word-spacing: .4em;
+            line-height: 3.6;
+            z-index: -1;
+            transform: translate(-6.5%, 16%);
+            clip-path: polygon(0% 35%, 24% 35%, 32% 0%, 100% 0%, 100% 100%, 0% 100%);
+            transition: transform .8s;
+            transform-origin: right;
+        }
+
+        .info-card:hover .card-title{
+            transform: translate(-6.5%, -1%) scale(1.05);
+        }
+
+        .info-card ul>li::before {
+            content: "";
+            display: inline-block;
+            background-color: #39F0BA;
+            clip-path: polygon(5% 25%, 5% 75%, 50% 100%, 95% 75%, 95% 25%, 50% 0%);
+            vertical-align: middle;
+            padding: .5em;
+            margin-right: 1em;
+        }
+
+        .info-card .bonus ul::before {
+            content: "";
+            border-left: 1px solid;
+            height: 100%;
+            margin-left: 1.6em;
+            color: #39F0BA;
+        }
+
+        .info-card .bonus {
+            position: absolute;
+            bottom: 5%;
+            left: 22%;
+            display: flex;
+        }
+
+        .info-card .bonus ul>li {
+            margin: 0 2em;
+        }
+
+        .info-card .bonus ul>li::before {
+            padding: .4em;
+            margin-right: .6em;
+        }
+
+        .quote {
+            color: #39F0BA;
+        }
+
+        .quote::before,
+        .quote::after {
+            transform: scale(1.2);
+            display: inline-block;
+        }
+
+        .quote::before {
+            content: "[";
+            margin-right: .2em;
+            position: absolute;
+            transform: translateX(-150%) scale(1.2);
+        }
+
+        .quote::after {
+            content: "]";
+            margin-left: .2em;
+        }
     </style>
 </head>
 
@@ -73,7 +206,7 @@
 
         <section class="max-w-screen-xl m-auto relative mb-24 text-center leading-9">
             <p class="absolute inset-0 border-bg-p flex items-center justify-center">
-                近期團隊因專案需求，需要徵求「資安工程師」、「資安產品工程師」等相關的正職人員或是自由工作者（Freelancer），而我們擔心因為想像力不足而錯過了你，所以其實可以忽略下面我們先入為主的設定。<br>
+                近期團隊因專案需求，需要徵求「資安工程師」、「資安產品工程師」等相關的正職人員或是自由工作者（Freelancer），我們擔心因為想像力不足而錯過了你，其實可以忽略下面我們先入為主的設定。<br>
                 如果你對資安有興趣﹐覺得自己可以在這個團隊中勝任某個角色或維持某種合作關係，請將你的想法與經歷與我們分享。</p>
             <img class="-z-10" src="./imgs/border-bg.svg" />
         </section>
@@ -84,9 +217,109 @@
             <p class="leading-loose">無預設合作模式，<a href="mailto:info@aurigasec.com">請先來信</a><br>讓我們有機會認識你與得知可能的配合方式</p>
         </div>
 
-        <section class="max-w-screen-xl m-auto">
-            <div class="px-8">
+        <section class="max-w-screen-xl m-auto mb-28">
+            <div class="info-card px-8">
                 <img class="w-full" src="./imgs/careers/card.svg" />
+                <div class="card-title">SentinelOne Presale 顧問</div>
+                <div class="card-wrap">
+                    <div class="card-block">
+                        <h3 class="quote font-din text-4xl mb-4">Job Description : </h3>
+                        <ul>
+                            <li>專案規劃 ( Pre-sale )：提供產品技術 / 整合方案規劃文件及製作相關說明簡報</li>
+                            <li>提供網路技術建議及技術諮詢</li>
+                            <li>負責售前技術規劃，達成供應成本最佳化與客戶需求</li>
+                            <li>釐清客戶端障礙點，並適當提出解決方案</li>
+                            <li>協助成交後專案有關於資安技術規劃</li>
+                            <li>建立並維護客戶和原廠技術之關係</li>
+                        </ul>
+                    </div>
+                    <div class="card-block">
+                        <h3 class="quote font-din text-4xl mb-4">Requirements : </h3>
+                        <ul>
+                            <li>勇於溝通表達意見，邏輯思考表達能力佳</li>
+                            <li>具資訊與資安相關知識與興趣</li>
+                            <li>具 Windows、Linux 作業系統 CMD 基礎操作</li>
+                            <li><span>Microsoft Office 文書軟體基本操作能力，需撰寫工作相關文件</span></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="bonus">
+                    <span class="light-green">加分項目</span>
+                    <ul class="flex">
+                        <li>資安相關證照</li>
+                        <li>個性外向不害怕新奇事物</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <section class="max-w-screen-xl m-auto mb-28">
+            <div class="info-card px-8">
+                <img class="w-full" src="./imgs/careers/card.svg" />
+                <div class="card-title">SentinelOne 資安產品工程師</div>
+                <div class="card-wrap">
+                    <div class="card-block">
+                        <h3 class="quote font-din text-4xl mb-4">Job Description : </h3>
+                        <p>資安工程師是公司裹重要的一環﹐我們期待尋找好手一同加入我們</p>
+                        <ul>
+                            <li>協助客戶提升 SentinelOne 產品使用體驗 </li>
+                            <li>協助客戶進行產品驗證相關事宜</li>
+                            <li>SentinelOne 產品相關說明文件撰寫</li>
+                            <li>了解 SentinelOne 產品相關資訊與新知</li>
+                            <li>執行主管交付任務</li>
+                        </ul>
+                    </div>
+                    <div class="card-block">
+                        <h3 class="quote font-din text-4xl mb-4">Requirements : </h3>
+                        <ul>
+                            <li>勇於溝通表達意見，邏輯思考表達能力佳</li>
+                            <li>具資訊與資安相關知識與興趣</li>
+                            <li>具 Windows、Linux 作業系統 CMD 基礎操作</li>
+                            <li><span>Microsoft Office 文書軟體基本操作能力，需撰寫工作相關文件</span></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="bonus">
+                    <span class="light-green">加分項目</span>
+                    <ul class="flex">
+                        <li>資安相關證照</li>
+                        <li>個性外向不害怕新奇事物</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <section class="max-w-screen-xl m-auto mb-28">
+            <div class="info-card px-8">
+                <img class="w-full" src="./imgs/careers/card.svg" />
+                <div class="card-title">Sales 業務</div>
+                <div class="card-wrap">
+                    <div class="card-block">
+                        <h3 class="quote font-din text-4xl mb-4">Job Description : </h3>
+                        <p>喜歡產品、愛上產品﹐幫客戶解決問題是你一定要有的能力﹐<br>跟我們跟你一起合作﹐賣最好的產品﹐做最棒的事！</p>
+                        <ul>
+                            <li>協助客戶提升產品使用體驗</li>
+                            <li>協助客戶進行產品驗證相關事宜</li>
+                            <li>洽商及拜訪客戶，負責業務推展、提供專業建議及最佳解決方案</li>
+                            <li>配合公司規劃參加各項行銷活動</li>
+                            <li>了解產品相關資訊與新知</li>
+                            <li>執行主管交付任務</li>
+                        </ul>
+                    </div>
+                    <div class="card-block">
+                        <h3 class="quote font-din text-4xl mb-4">Requirements : </h3>
+                        <ul>
+                            <li>勇於溝通表達意見，邏輯思考表達能力佳</li>
+                            <li>具資訊與資安相關知識與興趣</li>
+                            <li><span>Microsoft Office 文書軟體基本操作能力，需撰寫工作相關文件</span></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="bonus">
+                    <span class="light-green">加分項目</span>
+                    <ul class="flex">
+                        <li>資安相關證照</li>
+                        <li>個性外向不害怕新奇事物</li>
+                    </ul>
+                </div>
             </div>
         </section>
     </main>
