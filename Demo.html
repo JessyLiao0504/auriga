@@ -1,0 +1,138 @@
+<html lang="zh">
+
+<head>
+    <title>Auriga</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta data-hid="description" name="description" content="">
+    <meta name="format-detection" content="telephone=no">
+    <meta data-hid="charset" charset="utf-8">
+    <meta data-hid="mobile-web-app-capable" name="mobile-web-app-capable" content="yes">
+    <meta data-hid="apple-mobile-web-app-title" name="apple-mobile-web-app-title" content="auriga">
+    <meta data-hid="og:type" name="og:type" property="og:type" content="website">
+    <meta data-hid="og:title" name="og:title" property="og:title" content="auriga">
+    <meta data-hid="og:site_name" name="og:site_name" property="og:site_name" content="auriga">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="stylesheet" href="style.css">
+    <script src="./js/main.min.js"></script>
+
+    <style type="text/css">
+        label {
+            display: block;
+            line-height: 3;
+            color: #39F0BA;
+            font-family: "DIN Condensed", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+        }
+
+        input,
+        textarea {
+            background: none;
+            width: 100%;
+        }
+
+        input {
+            border-bottom: 1px solid #39F0BA;
+            margin-bottom: 54px;
+        }
+
+        textarea {
+            border: 1px solid #39F0BA;
+            margin-bottom: 36px;
+        }
+
+        .flex>p {
+            flex-grow: 1;
+        }
+
+        .send button::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            top: 0;
+            border: 4px solid;
+            border-image-source: linear-gradient(280.39deg, rgba(107, 10, 234, 0.5) 31.98%, rgba(107, 10, 234, 0.5) 70.71%, rgba(251, 73, 255, 0.5) 107.09%);
+            border-image-slice: 1;
+        }
+
+        .form {
+            background-image: linear-gradient(106.81deg, #171032 5.35%, rgba(22, 13, 47, 0.63) 81.05%);
+            border: 1px solid #6B0AEA;
+            box-shadow: 0px 4px 16px rgba(107, 10, 234, 0.4);
+            border-radius: 4px;
+        }
+    </style>
+</head>
+
+<body class="text-white relative">
+    <div id="bg-play" class="absolute inset-0 pointer-events-none overflow-hidden z-10"></div>
+    <header class="max-w-screen-xl flex justify-between py-8 px-10 m-auto">
+        <div><a href="index.html"><img src="imgs/logo.svg"></a></div>
+        <nav>
+            <ul class="flex gap-12">
+                <li><a href="index.html">Our Team</a></li>
+                <li><a href="Solutions.html">Solutions</a></li>
+                <li><a href="Consultant.html">Blog</a></li>
+                <li><a href="Careers.html">Careers</a></li>
+                <li class="active">Demo Request</li>
+            </ul>
+        </nav>
+    </header>
+    <main class="relative m-auto tracking-widest leading-normal text-base">
+        <section class="max-w-screen-xl mx-auto flex">
+            <div>
+                <h1>Demo Request</h1>
+                <h2>馬上體驗高效率、全面性與高準確度的資訊安全服務</h2>
+                <p>若您有興趣體驗 SentinelOne Singularity<br>煩請填妥右側資訊﹐我們將派專人與您聯繫 謝謝</p>
+                <ul>
+                    <li>最大化探索企業環境架構、提供高可視性，全面掌握企業內部所有可能的資安風險</li>
+                    <li>AI 偵測模組、全自動化事件處理、一鍵還原。有效防護所有層面的威脅事件</li>
+                    <li>專利 Storyline 技術、串聯並完整呈現威脅事件。降低後續調查作業時間與人力耗損</li>
+                </ul>
+            </div>
+            <div class="p-12 form">
+                <form>
+                    <div class="flex gap-8">
+                        <p>
+                            <label for="name">Name</label>
+                            <input type="text" id="name">
+                        </p>
+                        <p>
+                            <label for="phone">Phone</label>
+                            <input type="text" id="phone">
+                        </p>
+                    </div>
+                    <p>
+                        <label for="company">Company</label>
+                        <input type="text" id="company">
+                    </p>
+                    <p>
+                        <label for="email">Email</label>
+                        <input type="email" id="email">
+                    </p>
+                    <p>
+                        <label for="message">Message</label>
+                        <textarea name="message" rows="6"></textarea>
+                    </p>
+                    <div class="text-center send">
+                        <button type="button"
+                            class="relative w-3/4 px-10 py-2 font-din bg-none rounded-sm shadow-none r-4-after absolute-after tracking-text text-xl">SEND</button>
+                    </div>
+                    <p>通過點擊送出，我同意根據 Auriga Security, Inc. 隱私政策使用我的個人數據<br>Auriga Security, Inc.
+                        不會將您的個人數據出售、交易、出租或出租給第三方。</p>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="pb-20">
+        <ul class="max-w-screen-xl m-auto flex justify-center gap-16 border-t border-light-green py-10">
+            <li class="flex"><img class="mr-6" src="./imgs/footer-marker.svg" />台北市和平東路二段163號10樓</li>
+            <li class="flex"><img class="mr-6" src="./imgs/footer-mail.svg" />sales@aurigasec.com</li>
+            <li class="flex"><img class="mr-6" src="./imgs/footer-phone.svg" />123-456-7890</li>
+        </ul>
+    </footer>
+</body>
+
+</html>

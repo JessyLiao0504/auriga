@@ -111,6 +111,10 @@ header nav li:not(.active) {
     background: linear-gradient(162.7deg, #2D2E46 10.24%, #1A1B2F 45.02%, #000000 98.1%);
 }
 
+.bg-none{
+    background: none;
+}
+
 .max-w-screen-xl {
     max-width: 1280px;
 }
@@ -324,6 +328,9 @@ header nav li:not(.active) {
 
 .p-4 {
     padding: 1rem;
+}
+.p-12 {
+    padding: 3rem;
 }
 
 .px-4 {
@@ -713,6 +720,10 @@ li {
 
 .w-1\/2 {
     width: 50%;
+}
+
+.w-3\/4{
+    width: 75%;
 }
 
 .opacity-0 {

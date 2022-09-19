@@ -14,9 +14,7 @@
     <meta data-hid="og:site_name" name="og:site_name" property="og:site_name" content="auriga">
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="./css/splide.min.css">
     <script src="./js/main.min.js"></script>
-    <script src="./js/splide.min.js"></script>
 
     <style type="text/css">
         .bg-dark {
@@ -28,7 +26,7 @@
             transition: filter .6s;
         }
 
-        .info-card:hover{
+        .info-card:hover {
             filter: drop-shadow(0px 0px 16px rgba(57, 240, 186, 0.72));
         }
 
@@ -96,7 +94,7 @@
             transform-origin: right;
         }
 
-        .info-card:hover .card-title{
+        .info-card:hover .card-title {
             transform: translate(-6.5%, -1%) scale(1.05);
         }
 
@@ -155,6 +153,18 @@
             content: "]";
             margin-left: .2em;
         }
+
+        .send button::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            top: 0;
+            border: 4px solid;
+            border-image-source: linear-gradient(280.39deg, rgba(107, 10, 234, 0.5) 31.98%, rgba(107, 10, 234, 0.5) 70.71%, rgba(251, 73, 255, 0.5) 107.09%);
+            border-image-slice: 1;
+        }
     </style>
 </head>
 
@@ -166,9 +176,9 @@
             <ul class="flex gap-12">
                 <li><a href="index.html">Our Team</a></li>
                 <li><a href="Solutions.html">Solutions</a></li>
-                <li>Blog</li>
+                <li><a href="Consultant.html">Blog</a></li>
                 <li class="active">Careers</li>
-                <li>Demo Request</li>
+                <li><a href="Demo.html">Demo Request</a></li>
             </ul>
         </nav>
     </header>
@@ -322,6 +332,12 @@
                 </div>
             </div>
         </section>
+        <div class="text-center my-32 send">
+            <a href="#">
+                <button type="button"
+                    class="relative py-3 px-10 px-12:hover bg-none rounded-sm shadow-none arrow-after r-4-after absolute-after">投遞履歷</button>
+            </a>
+        </div>
     </main>
 
     <footer class="pb-20">
