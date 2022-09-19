@@ -111,7 +111,7 @@ header nav li:not(.active) {
     background: linear-gradient(162.7deg, #2D2E46 10.24%, #1A1B2F 45.02%, #000000 98.1%);
 }
 
-.bg-none{
+.bg-none {
     background: none;
 }
 
@@ -329,6 +329,10 @@ header nav li:not(.active) {
 .p-4 {
     padding: 1rem;
 }
+.p-8 {
+    padding: 2rem;
+}
+
 .p-12 {
     padding: 3rem;
 }
@@ -397,6 +401,14 @@ header nav li:not(.active) {
 
 .pl-8 {
     padding-left: 2rem;
+}
+
+.pr-20{
+    padding-right: 5rem;
+}
+
+.pr-3\/10{
+    padding-right: 30%;
 }
 
 .pb-20 {
@@ -565,6 +577,10 @@ header nav li:not(.active) {
     margin-right: 1.5rem;
 }
 
+.mr-20{
+    margin-right: 5rem;
+}
+
 .pointer-events-none {
     pointer-events: none;
 }
@@ -583,6 +599,10 @@ header nav li:not(.active) {
 
 .text-justify {
     text-align: justify;
+}
+
+.text-sm {
+    font-size: 0.875rem;
 }
 
 .text-base {
@@ -722,7 +742,11 @@ li {
     width: 50%;
 }
 
-.w-3\/4{
+.w-7\/10 {
+    width: 70%;
+}
+
+.w-3\/4 {
     width: 75%;
 }
 
