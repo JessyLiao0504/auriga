@@ -797,6 +797,10 @@ li {
     z-index: 10;
 }
 
+.z-30 {
+    z-index: 30;
+}
+
 .border-bg-p {
     width: 86%;
     margin: auto;
