@@ -17,8 +17,142 @@
     <script src="./js/main.min.js"></script>
 
     <style type="text/css">
-        strong{
+        strong {
             font-size: 20px;
+        }
+
+        #list-rows {
+            line-height: 1.8;
+        }
+
+        #list-rows h2 {
+            color: #6B0AEA;
+            font-family: 'DIN Condensed';
+            font-size: 64px;
+        }
+
+        #list-rows h3 {
+            font-size: 24px;
+            margin-bottom: 1rem;
+        }
+
+        #list-rows section {
+            gap: 1%;
+            padding: 3%;
+        }
+
+        #list-rows section>div {
+            width: 50%;
+        }
+
+        #list-rows p {
+            max-width: 670px;
+        }
+
+        #list-rows section:nth-child(even) {
+            position: relative;
+        }
+
+        #list-rows section:nth-child(even)::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-color: #1E183A;
+            box-shadow: 0px 0px 30px #1E183A;
+            z-index: -1;
+            clip-path: polygon(0% 20%, 100% 0%, 100% 100%, 0% 80%);
+            transform: scaleY(1.2);
+        }
+
+        #list-rows section:nth-child(odd)>div:first-child,
+        #list-rows section:nth-child(even)>div:last-child {
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        #list-rows section>div>div {
+            width: 520px;
+        }
+
+        #circles {
+            position: relative;
+            min-height: 900px;
+            font-size: 1vw;
+        }
+
+        #circles>div {
+            position: absolute;
+            width: 100%;
+            top: 18%;
+        }
+
+        #circles .bubble {
+            display: inline-flex;
+            position: absolute;
+            align-items: center;
+            justify-content: center;
+            padding: 1em;
+        }
+
+        #circles .bubble::before {
+            content: "";
+            border-radius: 50%;
+            width: 100%;
+            height: 0;
+            padding-top: 100%;
+            position: absolute;
+            z-index: -1;
+        }
+
+        #circles .bubble p {
+            text-align-last: justify;
+            -ms-text-align-last: justify;
+            -moz-text-align-last: justify;
+        }
+
+        #circles .bubble.bd {
+            z-index: 0;
+        }
+
+        #circles .bubble.purple {
+            z-index: 10;
+        }
+
+        #circles .bubble.white {
+            z-index: 20;
+        }
+
+        #circles .bubble.bd::before {
+            border: 1px solid #B14FFF;
+            box-shadow: 0px 0px 16px rgba(251, 73, 255, 0.4);
+        }
+
+        #circles .bubble.white::before {
+            border: 1px solid rgba(255, 255, 255, 0.32);
+        }
+
+        #circles .bubble.white::after {
+            content: "";
+            border-radius: 50%;
+            width: 110%;
+            height: 0;
+            padding-top: 110%;
+            position: absolute;
+            background-image: linear-gradient(172.41deg, #D4D7DA 36.37%, rgba(255, 255, 255, 0) 152.3%);
+            filter: drop-shadow(0px 4px 18px rgba(0, 0, 0, 0.6));
+            z-index: -1;
+        }
+
+        #circles .bubble.purple::before {
+            background-image: linear-gradient(154.61deg, #6B0AEA -75.89%, #6B0AEA 17.13%, #FB49FF 104.51%);
+            background-blend-mode: screen, normal;
+        }
+
+        #circles .bubble.purple-sm::before {
+            background-image: linear-gradient(32.72deg, rgba(107, 10, 234, 0.6) -25.75%, rgba(107, 10, 234, 0.6) 50.03%, rgba(251, 73, 255, 0.6) 121.21%);
         }
     </style>
 </head>
@@ -46,13 +180,132 @@
                             Cybersecurity</p>
                         <h2 class="font-din text-5xl mt-16">Consultant</h2>
                         <h3 class="font-din text-xl mt-2 mb-20">The Future of Cybersecurity is Autonomous</h3>
-                        <p class="mb-20">以「<strong>提升企業資安</strong>」作為主要目標，協助客戶建置與佈署最適合的完整資安防護網<br>以強大的分析器引擎，製作大數據分析解決方案</p>
+                        <p class="mb-20">以「<strong>提升企業資安</strong>」作為主要目標，協助客戶建置與佈署最適合的完整資安防護網<br>以強大的分析器引擎，製作大數據分析解決方案
+                        </p>
                     </div>
                 </div>
             </div>
             <div class="relative -z-10"><img src="./imgs/consultant/bg-main.jpg" /></div>
         </section>
+
+        <div id="list-rows">
+            <section class="flex items-center justify-center">
+                <div><img src="./imgs/consultant/solve.png" /></div>
+                <div>
+                    <h2>Solve</h2>
+                    <h3>協助導入產品解決方案</h3>
+                    <p>以「提升企業資安」作為主要目標，協助客戶建置及佈署最適合的完整資安防護網，<br>妥善保護企業知識資產，讓客戶能取得與原廠相同品質的服務並成為與原廠溝通的橋樑</p>
+                </div>
+            </section>
+            <section class="flex items-center justify-center row-reverse">
+                <div><img src="./imgs/consultant/consult.png" /></div>
+                <div>
+                    <div>
+                        <h2>Consult</h2>
+                        <h3>產品使用問題顧問服務</h3>
+                        <p>以專業團隊數十年的豐富資安及產品經驗為客戶提供產品諮詢服務<br>確保資訊系統的投資、部署、使用和管理最佳化<br>為企業做出最合適的產品使用決策及建議</p>
+                    </div>
+                </div>
+            </section>
+            <section class="flex items-center justify-center">
+                <div><img src="./imgs/consultant/consultant.png" /></div>
+                <div>
+                    <h2>Consultant</h2>
+                    <h3>資安事件顧問服務</h3>
+                    <p>提供企業或組織發生資安事件時的回應與調查，評估可能受害的範圍與影響程度。<br>資安事件處理能幫助企業落實有效之應變處理程序，並在發生資安事件後，能迅速確實的進行的資安事件回應，於最短時間內完成復原，並提供後續的改善建議與規劃。
+                    </p>
+                </div>
+            </section>
+            <section class="flex items-center justify-center row-reverse">
+                <div><img src="./imgs/consultant/safe.png" /></div>
+                <div>
+                    <div>
+                        <h2>Safe</h2>
+                        <h3>資訊安全技術顧問服務</h3>
+                        <p>提供多元服務與產品，依企業屬性及個別需求﹐提供資訊安全技術顧問服務，幫助企業創造安全、安心的資訊環境。</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <section id="circles">
+            <div>
+                <div class="bubble bd" style="left: 41.7%;">
+                    <div>
+                        <p>Date Visualization</p>
+                        <p>資料視覺化</p>
+                    </div>
+                </div>
+                <div class="bubble bd" style="left: 33%; top: 12.2em; padding: 2.7em;">
+                    <div>
+                        <p>Date Science</p>
+                        <p>資料科學</p>
+                    </div>
+                </div>
+                <div class="bubble bd" style="left: 49.4%; top: 18.7em; padding: 3.8em;">
+                    <div>
+                        <p>Big Data</p>
+                        <p>資料視覺化</p>
+                    </div>
+                </div>
+                <div class="bubble white" style="left: 41.9%; top: 8.6em;">
+                    <img src="./imgs/consultant/qlik.png" style="width: 4.2em;">
+                </div>
+                <div class="bubble white" style="left: 51.7%; top: 6em;">
+                    <img src="./imgs/consultant/parse.png" style="width: 4.2em;">
+                </div>
+                <div class="bubble white" style="left: 42.3%; top: 20em; padding: .5em;">
+                    <img src="./imgs/consultant/sentinelone.svg" style="width: 7em;">
+                </div>
+                <div class="bubble purple" style="left: 44.8%; top: 7.2em; padding: 5em;">
+                    <div>
+                        <p style="font-size: 1.5em;">安創資訊</p>
+                        <p>安全解決方案</p>
+                    </div>
+                    <img class="absolute inset-0 opacity-20 pointer-events-none" src="./imgs/consultant/vortex.png" />
+                </div>
+                <div class="bubble purple" style="left: 32.8%; top: 8.6em; padding: 1.2em;">
+                    <p style="font-size: .9em;">創新<br>應用</p>
+                </div>
+                <div class="bubble purple-sm" style="left: 29.4%; top: 10.4em;"></div>
+                <div class="bubble purple-sm" style="left: 30.6%; top: 12.6em; transform: scale(.3);"></div>
+                <div class="bubble purple-sm" style="left: 27.6%; top: 13.6em; transform: scale(.3); opacity: .5;">
+                </div>
+                <div class="bubble purple-sm" style="left: 64.6%; top: 21.4em;"></div>
+                <div class="bubble purple-sm" style="left: 67.2%; top: 18.6em; transform: scale(.9);"></div>
+                <div class="bubble purple-sm" style="left: 67.6%; top: 24.6em; transform: scale(.3);"></div>
+            </div>
+        </section>
     </main>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const canvas = document.createElement('canvas');
+            canvas.setAttribute('width', document.getElementById('circles').clientWidth);
+            canvas.setAttribute('height', document.getElementById('circles').clientHeight);
+            canvas.classList.add('pointer-events-none','absolute','z-30');
+            document.getElementById('circles').append(canvas);
+
+            document.querySelectorAll('.bubble.white').forEach(ele => ele.addEventListener('mouseenter', e => {
+                const ctx = canvas.getContext('2d');
+
+                const cx = e.clientX;
+                const cy = e.clientY-60;
+
+                // First path
+                ctx.beginPath();
+                ctx.strokeStyle = '#FFF';
+                ctx.moveTo(cx, cy);
+                ctx.lineTo(cx, cy-80);
+                ctx.lineTo(cx+120, cy-80);
+                ctx.stroke();
+            }));
+            document.querySelectorAll('.bubble.white').forEach(ele => ele.addEventListener('mouseleave', e => {
+                const ctx = canvas.getContext('2d');
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+            }));
+        });
+    </script>
 
     <footer class="pb-20">
         <ul class="max-w-screen-xl m-auto flex justify-center gap-16 border-t border-light-green py-10">

@@ -181,6 +181,10 @@ header nav li:not(.active) {
     flex-direction: column;
 }
 
+.row-reverse{
+    flex-direction: row-reverse;
+}
+
 .flex-grow {
     flex-grow: 1;
 }
@@ -601,6 +605,10 @@ header nav li:not(.active) {
     text-align: justify;
 }
 
+.last-justify{
+    text-align-last: justify;
+}
+
 .text-sm {
     font-size: 0.875rem;
 }
@@ -615,6 +623,10 @@ header nav li:not(.active) {
 
 .text-xl {
     font-size: 1.25rem;
+}
+
+.text-2xl {
+    font-size: 1.5rem;
 }
 
 .text-3xl {
@@ -633,6 +645,9 @@ header nav li:not(.active) {
     color: #FFF;
 }
 
+.tracking-normal {
+    letter-spacing: normal;
+}
 .tracking-widest {
     letter-spacing: .1em;
 }
