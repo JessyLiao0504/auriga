@@ -177,6 +177,10 @@ header nav li:not(.active) {
     display: inline-flex;
 }
 
+.hidden{
+    display: none;
+}
+
 .flex-col {
     flex-direction: column;
 }

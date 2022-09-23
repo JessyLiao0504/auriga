@@ -275,35 +275,137 @@
                 <div class="bubble purple-sm" style="left: 67.2%; top: 18.6em; transform: scale(.9);"></div>
                 <div class="bubble purple-sm" style="left: 67.6%; top: 24.6em; transform: scale(.3);"></div>
             </div>
+            <div>
+                <p>大數據分析解決方案</p>
+                <p>用於財務、官方報表、大資料量統計</p>
+            </div>
+            <div>
+                <p>強大的分析器引擎</p>
+                <p>將數據轉換為多種格式。<br>並使用可視化工具呈現完整的數據流。</p>
+            </div>
+            <div>
+                <p>次世代防禦軟體解決方案 </p>
+                <p>金融業、電信業、製造業、運輸業、醫療保健與政府單位等不同領域成功導入</p>
+            </div>
         </section>
     </main>
 
     <script>
+        AurigaConfigs = {
+            posX: 0,
+            posY: 0,
+            animations: [],
+        };
+
+
+        if (!window.requestAnimationFrame) {
+            window.requestAnimationFrame = (window.webkitRequestAnimationFrame ||
+                window.mozRequestAnimationFrame ||
+                window.oRequestAnimationFrame ||
+                window.msRequestAnimationFrame ||
+                function (callback) {
+                    var self = this, start, finish;
+                    return window.setTimeout(function () {
+                        start = new Date();
+                        callback(start);
+                        finish = new Date();
+                        self.timeout = 1000 / 60 - (finish - start);
+                    }, self.timeout);
+                });
+        }
+        window.cancelRequestAnimFrame = (function () {
+            return window.cancelAnimationFrame ||
+                window.webkitCancelRequestAnimationFrame ||
+                window.mozCancelRequestAnimationFrame ||
+                window.oCancelRequestAnimationFrame ||
+                window.msCancelRequestAnimationFrame ||
+                clearTimeout;
+        })();
+
         document.addEventListener('DOMContentLoaded', () => {
             const canvas = document.createElement('canvas');
             canvas.setAttribute('width', document.getElementById('circles').clientWidth);
             canvas.setAttribute('height', document.getElementById('circles').clientHeight);
-            canvas.classList.add('pointer-events-none','absolute','z-30');
+            canvas.classList.add('pointer-events-none', 'absolute', 'z-30');
             document.getElementById('circles').append(canvas);
+            const ctx = canvas.getContext('2d');
 
             document.querySelectorAll('.bubble.white').forEach(ele => ele.addEventListener('mouseenter', e => {
-                const ctx = canvas.getContext('2d');
+                const parent = ele.closest('#circles');
+                const bounds = parent.getBoundingClientRect();
+                AurigaConfigs.posX = e.clientX - bounds.left;
+                AurigaConfigs.posY = e.clientY - bounds.top;
 
-                const cx = e.clientX;
-                const cy = e.clientY - 160;
-
-                // First path
-                ctx.beginPath();
-                ctx.strokeStyle = '#FFF';
-                ctx.moveTo(cx, cy);
-                ctx.lineTo(cx, cy-80);
-                ctx.lineTo(cx+120, cy-80);
-                ctx.stroke();
+                window.cancelAnimationFrame(AurigaConfigs.animations);
+                draw1(AurigaConfigs.posX, AurigaConfigs.posY);
             }));
+
             document.querySelectorAll('.bubble.white').forEach(ele => ele.addEventListener('mouseleave', e => {
-                const ctx = canvas.getContext('2d');
                 ctx.clearRect(0, 0, canvas.width, canvas.height);
             }));
+
+            function draw1(x, y) {
+                AurigaConfigs.pts = [
+                    {
+                        x: x,
+                        y: y,
+                    }, {
+                        x: x,
+                        y: y - 100,
+                    }, {
+                        x: x + 120,
+                        y: y - 100,
+                    }
+                ];
+
+                AurigaConfigs.points = [];
+                AurigaConfigs.points = calcWaypoints(AurigaConfigs.pts);
+                animate();
+            }
+
+            function calcWaypoints(vertices) {
+                const cnt = 10;
+                var waypoints = [];
+                for (var i = 1; i < vertices.length; i++) {
+                    var pt0 = vertices[i - 1];
+                    var pt1 = vertices[i];
+                    var dx = pt1.x - pt0.x;
+                    var dy = pt1.y - pt0.y;
+                    for (var j = 0; j < cnt; j++) {
+                        var x = pt0.x + dx * j / cnt;
+                        var y = pt0.y + dy * j / cnt;
+                        waypoints.push({
+                            x: x,
+                            y: y
+                        });
+                    }
+                }
+                return (waypoints);
+            }
+
+            var t = 1;
+            function animate(timestamp) {
+                points = AurigaConfigs.points;
+                if (t < points.length - 1) {
+                    AurigaConfigs.animations = window.requestAnimationFrame(animate);
+                } else {
+                    t = 1;
+                    return;
+                }
+                // draw a line segment from the last waypoint
+                // to the current waypoint
+                const ctx = canvas.getContext('2d');
+                ctx.beginPath();
+                ctx.strokeStyle = '#FFF';
+                ctx.fillStyle = '#FFF';
+                ctx.lineWidth = 2;
+                ctx.moveTo(points[t - 1].x, points[t - 1].y);
+                ctx.lineTo(points[t].x, points[t].y);
+                ctx.stroke();
+                ctx.fill();
+                // increment "t" to get the next waypoint
+                t++;
+            }
         });
     </script>
 
