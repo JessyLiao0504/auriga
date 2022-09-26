@@ -146,14 +146,20 @@
             z-index: -1;
         }
 
-        #circles .bubble.white p{
+        #circles .bubble.white p {
             text-align: left;
             text-align-last: auto;
             word-break: keep-all;
         }
 
-        #circles .bubble.white:not(:hover)+div{
-            display: none;
+        #circles .bubble.white+div {
+            transition: all .4s .5s;
+        }
+
+        #circles .bubble.white:not(:hover)+div {
+            transform: translateY(.3em);
+            opacity: 0;
+            transition: none;
         }
 
         #circles .bubble.purple::before {
@@ -262,7 +268,7 @@
                     <img src="./imgs/consultant/qlik.png" style="width: 4.2em;">
                 </div>
                 <div class="absolute text-right" style="left: 18.7%; top: 2em;">
-                    <p>大數據分析解決方案</p>
+                    <p class="light-green">大數據分析解決方案</p>
                     <p>用於財務、官方報表、大資料量統計</p>
                 </div>
                 <div class="bubble white" style="left: 51.7%; top: 6em;">
@@ -270,14 +276,14 @@
                 </div>
 
                 <div class="absolute" style="left: 67.7%;">
-                    <p>強大的分析器引擎</p>
+                    <p class="light-green">強大的分析器引擎</p>
                     <p>將數據轉換為多種格式。<br>並使用可視化工具呈現完整的數據流。</p>
                 </div>
                 <div class="bubble white" style="left: 42.3%; top: 20em; padding: .5em;">
                     <img src="./imgs/consultant/sentinelone.svg" style="width: 7em;">
                 </div>
                 <div class="absolute text-right" style="left: 16.7%; top: 26em; max-width: 19em;">
-                    <p>次世代防禦軟體解決方案 </p>
+                    <p class="light-green">次世代防禦軟體解決方案 </p>
                     <p>金融業、電信業、製造業、運輸業、醫療保健與政府單位等不同領域成功導入</p>
                 </div>
                 <div class="bubble purple" style="left: 44.8%; top: 7.2em; padding: 5em;">
@@ -334,48 +340,69 @@
         })();
 
         document.addEventListener('DOMContentLoaded', () => {
-            const canvas = document.createElement('canvas');
-            canvas.setAttribute('width', document.getElementById('circles').clientWidth);
-            canvas.setAttribute('height', document.getElementById('circles').clientHeight);
-            canvas.classList.add('pointer-events-none', 'absolute', 'z-30');
-            document.getElementById('circles').append(canvas);
-            const ctx = canvas.getContext('2d');
+            var canvas, ctx;
 
             document.querySelectorAll('.bubble.white').forEach(ele => ele.addEventListener('mouseenter', e => {
-                const parent = ele.closest('#circles');
-                const bounds = parent.getBoundingClientRect();
-                AurigaConfigs.posX = e.clientX - bounds.left;
-                AurigaConfigs.posY = e.clientY - bounds.top;
+                canvas = document.createElement('canvas');
+                canvas.setAttribute('width', document.getElementById('circles').clientWidth);
+                canvas.setAttribute('height', document.getElementById('circles').clientHeight);
+                canvas.classList.add('pointer-events-none', 'absolute', 'z-30');
+                document.getElementById('circles').append(canvas);
+                ctx = canvas.getContext('2d');
+                draw1(e.target);
 
-                window.cancelAnimationFrame(AurigaConfigs.animations);
-                draw1(AurigaConfigs.posX, AurigaConfigs.posY);
             }));
 
             document.querySelectorAll('.bubble.white').forEach(ele => ele.addEventListener('mouseleave', e => {
-                ctx.clearRect(0, 0, canvas.width, canvas.height);
+                //ctx.clearRect(0, 0, canvas.width, canvas.height);
+                canvas.remove();
             }));
 
-            function draw1(x, y) {
+            function draw1(target) {
+                const bounds = target.getBoundingClientRect();
+                const wrapper = target.closest('#circles');
+                const parent = wrapper.firstElementChild;
+                let x = target.offsetLeft + bounds.width / 2;
+                let y = target.offsetTop + parent.offsetTop + bounds.height / 2;
+                if (wrapper.clientHeight / 2 > y) {
+                    y -= bounds.height * 3 / 4;
+                } else {
+                    y += bounds.height * 3 / 4;
+                }
+
+                const dest = target.nextElementSibling;
+                const destRect = dest.getBoundingClientRect();
+
+                let toX = dest.offsetLeft;
+                if (wrapper.clientWidth / 2 > toX) {
+                    toX = dest.getBoundingClientRect().right;
+                }
+                let toY = dest.offsetTop + parent.offsetTop + dest.querySelector('p:first-child').clientHeight / 2;
+
                 AurigaConfigs.pts = [
                     {
                         x: x,
                         y: y,
                     }, {
                         x: x,
-                        y: y - 100,
+                        y: toY,
                     }, {
-                        x: x + 120,
-                        y: y - 100,
+                        x: toX,
+                        y: toY,
                     }
                 ];
 
                 AurigaConfigs.points = [];
                 AurigaConfigs.points = calcWaypoints(AurigaConfigs.pts);
+
+                ctx.fillStyle = '#FFF';
+                ctx.arc(x, y, 3, 0, Math.PI * 2);
+                ctx.fill();
                 animate();
             }
 
             function calcWaypoints(vertices) {
-                const cnt = 10;
+                const cnt = 12;
                 var waypoints = [];
                 for (var i = 1; i < vertices.length; i++) {
                     var pt0 = vertices[i - 1];
