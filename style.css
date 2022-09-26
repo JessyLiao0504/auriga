@@ -177,7 +177,7 @@ header nav li:not(.active) {
     display: inline-flex;
 }
 
-.hidden{
+.hidden {
     display: none;
 }
 
@@ -185,7 +185,7 @@ header nav li:not(.active) {
     flex-direction: column;
 }
 
-.row-reverse{
+.row-reverse {
     flex-direction: row-reverse;
 }
 
@@ -337,6 +337,7 @@ header nav li:not(.active) {
 .p-4 {
     padding: 1rem;
 }
+
 .p-8 {
     padding: 2rem;
 }
@@ -411,11 +412,11 @@ header nav li:not(.active) {
     padding-left: 2rem;
 }
 
-.pr-20{
+.pr-20 {
     padding-right: 5rem;
 }
 
-.pr-3\/10{
+.pr-3\/10 {
     padding-right: 30%;
 }
 
@@ -585,7 +586,7 @@ header nav li:not(.active) {
     margin-right: 1.5rem;
 }
 
-.mr-20{
+.mr-20 {
     margin-right: 5rem;
 }
 
@@ -601,6 +602,10 @@ header nav li:not(.active) {
     text-align: left;
 }
 
+.text-right {
+    text-align: right;
+}
+
 .text-center {
     text-align: center;
 }
@@ -609,7 +614,7 @@ header nav li:not(.active) {
     text-align: justify;
 }
 
-.last-justify{
+.last-justify {
     text-align-last: justify;
 }
 
@@ -652,6 +657,7 @@ header nav li:not(.active) {
 .tracking-normal {
     letter-spacing: normal;
 }
+
 .tracking-widest {
     letter-spacing: .1em;
 }
@@ -755,6 +761,10 @@ li {
 
 .w-full {
     width: 100%;
+}
+
+.w-screen {
+    width: 100vw;
 }
 
 .w-1\/2 {

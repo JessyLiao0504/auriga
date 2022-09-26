@@ -146,6 +146,16 @@
             z-index: -1;
         }
 
+        #circles .bubble.white p{
+            text-align: left;
+            text-align-last: auto;
+            word-break: keep-all;
+        }
+
+        #circles .bubble.white:not(:hover)+div{
+            display: none;
+        }
+
         #circles .bubble.purple::before {
             background-image: linear-gradient(154.61deg, #6B0AEA -75.89%, #6B0AEA 17.13%, #FB49FF 104.51%);
             background-blend-mode: screen, normal;
@@ -251,11 +261,24 @@
                 <div class="bubble white" style="left: 41.9%; top: 8.6em;">
                     <img src="./imgs/consultant/qlik.png" style="width: 4.2em;">
                 </div>
+                <div class="absolute text-right" style="left: 18.7%; top: 2em;">
+                    <p>大數據分析解決方案</p>
+                    <p>用於財務、官方報表、大資料量統計</p>
+                </div>
                 <div class="bubble white" style="left: 51.7%; top: 6em;">
                     <img src="./imgs/consultant/parse.png" style="width: 4.2em;">
                 </div>
+
+                <div class="absolute" style="left: 67.7%;">
+                    <p>強大的分析器引擎</p>
+                    <p>將數據轉換為多種格式。<br>並使用可視化工具呈現完整的數據流。</p>
+                </div>
                 <div class="bubble white" style="left: 42.3%; top: 20em; padding: .5em;">
                     <img src="./imgs/consultant/sentinelone.svg" style="width: 7em;">
+                </div>
+                <div class="absolute text-right" style="left: 16.7%; top: 26em; max-width: 19em;">
+                    <p>次世代防禦軟體解決方案 </p>
+                    <p>金融業、電信業、製造業、運輸業、醫療保健與政府單位等不同領域成功導入</p>
                 </div>
                 <div class="bubble purple" style="left: 44.8%; top: 7.2em; padding: 5em;">
                     <div>
@@ -274,18 +297,6 @@
                 <div class="bubble purple-sm" style="left: 64.6%; top: 21.4em;"></div>
                 <div class="bubble purple-sm" style="left: 67.2%; top: 18.6em; transform: scale(.9);"></div>
                 <div class="bubble purple-sm" style="left: 67.6%; top: 24.6em; transform: scale(.3);"></div>
-            </div>
-            <div>
-                <p>大數據分析解決方案</p>
-                <p>用於財務、官方報表、大資料量統計</p>
-            </div>
-            <div>
-                <p>強大的分析器引擎</p>
-                <p>將數據轉換為多種格式。<br>並使用可視化工具呈現完整的數據流。</p>
-            </div>
-            <div>
-                <p>次世代防禦軟體解決方案 </p>
-                <p>金融業、電信業、製造業、運輸業、醫療保健與政府單位等不同領域成功導入</p>
             </div>
         </section>
     </main>
