@@ -745,6 +745,10 @@ header nav li:hover::after {
 
 .btn-purple-1 {
     background-image: linear-gradient(269.25deg, #6B0AEA 27.39%, #8130EC 88.62%);
+    background-image: linear-gradient(-45deg,#56eef4,#6b0aea 25%,#6b0aea 40%,#e404dd 60%,#2e21f3 80%,#2e21f3);
+    background-size: 600%;
+    background-position: 100% 50%;
+    animation: bg-horizon 16s linear infinite;
 }
 
 .cursor-pointer {
@@ -1053,5 +1057,17 @@ i.hexagon::before {
     100% {
         opacity: 0;
         transform: translate(6em);
+    }
+}
+
+@keyframes bg-horizon {
+    0% {
+        background-position: 0 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0 50%;
     }
 }
