@@ -994,7 +994,7 @@ li {
 }
 
 .play-dot {
-    animation: fadeInOut .9s ease-in-out;
+    animation: fadeInOut .9s ease-in-out forwards;
 }
 
 .play-dot-1 {
