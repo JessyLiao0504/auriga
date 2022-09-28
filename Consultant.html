@@ -173,7 +173,7 @@
     </style>
 </head>
 
-<body class="text-white relative">
+<body id="auriga" class="text-white relative">
     <div id="bg-play" class="absolute inset-0 pointer-events-none overflow-hidden z-10"></div>
     <header class="max-w-screen-xl flex justify-between py-8 px-10 m-auto relative z-10">
         <div><a href="index.html"><img src="imgs/logo.svg"></a></div>
@@ -186,6 +186,7 @@
                 <li><a href="Demo.html">Demo Request</a></li>
             </ul>
         </nav>
+        <img id="menu-toggle" class="mx-10 my-8" src="./imgs/header-toggle.svg" />
     </header>
     <main class="relative m-auto tracking-widest leading-normal text-base">
         <section class="relative" style="top: -108px">
@@ -308,9 +309,9 @@
 
         <div class="text-center mb-32">
             <a href="Demo.html">
-            <button type="button"
-                class="relative py-3 px-10 px-12:hover btn-purple-1 rounded-sm shadow-none arrow-after r-4-after absolute-after">前往諮詢</button>
-                </a>
+                <button type="button"
+                    class="relative py-3 px-10 px-12:hover btn-purple-1 rounded-sm shadow-none arrow-after r-4-after absolute-after">前往諮詢</button>
+            </a>
         </div>
     </main>
 
@@ -380,9 +381,9 @@
                 const dest = target.nextElementSibling;
                 const destRect = dest.getBoundingClientRect();
 
-                let toX = dest.offsetLeft;
+                let toX = dest.offsetLeft -16;
                 if (wrapper.clientWidth / 2 > toX) {
-                    toX = dest.getBoundingClientRect().right;
+                    toX = dest.getBoundingClientRect().right +16;
                 }
                 let toY = dest.offsetTop + parent.offsetTop + dest.querySelector('p:first-child').clientHeight / 2;
 
@@ -409,22 +410,45 @@
             }
 
             function calcWaypoints(vertices) {
-                const cnt = 12;
+                const cnt = 14;
                 var waypoints = [];
+
+                const sum = (1 + cnt) * cnt / 2;
                 for (var i = 1; i < vertices.length; i++) {
                     var pt0 = vertices[i - 1];
                     var pt1 = vertices[i];
                     var dx = pt1.x - pt0.x;
                     var dy = pt1.y - pt0.y;
-                    for (var j = 0; j < cnt; j++) {
-                        var x = pt0.x + dx * j / cnt;
-                        var y = pt0.y + dy * j / cnt;
+
+                    var x = pt0.x;
+                    var y = pt0.y;
+                    waypoints.push({
+                        x: x,
+                        y: y
+                    });
+                    for (let j = 0; j < cnt; j++) {
+                        x += dx * (cnt - j) / sum;
+                        y += dy * (cnt - j) / sum;
                         waypoints.push({
                             x: x,
                             y: y
                         });
                     }
                 }
+                // for (var i = 1; i < vertices.length; i++) {
+                //     var pt0 = vertices[i - 1];
+                //     var pt1 = vertices[i];
+                //     var dx = pt1.x - pt0.x;
+                //     var dy = pt1.y - pt0.y;
+                //     for (var j = 0; j < cnt; j++) {
+                //         var x = pt0.x + dx * j / cnt;
+                //         var y = pt0.y + dy * j / cnt;
+                //         waypoints.push({
+                //             x: x,
+                //             y: y
+                //         });
+                //     }
+                // }
                 return (waypoints);
             }
 

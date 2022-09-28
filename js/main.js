@@ -74,12 +74,12 @@ window.addEventListener('mousemove', e => {
 window.addEventListener('pointerdown', holdingEffects);
 window.addEventListener('pointerup', holdingEffects);
 
-var holdInt = '';
+var holdInt = [];
 function holdingEffects(e) {
     if ('pointerdown' === e.type) {
         aurigaConfigs.pointerX = e.pageX;
         aurigaConfigs.pointerY = e.pageY;
-        holdInt = setInterval(() => {
+        holdInt.push(setInterval(() => {
             const elem = document.createElement('div');
             const spread = Math.round(Math.random() * 4) + 2;
             const blur = spread * 1.5;
@@ -102,16 +102,21 @@ function holdingEffects(e) {
             setTimeout(function () {
                 elem.remove();
             }, 1000);
-        }, 120);
+        }, 120));
     } else {
-        clearInterval(holdInt);
+        holdInt.forEach(int => clearInterval(int));
+        holdInt = [];
     }
 }
 
-window.addEventListener('mousedown', () => {
-    if(is_rightclick()){
-        clearInterval(holdInt);
-    }
+window.addEventListener('contextmenu', () => {
+    holdInt.forEach(int => clearInterval(int));
+    holdInt = [];
+});
+
+window.addEventListener('lostpointercapture', () => {
+    holdInt.forEach(int => clearInterval(int));
+    holdInt = [];
 });
 
 function is_rightclick() {
@@ -128,3 +133,9 @@ window.addEventListener("load", () => {
         //createObserver(e);
     });
 }, false);
+
+document.addEventListener('DOMContentLoaded', () => {
+    document.getElementById('menu-toggle').onclick = e => {
+        document.querySelector('#auriga>header').classList.toggle('active');
+    };
+});

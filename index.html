@@ -37,7 +37,7 @@
             padding: 1.4em 0;
             transition: all .6s;
             background: linear-gradient(106.81deg, #171032 5.35%, rgba(22, 13, 47, 0.63) 81.05%);
-            transition-property: box-shadow,transform;
+            transition-property: box-shadow, transform;
         }
 
         .info-box:hover {
@@ -51,7 +51,7 @@
 
         #history li {
             margin-top: 1em;
-            padding: 2.6em 0;
+            margin: 3em 0;
         }
 
         #history li .crossline {
@@ -70,7 +70,7 @@
         }
 
         #history li.active {
-            margin-bottom: 2em;
+            margin-bottom: 5em;
         }
 
         #history li.active .crossline {
@@ -139,15 +139,124 @@
             opacity: .1;
             pointer-events: none;
         }
+
+        @media (max-width: 767px) {
+            #welcome {
+                margin-top: 30px;
+                margin-bottom: 5em;
+                display: block;
+            }
+
+            #welcome p {
+                margin-bottom: .6em;
+            }
+
+            #welcome h2 {
+                font-size: 24px;
+            }
+
+            #welcome>div:first-child {
+                margin-bottom: 5em;
+            }
+
+            #welcome>div>img {
+                width: 92%;
+            }
+
+            #shields ul {
+                display: block;
+            }
+
+            #shields li {
+                margin-bottom: 3.6em;
+            }
+
+            #shields li>img {
+                width: 30%;
+            }
+
+            #shields li>div img {
+                max-height: 4.5rem;
+            }
+
+            #history ul{
+                margin-top: 4em;
+                margin-bottom: 4em;
+            }
+            #history ul>li {
+                display: block;
+                position: relative;
+            }
+
+            #history ul>li.active{
+                margin-bottom: 8em;
+                padding-left: 2em;
+            }
+
+            #history li:not(:last-child) p>span:first-child::before,
+            #history li:not(:last-child) p>span:first-child::after {
+                display: none;
+            }
+
+            #history ul>li:not(:last-child)>span::before,
+            #history ul>li:not(:last-child)>span::after {
+                content: "";
+                opacity: 0;
+                transform: translateY(-60%);
+                position: absolute;
+                left: 0;
+            }
+
+            #history ul>li:not(:last-child).active>span::before,
+            #history ul>li:not(:last-child).active>span::after {
+                height: 0.6em;
+                width: 0.6em;
+                border-radius: 50%;
+                background-color: #FFFFFF4D;
+                opacity: 1;
+                transform: translateY(0);
+                transition-property: opacity, transform;
+                transition-duration: .6s;
+                transition-delay: .3s;
+                display: block;
+                margin: 1.6em 0;
+            }
+
+            #history ul>li:not(:last-child).active>span::before {
+                bottom: -5em;
+            }
+            #history ul>li:not(:last-child).active>span::after {
+                bottom: -7em;
+            }
+
+            #history li.active p::before{
+                position: absolute;
+                height: 100%;
+                left: 0;
+            }
+
+            #history li p{
+                text-align: center;
+                margin-bottom: .6em;
+            }
+
+            #history li.active p{
+                margin-bottom: 1.4em;
+                text-align: left;
+            }
+        }
     </style>
     <script>
         registerObserver('.obs>li');
     </script>
 </head>
 
-<body class="text-white relative">
+<body id="auriga" class="text-white relative">
     <div id="bg-play" class="absolute inset-0 pointer-events-none overflow-hidden z-10"></div>
-    <img class="absolute -z-10" src="./imgs/our-team/bg-main.png" />
+    <picture>
+        <source srcset="./imgs/our-team/bg-main-mobile.png" media="(max-width: 767px)" />
+        <img class="absolute -z-10 w-full" src="./imgs/our-team/bg-main.png" />
+    </picture>
     <header class="max-w-screen-xl flex justify-between py-8 px-10 m-auto">
         <div><a href="index.html"><img src="imgs/logo.svg"></a></div>
         <nav>
@@ -159,6 +268,7 @@
                 <li><a href="Demo.html">Demo Request</a></li>
             </ul>
         </nav>
+        <img id="menu-toggle" class="mx-10 my-8" src="./imgs/header-toggle.svg" />
     </header>
     <main class="relative m-auto tracking-widest leading-normal text-base">
         <section id="welcome" class="max-w-screen-lg m-auto flex justify-between my-56">
@@ -173,7 +283,7 @@
             </div>
             <div>
                 <h2 class="font-din mb-4"><strong>Serve Security</strong> With More Than<br>Just Professionalism</h2>
-                <p class="leading-9">
+                <p class="leading-9 text-justify">
                     安創資訊，是一間專注於提供客戶安心體驗的公司<br>
                     團隊導入教練式溝通思維。專業、當責是團隊精神<br>
                     引進技術卓越的資安產品，輔以自主開發能力，持續精進與更新時下攻防技術與思維；減少人力介入產生失誤或降低反應時間差<br>
@@ -182,7 +292,7 @@
             </div>
         </section>
 
-        <section class="max-w-screen-xl m-auto mb-28">
+        <section id="shields" class="max-w-screen-xl m-auto mb-28">
             <img class="absolute -z-10 r-0 w-1/2" src="./imgs/our-team/bg-wave.svg" />
             <ul class="grid grid-cols-3 gap-8 items-center">
                 <li class="info-box flex shrink-0">
