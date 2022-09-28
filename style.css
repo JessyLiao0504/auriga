@@ -100,15 +100,6 @@ header nav li:not(.active) {
     color: #9F9F9F;
 }
 
-header nav li:hover::after {
-    left: 0;
-    bottom: -.3em;
-    width: 100%;
-    height: 2px;
-    background-image: linear-gradient(270deg, #B14FFF 87.87%, rgba(177, 79, 255, 0) 97.34%);
-    transform: scaleX(1.4);
-}
-
 .bg-main {
     background: var(--main-bg);
 }
@@ -1031,15 +1022,26 @@ i.hexagon::before {
 }
 
 @media (min-width: 768px) {
+
+    header nav li:hover::after {
+        left: 0;
+        bottom: -.3em;
+        width: 100%;
+        height: 2px;
+        background-image: linear-gradient(270deg, #B14FFF 87.87%, rgba(177, 79, 255, 0) 97.34%);
+        transform: scaleX(1.4);
+    }
+
     #auriga>header>img {
         display: none;
     }
 }
 
 @media (max-width: 767px) {
-    :root{
+    :root {
         font-size: 14px;
     }
+
     #auriga>header>img {
         position: absolute;
         top: 0;
