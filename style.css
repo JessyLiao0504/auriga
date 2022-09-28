@@ -927,7 +927,7 @@ li {
     display: flex;
     position: relative;
     justify-content: center;
-    align-items: flex-end;
+    align-items: center;
     margin-bottom: 1rem;
 }
 
