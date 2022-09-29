@@ -17,7 +17,6 @@
     <script src="./js/main.min.js"></script>
 
     <style type="text/css">
-
         #first-bg {
             background-image: linear-gradient(358.94deg, #1A183D 7.21%, rgba(0, 0, 0, 0) 64.59%), url(./imgs/tubes.png);
             background-blend-mode: lighten;
@@ -211,10 +210,157 @@
             transform: translateX(2.5vw) rotate(135deg);
         }
 
+        #para-bg {
+            background-image: url(./imgs/tubes.png);
+            background-position: center;
+            height: 60%;
+            top: 15%;
+            mix-blend-mode: hue;
+            opacity: .5;
+            animation: para-bg 6s infinite both alternate;
+        }
+
+        .icons-list {
+            margin-top: 3em;
+            margin-bottom: 4em;
+        }
+
+        .icons-list>li {
+            display: grid;
+            align-items: center;
+            grid-template-columns: 20% auto;
+        }
+
+        .icons-list>li:not(:last-child)::after {
+            content: "";
+            width: 36%;
+            border-top: 1px solid #518CFF;
+            grid-column: 1 / span 2;
+            margin: 2em 0;
+        }
+
+        .icons-list>li .img {
+            width: auto;
+        }
+
+        @media screen and (min-width: 768px) {
+            .icons-list>li>.img {
+                grid-row: 1 / span 2;
+            }
+        }
+
         @media screen and (max-width: 767px) {
+            h3 {
+                font-size: 1em;
+            }
+
             #dt-slider {
                 height: 240px;
                 overflow: hidden;
+            }
+
+            #first-bg {
+                background-image: url(./imgs/solutions/bg-main-mobile.png);
+            }
+
+            main>section:first-of-type h3 {
+                margin-bottom: 1.4em;
+            }
+
+            main>section:first-of-type p {
+                line-height: 2;
+                margin-bottom: 3.8em;
+            }
+
+            #para-bg {
+                background-image: url(./imgs/solutions/bg-main-mobile.png);
+            }
+
+            .icons-list>li {
+                gap: .8em;
+            }
+
+            .icons-list>li>p {
+                grid-column: 1 / span 2;
+                margin-top: 1.8em;
+            }
+
+            .border-bg-p {
+                padding: 1.8em;
+                line-height: 1.8;
+            }
+
+            .purple-quote {
+                font-size: 12px;
+                width: 94%;
+                padding: 7px;
+                text-align: justify;
+            }
+
+            .purple-quote::before,
+            .purple-quote::after {
+                display: none;
+            }
+
+            #auriga #grid-blocks {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+                grid-auto-rows: 1fr;
+                padding: 0;
+                gap: 12px;
+                margin-top: 1.8em;
+            }
+
+            #grid-blocks>div {
+                height: 45vw;
+                grid-column: auto;
+                grid-row: auto;
+            }
+
+            #grid-blocks>div>span {
+                font-size: 18px;
+            }
+
+            #grid-blocks>div>.absolute {
+                padding: .8em;
+            }
+
+            #grid-blocks>div:first-child,
+            #grid-blocks>div:nth-child(4),
+            #grid-blocks>div:nth-child(5),
+            #grid-blocks>div:nth-child(8),
+            #grid-blocks>div:nth-child(9) {
+                grid-column: 1 / span 2;
+            }
+
+            #grid-blocks>div:hover span {
+                transform: translateY(-2.2em);
+            }
+
+            #auriga #balls{
+                display: block;
+                padding: 0 16%;
+            }
+
+            #auriga #balls>div>img{
+                margin-top: 0;
+            }
+            #auriga #balls>div{
+                margin-top: 6em;
+                margin-bottom: 8em;
+            }
+
+            #dt-slider ul{
+                overflow: auto;
+            }
+        }
+
+        @keyframes para-bg {
+            from {
+                background-position-y: 40%;
+            }
+
+            to {
+                background-position-y: 50%;
             }
         }
     </style>
@@ -247,9 +393,9 @@
     <main class="m-auto tracking-widest leading-normal text-base">
         <section class="relative">
             <div class="max-w-screen-lg m-auto">
-                <p class="border py-2 px-16 inline-block text-4xl light-green font-din">New World ・ New
+                <p class="border py-2 px-16 mb-16 inline-block text-4xl light-green font-din hidden:sm">New World ・ New
                     Cybersecurity</p>
-                <h2 class="font-din text-5xl mt-16">SentinelOne Singularity XDR</h2>
+                <h2 class="font-din text-5xl">SentinelOne Singularity XDR</h2>
                 <h3 class="font-din text-xl mt-2 mb-20">The Future of Cybersecurity is Autonomous</h3>
                 <p class="mb-20">駭客攻擊與滲透手法一日千里，傳統事件處理與回應機制不足以面對快速進化的攻擊手法<br>
                     SentinelOne Singularity XDR 提供更快速、更全面、更即時的威脅回應機制<br>
@@ -257,55 +403,53 @@
                 <button type="button" class="py-4 px-16 btn-purple rounded">2022 MITAC 結果</button>
             </div>
             <div class="absolute inset-0 -z-10" id="first-bg">
-                <!-- <div class="sticky w-full" style="height: 200px; background-image: url(./imgs/our-team/bg-history.png); top: 30%; background-position: center;"></div> -->
+                <div class="sticky w-full" id="para-bg"></div>
             </div>
         </section>
 
-        <section class="flex">
+        <section class="flex block:sm">
             <div class="flex-grow text-center mix-blend-lighten select-none">
                 <img class="pointer-events-none" src="./imgs/pattern.png" />
             </div>
-            <div class="w-1/2 pl-8">
+            <div class="w-1/2 pl-8 w-full:sm p-0:sm">
                 <img src="./imgs/xdr.png" />
                 <p>以更有效率的方式應對日益複雜的資安威脅<br>並保障企業資訊安全</p>
                 <ul class="icons-list">
                     <li class="flex">
                         <div class="img">
-                            <img src="./imgs/eye.svg" />
+                            <img class="img" src="./imgs/eye.svg" />
                         </div>
-                        <div>
-                            <h3>SEE</h3>
-                            <p>最大化探索企業環境架構、提供高可視性<br>全面掌握企業內部所有可能的資安風險</p>
-                        </div>
+                        <h3>SEE</h3>
+                        <p>最大化探索企業環境架構、提供高可視性<br>全面掌握企業內部所有可能的資安風險</p>
                     </li>
                     <li class="flex">
                         <div class="img">
                             <img src="./imgs/frame.svg" />
                         </div>
-                        <div>
-                            <h3>PROTECT</h3>
-                            <p>AI 動 \ 靜態偵測模組、事件全自動化處理、<br>一鍵還原威脅事件造成的危害</p>
-                        </div>
+                        <h3>PROTECT</h3>
+                        <p>AI 動 \ 靜態偵測模組、事件全自動化處理、<br>一鍵還原威脅事件造成的危害</p>
                     </li>
                     <li class="flex">
                         <div class="img">
                             <img src="./imgs/resolve.svg" />
                         </div>
-                        <div>
-                            <h3>RESOLVE</h3>
-                            <p>專利 Storyline<sup>TM</sup> 技術、串聯並完整呈現威脅事件<br>​降低事件調查時間與人力成本</p>
-                        </div>
+                        <h3>RESOLVE</h3>
+                        <p>專利 Storyline<sup>TM</sup> 技術、串聯並完整呈現威脅事件<br>​降低事件調查時間與人力成本</p>
                     </li>
                 </ul>
             </div>
         </section>
         <section class="max-w-screen-lg m-auto relative mb-24">
-            <p class="absolute inset-0 border-bg-p text-justify flex items-center justify-center">SentinelOne Singularity XDR
+            <p class="absolute inset-0 border-bg-p text-justify flex items-center justify-center">SentinelOne
+                Singularity XDR
                 為端點防護、端點事件偵測與回應、IoT 設備防護、雲端防護與 IT 團隊的運作提供不同的解決方案，並將多種技術整合至統一的管理平台，針對 Windows、MacOS、Linux 與
                 Kubernetes 提供高效率的 Agent 並針對客戶不同環境架構（包含實體環境、虛擬環境、VDI、客戶資料中心、混合式資料中心與雲端服務供應商...等）進行佈署</p>
-            <img class="-z-10" src="./imgs/border-bg.svg" />
+            <picture>
+                <source srcset="./imgs/solutions/border-bg-mobile.png" media="(max-width: 767px)" />
+                <img class="-z-10" src="./imgs/border-bg.svg" />
+            </picture>
         </section>
-        <section class="text-center mb-20">
+        <section class="text-center">
             <h2 class="text-4xl">脫穎而出</h2>
             <h3 class="border-b border-light-green inline-block mt-4 mb-10 px-6">使用 SentinelOne 降低風險並提高效率</h3>
             <div>
@@ -314,7 +458,7 @@
         </section>
 
         <section id="grid-blocks"
-            class="max-w-screen-lg m-auto grid grid-cols-9 grid-flow-dense auto-rows-6vw gap-4 text-center mb-20">
+            class="max-w-screen-lg m-auto grid grid-cols-9 grid-flow-dense auto-rows-6vw gap-4 text-center my-20">
             <div class="col-span-4 row-span-2">
                 <span>權限彈性高</span>
                 <div class="bg absolute inset-0">
@@ -563,7 +707,8 @@
         <section class="m-auto flex gap-4 mb-20 info-box">
             <div>
                 <h2 class="mb-8">Vigilance Respond Pro</h2>
-                <p class="mb-12 text-lg">Vigilance Respond Pro 增加事件鑑識 ( Digital Forensics ) 與事件處理 ( Incident Response ) 包含所有
+                <p class="mb-12 text-lg">Vigilance Respond Pro 增加事件鑑識 ( Digital Forensics ) 與事件處理 ( Incident Response )
+                    包含所有
                     Vigilance Respond 服務並額外提供：</p>
                 <ul class="leading-9 square-before-list bg-purple-before-list mr-4-before-list mb-4-list">
                     <li>專業資安建議：直接與 SentinelOne 專業分析師討論</li>
@@ -608,9 +753,9 @@
 
         <div class="text-center my-32">
             <a href="https://www.sentinelone.com/platform/">
-            <button type="button"
-                class="relative py-3 px-10 px-12:hover btn-purple-1 rounded-sm shadow-none arrow-after r-4-after absolute-after">更多服務</button>
-                </a>
+                <button type="button"
+                    class="relative py-3 px-10 px-12:hover btn-purple-1 rounded-sm shadow-none arrow-after r-4-after absolute-after">更多服務</button>
+            </a>
         </div>
     </main>
 

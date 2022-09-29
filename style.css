@@ -100,6 +100,10 @@ header nav li:not(.active) {
     color: #9F9F9F;
 }
 
+main>section:first-of-type {
+    min-height: calc(100vh - 108px);
+}
+
 .bg-main {
     background: var(--main-bg);
 }
@@ -163,7 +167,7 @@ header nav li:not(.active) {
     position: absolute;
 }
 
-.sticky{
+.sticky {
     position: sticky;
 }
 
@@ -393,7 +397,8 @@ header nav li:not(.active) {
     padding-top: .5rem;
     padding-bottom: .5rem;
 }
-.font-din.py-2{
+
+.font-din.py-2 {
     padding-top: .8rem;
 }
 
@@ -422,7 +427,7 @@ header nav li:not(.active) {
     padding-bottom: 2.5rem;
 }
 
-.py-24{
+.py-24 {
     padding-top: 6rem;
     padding-bottom: 6rem;
 }
@@ -465,6 +470,11 @@ header nav li:not(.active) {
 .my-16 {
     margin-top: 4rem;
     margin-bottom: 4rem;
+}
+
+.my-20 {
+    margin-top: 5rem;
+    margin-bottom: 5rem;
 }
 
 .my-32 {
@@ -540,6 +550,10 @@ header nav li:not(.active) {
 
 .mb-12 {
     margin-bottom: 3rem;
+}
+
+.mb-12 {
+    margin-bottom: 4rem;
 }
 
 .mb-20 {
@@ -765,18 +779,6 @@ header nav li:not(.active) {
 
 li {
     list-style-type: none;
-}
-
-.icons-list {
-    margin: 3em 0;
-}
-
-.icons-list li {
-    padding: 20px 0;
-}
-
-.icons-list li .img {
-    width: 20%;
 }
 
 .h-full {
@@ -1060,6 +1062,22 @@ i.hexagon::before {
 @media (max-width: 767px) {
     :root {
         font-size: 14px;
+    }
+
+    .block\:sm {
+        display: block;
+    }
+
+    .hidden\:sm {
+        display: none;
+    }
+
+    .w-full\:sm {
+        width: 100%;
+    }
+
+    .p-0\:sm {
+        padding: 0;
     }
 
     #auriga>header>img {
