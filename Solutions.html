@@ -352,6 +352,21 @@
             #dt-slider ul{
                 overflow: auto;
             }
+            .dot-purple-wrap{
+                display: flex;
+                align-items: center;
+            }
+            #auriga .info-box{
+                display: block;
+                padding: 8%;
+                margin: 3em 6%;
+            }
+            #auriga .info-box ul{
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+            .grid-list li:nth-child(even)>div::after{
+                display: none;
+            }
         }
 
         @keyframes para-bg {
@@ -668,7 +683,7 @@
                     <li>重要與緊急事件通知，確保管理者掌握平台內資安情況</li>
                 </ul>
             </div>
-            <ul class="grid grid-cols-4 text-center grid-list w-1/2 shrink-0 gap-y-12">
+            <ul class="grid grid-cols-4 text-center grid-list w-1/2 w-full:sm shrink-0 gap-y-12">
                 <li>
                     <div><img src="./imgs/solutions/respond-1.svg" /></div>
                     <p>24 x 7 x 365<br>不間斷資安服務</p>
@@ -715,7 +730,7 @@
                     <li>事件處理方式、威脅阻斷與資安諮詢服務</li>
                 </ul>
             </div>
-            <ul class="grid grid-cols-4 text-center grid-list w-1/2 shrink-0 gap-y-12">
+            <ul class="grid grid-cols-4 text-center grid-list w-1/2 w-full:sm shrink-0 gap-y-12">
                 <li>
                     <div><img src="./imgs/solutions/respond-pro-1.svg" /></div>
                     <p>加速 Viligance Response<br>資安服務處理時間</p>
