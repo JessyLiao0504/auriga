@@ -202,7 +202,12 @@
                     </div>
                 </div>
             </div>
-            <div class="relative -z-10"><img src="./imgs/consultant/bg-main.jpg" /></div>
+            <div class="relative -z-10">
+                <picture>
+                    <source srcset="./imgs/consultant/bg-main-mobile.png" media="(max-width: 767px)">
+                    <img src="./imgs/consultant/bg-main.jpg" />
+                </picture>
+            </div>
         </section>
 
         <div id="list-rows">
@@ -381,9 +386,9 @@
                 const dest = target.nextElementSibling;
                 const destRect = dest.getBoundingClientRect();
 
-                let toX = dest.offsetLeft -16;
+                let toX = dest.offsetLeft - 16;
                 if (wrapper.clientWidth / 2 > toX) {
-                    toX = dest.getBoundingClientRect().right +16;
+                    toX = dest.getBoundingClientRect().right + 16;
                 }
                 let toY = dest.offsetTop + parent.offsetTop + dest.querySelector('p:first-child').clientHeight / 2;
 
