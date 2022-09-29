@@ -17,12 +17,10 @@
     <script src="./js/main.min.js"></script>
 
     <style type="text/css">
-        #welcome>div>img {
-            width: 400px;
-        }
-
-        #welcome>div:last-child {
-            max-width: 510px;
+        #welcome {
+            position: relative;
+            height: calc(100vh - 108px);
+            align-items: center;
         }
 
         #welcome h2 {
@@ -141,7 +139,7 @@
         }
 
         @media (max-width: 767px) {
-            #welcome {
+            #welcome>div {
                 margin-top: 30px;
                 margin-bottom: 5em;
                 display: block;
@@ -179,16 +177,17 @@
                 max-height: 4.5rem;
             }
 
-            #history ul{
+            #history ul {
                 margin-top: 4em;
                 margin-bottom: 4em;
             }
+
             #history ul>li {
                 display: block;
                 position: relative;
             }
 
-            #history ul>li.active{
+            #history ul>li.active {
                 margin-bottom: 8em;
                 padding-left: 2em;
             }
@@ -225,22 +224,23 @@
             #history ul>li:not(:last-child).active>span::before {
                 bottom: -5em;
             }
+
             #history ul>li:not(:last-child).active>span::after {
                 bottom: -7em;
             }
 
-            #history li.active p::before{
+            #history li.active p::before {
                 position: absolute;
                 height: 100%;
                 left: 0;
             }
 
-            #history li p{
+            #history li p {
                 text-align: center;
                 margin-bottom: .6em;
             }
 
-            #history li.active p{
+            #history li.active p {
                 margin-bottom: 1.4em;
                 text-align: left;
             }
@@ -271,24 +271,28 @@
         <img id="menu-toggle" class="mx-10 my-8" src="./imgs/header-toggle.svg" />
     </header>
     <main class="relative m-auto tracking-widest leading-normal text-base">
-        <section id="welcome" class="max-w-screen-lg m-auto flex justify-between my-56">
-            <div>
-                <p class="font-din text-4xl">WELCOME to</p>
-                <img src="imgs/logo.svg">
-                <div class="flex justify-end items-center text-xl mt-6">
-                    <div class="flex-grow border-t border-light-blue"></div>
-                    <img class="h-text" src="./imgs/our-team/arrows.svg" />
-                    <span class="ml-4 tracking-text">安創資訊</span>
+        <img class="continue-btn" src="./imgs/continue.svg" />
+        <section id="welcome" class="max-w-screen-lg m-auto flex">
+            <div class="flex justify-between w-full">
+                <div>
+                    <p class="font-din text-4xl">WELCOME to</p>
+                    <img width="400" src="imgs/logo.svg">
+                    <div class="flex justify-end items-center text-xl mt-6">
+                        <div class="flex-grow border-t border-light-blue"></div>
+                        <img class="h-text" src="./imgs/our-team/arrows.svg" />
+                        <span class="ml-4 tracking-text">安創資訊</span>
+                    </div>
                 </div>
-            </div>
-            <div>
-                <h2 class="font-din mb-4"><strong>Serve Security</strong> With More Than<br>Just Professionalism</h2>
-                <p class="leading-9 text-justify">
-                    安創資訊，是一間專注於提供客戶安心體驗的公司<br>
-                    團隊導入教練式溝通思維。專業、當責是團隊精神<br>
-                    引進技術卓越的資安產品，輔以自主開發能力，持續精進與更新時下攻防技術與思維；減少人力介入產生失誤或降低反應時間差<br>
-                    我們專注於資訊安全領域與事件調查，提供具體、可執行的合作方案，創造多贏資訊安全體驗
-                </p>
+                <div style="max-width: 510px;">
+                    <h2 class="font-din mb-4"><strong>Serve Security</strong> With More Than<br>Just Professionalism
+                    </h2>
+                    <p class="leading-9 text-justify">
+                        安創資訊，是一間專注於提供客戶安心體驗的公司<br>
+                        團隊導入教練式溝通思維。專業、當責是團隊精神<br>
+                        引進技術卓越的資安產品，輔以自主開發能力，持續精進與更新時下攻防技術與思維；減少人力介入產生失誤或降低反應時間差<br>
+                        我們專注於資訊安全領域與事件調查，提供具體、可執行的合作方案，創造多贏資訊安全體驗服務
+                    </p>
+                </div>
             </div>
         </section>
 

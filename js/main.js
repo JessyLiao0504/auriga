@@ -139,3 +139,7 @@ document.addEventListener('DOMContentLoaded', () => {
         document.querySelector('#auriga>header').classList.toggle('active');
     };
 });
+
+// window.addEventListener('scroll', () => {
+//     document.body.style.setProperty('--scroll', window.scrollY / (document.body.offsetHeight - window.innerHeight));
+// }, false);

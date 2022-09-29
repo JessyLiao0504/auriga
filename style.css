@@ -163,6 +163,10 @@ header nav li:not(.active) {
     position: absolute;
 }
 
+.sticky{
+    position: sticky;
+}
+
 .r-0 {
     right: 0;
 }
@@ -389,6 +393,9 @@ header nav li:not(.active) {
     padding-top: .5rem;
     padding-bottom: .5rem;
 }
+.font-din.py-2{
+    padding-top: .8rem;
+}
 
 .py-3 {
     padding-top: .75rem;
@@ -413,6 +420,11 @@ header nav li:not(.active) {
 .py-10 {
     padding-top: 2.5rem;
     padding-bottom: 2.5rem;
+}
+
+.py-24{
+    padding-top: 6rem;
+    padding-bottom: 6rem;
 }
 
 .pl-8 {
@@ -1021,6 +1033,14 @@ i.hexagon::before {
     filter: drop-shadow(0 0 4px);
 }
 
+.continue-btn {
+    position: absolute;
+    top: calc(88vh - 108px);
+    left: 50%;
+    transform: translateX(-50%);
+    animation: continue-btn .8s linear both infinite alternate;
+}
+
 @media (min-width: 768px) {
 
     header nav li:hover::after {
@@ -1150,5 +1170,11 @@ i.hexagon::before {
 
     100% {
         background-position: 0 50%;
+    }
+}
+
+@keyframes continue-btn {
+    to {
+        transform: translateY(10%) translateX(-50%);
     }
 }
