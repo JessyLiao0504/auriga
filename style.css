@@ -979,7 +979,7 @@ li {
 
 .info-box h2 {
     position: relative;
-    font-family: "DIN Condensed";
+    font-family: "DIN Condensed", "DIN-Condensed";
     font-size: 40px;
 }
 
