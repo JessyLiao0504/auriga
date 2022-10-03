@@ -14,6 +14,7 @@
     <meta data-hid="og:site_name" name="og:site_name" property="og:site_name" content="auriga">
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://use.typekit.net/jmd1jtv.css">
     <script src="./js/main.min.js"></script>
 
     <style type="text/css">
@@ -87,6 +88,7 @@
             position: absolute;
             width: 100%;
             top: 18%;
+            left: 0;
         }
 
         #circles .bubble {
@@ -95,16 +97,6 @@
             align-items: center;
             justify-content: center;
             padding: 1em;
-        }
-
-        #circles .bubble::before {
-            content: "";
-            border-radius: 50%;
-            width: 100%;
-            height: 0;
-            padding-top: 100%;
-            position: absolute;
-            z-index: -1;
         }
 
         #circles .bubble p {
@@ -125,27 +117,6 @@
             z-index: 20;
         }
 
-        #circles .bubble.bd::before {
-            border: 1px solid #B14FFF;
-            box-shadow: 0px 0px 16px rgba(251, 73, 255, 0.4);
-        }
-
-        #circles .bubble.white::before {
-            border: 1px solid rgba(255, 255, 255, 0.32);
-        }
-
-        #circles .bubble.white::after {
-            content: "";
-            border-radius: 50%;
-            width: 110%;
-            height: 0;
-            padding-top: 110%;
-            position: absolute;
-            background-image: linear-gradient(172.41deg, #D4D7DA 36.37%, rgba(255, 255, 255, 0) 152.3%);
-            filter: drop-shadow(0px 4px 18px rgba(0, 0, 0, 0.6));
-            z-index: -1;
-        }
-
         #circles .bubble.white p {
             text-align: left;
             text-align-last: auto;
@@ -162,13 +133,164 @@
             transition: none;
         }
 
-        #circles .bubble.purple::before {
-            background-image: linear-gradient(154.61deg, #6B0AEA -75.89%, #6B0AEA 17.13%, #FB49FF 104.51%);
-            background-blend-mode: screen, normal;
+        #circles #data-visual {
+            left: 41.7%;
         }
 
-        #circles .bubble.purple-sm::before {
-            background-image: linear-gradient(32.72deg, rgba(107, 10, 234, 0.6) -25.75%, rgba(107, 10, 234, 0.6) 50.03%, rgba(251, 73, 255, 0.6) 121.21%);
+        #circles #data-science {
+            left: 33%;
+            top: 12.2em;
+            padding: 2.7em;
+        }
+
+        #circles #big-data {
+            left: 49.4%;
+            top: 18.7em;
+            padding: 3.8em;
+        }
+
+        #circles #qlik {
+            left: 41.9%;
+            top: 8.6em;
+        }
+
+        #circles #parse {
+            left: 51.7%;
+            top: 6em;
+        }
+
+        #circles #sentinelone {
+            left: 42.3%;
+            top: 20em;
+            padding: .5em;
+        }
+
+        #circles #qlik>img,
+        #circles #parse>img {
+            width: 4.2em;
+        }
+
+        #circles #sentinelone>img {
+            width: 7em;
+        }
+
+        #circles #solutions {
+            left: 44.8%;
+            top: 7.2em;
+            padding: 5em;
+        }
+
+        #circles #brand-new {
+            left: 32.8%;
+            top: 8.6em;
+            padding: 1.2em;
+        }
+
+        #auriga #op>div:first-child {
+            padding: 0 6%;
+        }
+
+        @media (min-width: 768px) {
+            #circles .bubble::before {
+                content: "";
+                border-radius: 50%;
+                width: 100%;
+                height: 0;
+                padding-top: 100%;
+                position: absolute;
+                z-index: -1;
+            }
+
+            #circles .bubble.bd::before {
+                border: 1px solid #B14FFF;
+                box-shadow: 0px 0px 16px rgba(251, 73, 255, 0.4);
+            }
+
+            #circles .bubble.white::before {
+                border: 1px solid rgba(255, 255, 255, 0.32);
+            }
+
+            #circles .bubble.white::after {
+                content: "";
+                border-radius: 50%;
+                width: 110%;
+                height: 0;
+                padding-top: 110%;
+                position: absolute;
+                background-image: linear-gradient(172.41deg, #D4D7DA 36.37%, rgba(255, 255, 255, 0) 152.3%);
+                filter: drop-shadow(0px 4px 18px rgba(0, 0, 0, 0.6));
+                z-index: -1;
+            }
+
+            #circles .bubble.purple::before {
+                background-image: linear-gradient(154.61deg, #6B0AEA -75.89%, #6B0AEA 17.13%, #FB49FF 104.51%);
+                background-blend-mode: screen, normal;
+            }
+
+            #circles .bubble.purple-sm::before {
+                background-image: linear-gradient(32.72deg, rgba(107, 10, 234, 0.6) -25.75%, rgba(107, 10, 234, 0.6) 50.03%, rgba(251, 73, 255, 0.6) 121.21%);
+            }
+        }
+
+        @media (max-width: 767px) {
+            #auriga #op {
+                padding: 0;
+            }
+
+            #op p:first-child {
+                display: block;
+                font-size: 24px;
+                padding: 17px 9px 12px;
+            }
+
+            #auriga #circles {
+                padding: 8% 0;
+                min-height: auto;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 1em;
+            }
+
+            #circles>div {
+                position: relative;
+            }
+
+            #circles .bubble {
+                display: none;
+            }
+
+            #list-rows {
+                overflow: hidden;
+                padding-bottom: 10%;
+            }
+
+            #circles .bubble.white+div {
+                position: unset;
+                text-align: left;
+            }
+
+            #circles .bubble.white:not(:hover)+div {
+                opacity: 1;
+                padding: 2em 6.5%;
+                max-width: none!important;
+            }
+
+            #circles .bubble.white+div>img{
+                margin-bottom: 1.4em;
+            }
+
+            #circles .bubble.white+div>p:last-of-type{
+                font-size: 16px;
+                margin-top: .4em;
+            }
+
+            #list-rows section{
+                display: block;
+            }
+            #list-rows section>div{
+                width: auto;
+            }
         }
     </style>
 </head>
@@ -189,7 +311,8 @@
         <img id="menu-toggle" class="mx-10 my-8" src="./imgs/header-toggle.svg" />
     </header>
     <main class="relative m-auto tracking-widest leading-normal text-base">
-        <section class="relative" style="top: -108px">
+        <img class="continue-btn" src="./imgs/continue.svg" />
+        <section id="op" class="relative" style="top: -108px">
             <div class="absolute inset-0">
                 <div class="max-w-screen-lg m-auto h-full flex items-center">
                     <div>
@@ -205,7 +328,7 @@
             <div class="relative -z-10">
                 <picture>
                     <source srcset="./imgs/consultant/bg-main-mobile.png" media="(max-width: 767px)">
-                    <img src="./imgs/consultant/bg-main.jpg" />
+                    <img class="w-full:sm" src="./imgs/consultant/bg-main.jpg" />
                 </picture>
             </div>
         </section>
@@ -252,54 +375,58 @@
 
         <section id="circles">
             <div>
-                <div class="bubble bd" style="left: 41.7%;">
+                <img class="hidden:lg" src="./imgs/consultant/bubbles-mobile.png" />
+
+                <div class="bubble bd" id="data-visual">
                     <div>
-                        <p>Date Visualization</p>
+                        <p>Data Visualization</p>
                         <p>資料視覺化</p>
                     </div>
                 </div>
-                <div class="bubble bd" style="left: 33%; top: 12.2em; padding: 2.7em;">
+                <div class="bubble bd" id="data-science">
                     <div>
-                        <p>Date Science</p>
+                        <p>Data Science</p>
                         <p>資料科學</p>
                     </div>
                 </div>
-                <div class="bubble bd" style="left: 49.4%; top: 18.7em; padding: 3.8em;">
+                <div class="bubble bd" id="big-data">
                     <div>
                         <p>Big Data</p>
                         <p>資料視覺化</p>
                     </div>
                 </div>
-                <div class="bubble white" style="left: 41.9%; top: 8.6em;">
-                    <img src="./imgs/consultant/qlik.png" style="width: 4.2em;">
+                <div class="bubble white" id="parse">
+                    <img src="./imgs/consultant/parse.png">
                 </div>
-                <div class="absolute text-right" style="left: 18.7%; top: 2em;">
-                    <p class="light-green">大數據分析解決方案</p>
-                    <p>用於財務、官方報表、大資料量統計</p>
-                </div>
-                <div class="bubble white" style="left: 51.7%; top: 6em;">
-                    <img src="./imgs/consultant/parse.png" style="width: 4.2em;">
-                </div>
-
                 <div class="absolute" style="left: 67.7%;">
+                    <img class="hidden:lg" src="./imgs/consultant/parse.png">
                     <p class="light-green">強大的分析器引擎</p>
                     <p>將數據轉換為多種格式。<br>並使用可視化工具呈現完整的數據流。</p>
                 </div>
-                <div class="bubble white" style="left: 42.3%; top: 20em; padding: .5em;">
-                    <img src="./imgs/consultant/sentinelone.svg" style="width: 7em;">
+                <div class="bubble white" id="qlik">
+                    <img src="./imgs/consultant/qlik.png">
+                </div>
+                <div class="absolute text-right" style="left: 18.7%; top: 2em;">
+                    <img class="hidden:lg" src="./imgs/consultant/qlik.png">
+                    <p class="light-green">大數據分析解決方案</p>
+                    <p>用於財務、官方報表、大資料量統計</p>
+                </div>
+                <div class="bubble white" id="sentinelone">
+                    <img src="./imgs/consultant/sentinelone.svg">
                 </div>
                 <div class="absolute text-right" style="left: 16.7%; top: 26em; max-width: 19em;">
+                    <img class="hidden:lg" src="./imgs/consultant/sentinelone.svg">
                     <p class="light-green">次世代防禦軟體解決方案 </p>
                     <p>金融業、電信業、製造業、運輸業、醫療保健與政府單位等不同領域成功導入</p>
                 </div>
-                <div class="bubble purple" style="left: 44.8%; top: 7.2em; padding: 5em;">
+                <div class="bubble purple" id="solutions">
                     <div>
                         <p style="font-size: 1.5em;">安創資訊</p>
                         <p>安全解決方案</p>
                     </div>
                     <img class="absolute inset-0 opacity-20 pointer-events-none" src="./imgs/consultant/vortex.png" />
                 </div>
-                <div class="bubble purple" style="left: 32.8%; top: 8.6em; padding: 1.2em;">
+                <div class="bubble purple" id="brand-new">
                     <p style="font-size: .9em;">創新<br>應用</p>
                 </div>
                 <div class="bubble purple-sm" style="left: 29.4%; top: 10.4em;"></div>
@@ -356,19 +483,22 @@
             var canvas, ctx;
 
             document.querySelectorAll('.bubble.white').forEach(ele => ele.addEventListener('mouseenter', e => {
-                canvas = document.createElement('canvas');
-                canvas.setAttribute('width', document.getElementById('circles').clientWidth);
-                canvas.setAttribute('height', document.getElementById('circles').clientHeight);
-                canvas.classList.add('pointer-events-none', 'absolute', 'z-30', 'cus-shadow');
-                document.getElementById('circles').append(canvas);
-                ctx = canvas.getContext('2d');
-                draw1(e.target);
-
+                if (window.innerWidth > 767) {
+                    canvas = document.createElement('canvas');
+                    canvas.setAttribute('width', document.getElementById('circles').clientWidth);
+                    canvas.setAttribute('height', document.getElementById('circles').clientHeight);
+                    canvas.classList.add('pointer-events-none', 'absolute', 'z-30', 'cus-shadow');
+                    document.getElementById('circles').append(canvas);
+                    ctx = canvas.getContext('2d');
+                    draw1(e.target);
+                }
             }));
 
             document.querySelectorAll('.bubble.white').forEach(ele => ele.addEventListener('mouseleave', e => {
                 //ctx.clearRect(0, 0, canvas.width, canvas.height);
-                canvas.remove();
+                if (canvas) {
+                    canvas.remove();
+                }
             }));
 
             function draw1(target) {
@@ -390,7 +520,7 @@
                 if (wrapper.clientWidth / 2 > toX) {
                     toX = dest.getBoundingClientRect().right + 16;
                 }
-                let toY = dest.offsetTop + parent.offsetTop + dest.querySelector('p:first-child').clientHeight / 2;
+                let toY = dest.offsetTop + parent.offsetTop + dest.querySelector('p:first-of-type').clientHeight / 2;
 
                 AurigaConfigs.pts = [
                     {

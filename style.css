@@ -1044,7 +1044,9 @@ i.hexagon::before {
 }
 
 @media (min-width: 768px) {
-
+    .hidden\:lg {
+        display: none;
+    }
     header nav li:hover::after {
         left: 0;
         bottom: -.3em;
@@ -1135,10 +1137,6 @@ i.hexagon::before {
     #auriga footer ul {
         flex-direction: column;
         gap: 2em;
-    }
-
-    #list-rows {
-        overflow: hidden;
     }
 }
 
