@@ -138,6 +138,14 @@ document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('menu-toggle').onclick = e => {
         document.querySelector('#auriga>header').classList.toggle('active');
     };
+
+    document.querySelectorAll('.continue-btn').forEach(ele => ele.addEventListener('click', () => {
+        window.scroll({
+            top: document.querySelector('main>section:first-of-type+*').offsetTop - 30,
+            behavior: 'smooth'
+        });
+        //document.querySelector('main>section:nth-of-type(2)').scrollIntoView({ behavior: "smooth" })
+    }));
 });
 
 // window.addEventListener('scroll', () => {

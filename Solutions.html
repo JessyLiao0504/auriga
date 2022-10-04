@@ -15,6 +15,9 @@
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://use.typekit.net/jmd1jtv.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@100;400&family=Noto+Sans+TC&family=Roboto&display=swap" rel="stylesheet">
     <script src="./js/main.min.js"></script>
 
     <style type="text/css">
@@ -27,8 +30,8 @@
             top: -108px;
         }
 
-        body main>section:first-child {
-            padding-top: 9%;
+        body main>section:first-of-type {
+            padding-top: 5%;
             padding-bottom: 16%;
             margin-bottom: 3%;
         }
@@ -406,7 +409,8 @@
         </nav>
         <img id="menu-toggle" class="mx-10 my-8" src="./imgs/header-toggle.svg" />
     </header>
-    <main class="m-auto tracking-widest leading-normal text-base">
+    <main class="relative m-auto tracking-widest leading-normal text-base">
+        <img class="continue-btn" src="./imgs/continue.svg" />
         <section class="relative">
             <div class="max-w-screen-lg m-auto">
                 <p class="border py-2 px-16 mb-16 inline-block text-4xl light-green font-din hidden:sm">New World ・ New
@@ -419,7 +423,7 @@
                 <button type="button" class="py-4 px-16 btn-purple rounded">2022 MITAC 結果</button>
             </div>
             <div class="absolute inset-0 -z-10" id="first-bg">
-                <div class="sticky w-full" id="para-bg"></div>
+                <!-- <div class="sticky w-full" id="para-bg"></div> -->
             </div>
         </section>
 

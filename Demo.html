@@ -15,16 +15,23 @@
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://use.typekit.net/jmd1jtv.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@100;400&family=Noto+Sans+TC&family=Roboto&display=swap"
+        rel="stylesheet">
     <script src="./js/main.min.js"></script>
 
     <style type="text/css">
-        h1{
+        h1 {
             font-size: 48px;
         }
-        h2{
+
+        h2 {
             font-size: 20px;
             font-weight: 400;
         }
+
         label {
             display: block;
             line-height: 3;
@@ -73,13 +80,15 @@
             flex-shrink: 0;
         }
 
-        .form form>p:last-child{
+        .form form>p:last-child {
             font-size: 12px;
+            color: #9E9E9E;
         }
 
-        main li{
+        main li {
             margin-bottom: 2.5rem;
         }
+
         main li::before {
             content: "";
             display: block;
@@ -91,10 +100,29 @@
         }
 
         @media screen and (max-width: 767px) {
-            .form{
-                width: 100%;
+            main>section:first-of-type{
+                margin-top: 0;
+                line-height: 2;
             }
-            .flex>p{
+            main>section:first-of-type h1{
+                font-size: 36px;
+            }
+            .form {
+                width: 100%;
+                margin-top: 4em;
+            }
+
+            .form label {
+                margin-bottom: .4em;
+            }
+
+            .send button{
+                font-size: 24px;
+                width: 86%;
+                margin: 1.2em auto;
+            }
+
+            .flex>p {
                 font-size: 16px;
             }
         }
@@ -117,12 +145,12 @@
         <img id="menu-toggle" class="mx-10 my-8" src="./imgs/header-toggle.svg" />
     </header>
     <main class="relative m-auto tracking-widest leading-normal text-base">
-        <section class="max-w-screen-xl mx-auto mt-12 mb-32 flex gap-12 justify-between block:sm">
+        <section class="max-w-screen-xl mx-auto mt-12 mb-24 flex gap-12 justify-between block:sm">
             <div>
                 <h1 class="font-din mb-4">Demo Request</h1>
                 <h2 class="mb-6">馬上體驗高效率、全面性與高準確度的資訊安全服務</h2>
                 <p class="mb-12">若您有興趣體驗 SentinelOne Singularity<br>煩請填妥右側資訊﹐我們將派專人與您聯繫 謝謝</p>
-                <ul class="pr-3/10 mt-16">
+                <ul class="pr-3/10 mt-16 p-0:sm">
                     <li>最大化探索企業環境架構、提供高可視性，全面掌握企業內部所有可能的資安風險</li>
                     <li>AI 偵測模組、全自動化事件處理、一鍵還原。有效防護所有層面的威脅事件</li>
                     <li>專利 Storyline 技術、串聯並完整呈現威脅事件。降低後續調查作業時間與人力耗損</li>
