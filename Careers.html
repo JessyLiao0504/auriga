@@ -199,46 +199,86 @@
                 margin-bottom: 2.6em;
             }
 
-            #freelan>p{
+            #freelan>p {
                 max-width: 72%;
                 text-align: justify;
                 line-height: 1.8;
             }
 
-            #auriga .cards{
+            #auriga .cards {
                 padding: 0;
             }
 
-            .info-card .card-wrap{
+            .info-card .card-wrap {
                 display: block;
             }
 
-            .info-card .card-block{
+            .info-card .card-block {
                 width: auto;
                 line-height: 1.8;
             }
 
-            .info-card .card-wrap{
-                padding: 6% 13%;
+            .info-card .card-block::after{
+                content: "";
+                display: block;
+                border-top: 1px solid #88C2B1;
+                margin-top: 1.8em;
             }
-            .card-wrap h3{
+
+            .info-card .card-wrap {
+                padding: 6% 13%;
+                padding-top: 20%;
+            }
+
+            .card-wrap h3 {
                 font-size: 24px;
             }
 
-            .info-card .bonus{
-                position: unset;
+            .info-card .bonus {
                 justify-content: center;
                 gap: .8em;
+                left: 0;
+                right: 0;
             }
 
-            .info-card .bonus ul>li{
+            .info-card .bonus ul>li {
                 margin: 0;
+            }
+
+            .info-card .bonus ul>li:last-of-type {
+                padding-right: 2.2em;
             }
 
             .info-card .card-wrap::before,
             .info-card .bonus ul::before,
-            .info-card .bonus ul>li::before{
+            .info-card .bonus ul>li::before {
                 display: none;
+            }
+
+            .card-title {
+                left: 2rem;
+                right: 40%;
+                clip-path: polygon(0% 0%, 80% 0%, 84% 1%, 86% 3%, 100% 50%, 100% 100%, 0% 100%);
+                transform: translateX(0.6em);
+                border-radius: 0.6em;
+                font-size: 18px;
+                padding: 6px 0.6em;
+                line-height: 1.3;
+                word-spacing: normal;
+                text-align: left;
+                background-image: linear-gradient(-180deg, #39F0BA -2.34%, #11001D 61.8%);
+            }
+            .info-card:hover .card-title{
+                transform: translateX(0.6em) scale(1.03);
+            }
+            .info-card .card-block li{
+                letter-spacing: normal;
+            }
+            .info-card ul>li::before{
+                margin-right: .6em;
+            }
+            .card-title>span{
+                display: block;
             }
         }
     </style>
@@ -314,7 +354,7 @@
                     <source srcset="./imgs/careers/card-mobile.png" media="(max-width: 767px)" />
                     <img class="w-full" src="./imgs/careers/card.svg" />
                 </picture>
-                <div class="card-title">SentinelOne Presale 顧問</div>
+                <div class="card-title"><span>SentinelOne Presale </span><span>顧問</span></div>
                 <div class="card-wrap">
                     <div class="card-block">
                         <h3 class="quote font-din text-4xl mb-4">Job Description : </h3>
@@ -352,7 +392,7 @@
                     <source srcset="./imgs/careers/card-mobile.png" media="(max-width: 767px)" />
                     <img class="w-full" src="./imgs/careers/card.svg" />
                 </picture>
-                <div class="card-title">SentinelOne 資安產品工程師</div>
+                <div class="card-title"><span>SentinelOne </span><span>資安產品工程師</span></div>
                 <div class="card-wrap">
                     <div class="card-block">
                         <h3 class="quote font-din text-4xl mb-4">Job Description : </h3>
@@ -390,7 +430,7 @@
                     <source srcset="./imgs/careers/card-mobile.png" media="(max-width: 767px)" />
                     <img class="w-full" src="./imgs/careers/card.svg" />
                 </picture>
-                <div class="card-title">Sales 業務</div>
+                <div class="card-title"><span>Sales </span><span>業務</span></div>
                 <div class="card-wrap">
                     <div class="card-block">
                         <h3 class="quote font-din text-4xl mb-4">Job Description : </h3>
