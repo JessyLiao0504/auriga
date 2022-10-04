@@ -197,6 +197,7 @@
                 background-position: center;
                 background-size: cover;
                 margin-bottom: 2.6em;
+                min-height: auto;
             }
 
             #freelan>p {
@@ -218,7 +219,7 @@
                 line-height: 1.8;
             }
 
-            .info-card .card-block::after{
+            .info-card .card-block::after {
                 content: "";
                 display: block;
                 border-top: 1px solid #88C2B1;
@@ -268,17 +269,35 @@
                 text-align: left;
                 background-image: linear-gradient(-180deg, #39F0BA -2.34%, #11001D 61.8%);
             }
-            .info-card:hover .card-title{
+
+            .info-card:hover .card-title {
                 transform: translateX(0.6em) scale(1.03);
             }
-            .info-card .card-block li{
+
+            .info-card .card-block li {
                 letter-spacing: normal;
             }
-            .info-card ul>li::before{
+
+            .info-card ul>li::before {
                 margin-right: .6em;
             }
-            .card-title>span{
+
+            .card-title>span {
                 display: block;
+            }
+
+            .mb-24,
+            .mb-28 {
+                margin-bottom: 4rem;
+            }
+
+            .send {
+                margin-top: 2.6em;
+                margin-bottom: 2.6em;
+            }
+
+            .send button {
+                width: 86%;
             }
         }
     </style>
