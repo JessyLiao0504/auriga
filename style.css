@@ -1165,6 +1165,18 @@ i.hexagon::before {
         align-self: flex-start;
     }
 
+    header nav .has-sub:not(:hover)::after{
+        position: absolute;
+    }
+
+    header nav .submenu{
+        padding-top: .8em;
+        padding-bottom: 0;
+    }
+    header nav .submenu>li{
+        margin-bottom: .6em;
+    }
+
     header>div img {
         height: 2.5rem;
     }
