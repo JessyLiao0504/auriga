@@ -288,6 +288,10 @@ main>section:first-of-type {
     align-self: center;
 }
 
+.self-start{
+    align-self: start;
+}
+
 .gap-4 {
     gap: 1rem;
 }
@@ -1080,6 +1084,10 @@ i.hexagon::before {
 
     .p-0\:sm {
         padding: 0;
+    }
+
+    .self-start\:sm{
+        align-self: flex-start;
     }
 
     #auriga>header>img {
