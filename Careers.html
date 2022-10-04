@@ -196,6 +196,49 @@
                 background-image: url(./imgs/careers/bg-main-mobile.svg);
                 background-position: center;
                 background-size: cover;
+                margin-bottom: 2.6em;
+            }
+
+            #freelan>p{
+                max-width: 72%;
+                text-align: justify;
+                line-height: 1.8;
+            }
+
+            #auriga .cards{
+                padding: 0;
+            }
+
+            .info-card .card-wrap{
+                display: block;
+            }
+
+            .info-card .card-block{
+                width: auto;
+                line-height: 1.8;
+            }
+
+            .info-card .card-wrap{
+                padding: 6% 13%;
+            }
+            .card-wrap h3{
+                font-size: 24px;
+            }
+
+            .info-card .bonus{
+                position: unset;
+                justify-content: center;
+                gap: .8em;
+            }
+
+            .info-card .bonus ul>li{
+                margin: 0;
+            }
+
+            .info-card .card-wrap::before,
+            .info-card .bonus ul::before,
+            .info-card .bonus ul>li::before{
+                display: none;
             }
         }
     </style>
@@ -249,7 +292,7 @@
             </div>
         </section>
 
-        <section class="max-w-screen-xl m-auto relative mb-24 text-center leading-9">
+        <section id="freelan" class="max-w-screen-xl m-auto relative mb-24 text-center leading-9">
             <p class="absolute inset-0 border-bg-p flex items-center justify-center">
                 近期團隊因專案需求，需要徵求「資安工程師」、「資安產品工程師」等相關的正職人員或是自由工作者（Freelancer），我們擔心因為想像力不足而錯過了你，其實可以忽略下面我們先入為主的設定。<br>
                 如果你對資安有興趣﹐覺得自己可以在這個團隊中勝任某個角色或維持某種合作關係，請將你的想法與經歷與我們分享。</p>
@@ -265,9 +308,12 @@
             <p class="leading-loose">無預設合作模式，<a href="mailto:info@aurigasec.com">請先來信</a><br>讓我們有機會認識你與得知可能的配合方式</p>
         </div>
 
-        <section class="max-w-screen-xl m-auto mb-28">
+        <section class="max-w-screen-xl m-auto mb-28 cards">
             <div class="info-card px-8">
-                <img class="w-full" src="./imgs/careers/card.svg" />
+                <picture>
+                    <source srcset="./imgs/careers/card-mobile.png" media="(max-width: 767px)" />
+                    <img class="w-full" src="./imgs/careers/card.svg" />
+                </picture>
                 <div class="card-title">SentinelOne Presale 顧問</div>
                 <div class="card-wrap">
                     <div class="card-block">
@@ -293,16 +339,19 @@
                 </div>
                 <div class="bonus">
                     <span class="light-green">加分項目</span>
-                    <ul class="flex">
+                    <ul class="flex block:sm">
                         <li>資安相關證照</li>
                         <li>個性外向不害怕新奇事物</li>
                     </ul>
                 </div>
             </div>
         </section>
-        <section class="max-w-screen-xl m-auto mb-28">
+        <section class="max-w-screen-xl m-auto mb-28 cards">
             <div class="info-card px-8">
-                <img class="w-full" src="./imgs/careers/card.svg" />
+                <picture>
+                    <source srcset="./imgs/careers/card-mobile.png" media="(max-width: 767px)" />
+                    <img class="w-full" src="./imgs/careers/card.svg" />
+                </picture>
                 <div class="card-title">SentinelOne 資安產品工程師</div>
                 <div class="card-wrap">
                     <div class="card-block">
@@ -328,16 +377,19 @@
                 </div>
                 <div class="bonus">
                     <span class="light-green">加分項目</span>
-                    <ul class="flex">
+                    <ul class="flex block:sm">
                         <li>資安相關證照</li>
                         <li>個性外向不害怕新奇事物</li>
                     </ul>
                 </div>
             </div>
         </section>
-        <section class="max-w-screen-xl m-auto mb-28">
+        <section class="max-w-screen-xl m-auto mb-28 cards">
             <div class="info-card px-8">
-                <img class="w-full" src="./imgs/careers/card.svg" />
+                <picture>
+                    <source srcset="./imgs/careers/card-mobile.png" media="(max-width: 767px)" />
+                    <img class="w-full" src="./imgs/careers/card.svg" />
+                </picture>
                 <div class="card-title">Sales 業務</div>
                 <div class="card-wrap">
                     <div class="card-block">
@@ -363,7 +415,7 @@
                 </div>
                 <div class="bonus">
                     <span class="light-green">加分項目</span>
-                    <ul class="flex">
+                    <ul class="flex block:sm">
                         <li>資安相關證照</li>
                         <li>個性外向不害怕新奇事物</li>
                     </ul>
