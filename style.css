@@ -101,6 +101,13 @@ header nav li:not(.active) {
     color: #9F9F9F;
 }
 
+header nav .submenu{
+}
+
+header nav li:not(:hover) .submenu{
+    display: none;
+}
+
 main>section:first-of-type {
     min-height: calc(100vh - 108px);
 }
@@ -1057,7 +1064,7 @@ i.hexagon::before {
     .hidden\:lg {
         display: none;
     }
-    header nav li:hover::after {
+    header nav li:not(.has-sub):hover::after {
         left: 0;
         bottom: -.3em;
         width: 100%;
