@@ -1076,17 +1076,30 @@ i.hexagon::before {
     cursor: pointer;
 }
 header nav li .submenu {
-    transition: all .8s;
+    transition: all .6s;
     overflow: hidden;
     
     height: 6em;
 }
 header nav li:not(:hover) .submenu {
+    transition: all .15s;
     position: relative;
     transform: translateY(-.8em);
     opacity: 0;
     height: 0;
     padding: 0;
+}
+
+.send button::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    border: 4px solid;
+    border-image-source: linear-gradient(280.39deg, rgba(107, 10, 234, 0.5) 31.98%, rgba(107, 10, 234, 0.5) 70.71%, rgba(251, 73, 255, 0.5) 107.09%);
+    border-image-slice: 1;
 }
 
 @media (min-width: 768px) {
