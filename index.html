@@ -258,6 +258,8 @@
             #welcome-a{
                 animation: welcome linear var(--welcome-duration) forwards;
                 animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1);
+                display: inline-block;
+                transform-origin: left;
             }
 
             #to-a{
@@ -297,7 +299,7 @@
 
         @keyframes welcome {
             from {
-                font-size: 27vw;
+                transform: scale(3.1);
             }
         }
 
