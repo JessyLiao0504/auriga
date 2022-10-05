@@ -1126,7 +1126,8 @@ header nav li:not(:hover) .submenu {
 
 
 
-    #auriga>header>img {
+    #auriga>header>img,
+    #menu-toggle {
         display: none;
     }
 }
