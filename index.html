@@ -254,6 +254,79 @@
                 margin-bottom: 1.4em;
                 text-align: left;
             }
+
+            #welcome-a{
+                animation: welcome ease-out var(--welcome-duration) forwards;
+            }
+
+            #to-a{
+                display: inline-block;
+                margin-left: .3em;
+                opacity: 0;
+                height: 0;
+                transform: translateX(50vw);
+                animation: to var(--to-duration) var(--welcome-duration) forwards;
+            }
+
+            #arrows-a{
+                animation: arrows var(--arrows-duration) 2.1s forwards;
+                opacity: 0;
+                transform: translateY(50vh);
+                margin-bottom: 1.4em;
+            }
+
+            #logo-a{
+                opacity: 0;
+                width: 0;
+                animation: logo 1s 2.9s forwards;
+            }
+
+            #text-a{
+                opacity: 0;
+                animation: text .8s 3.9s forwards;
+                transform: translateY(20vh);
+            }
+        }
+
+        :root{
+            --welcome-duration: 1.4s;
+            --to-duration: .7s;
+            --arrows-duration: .8s;
+        }
+
+        @keyframes welcome {
+            from {
+                font-size: 27vw;
+            }
+        }
+
+        @keyframes to {
+            to{
+                transform: none;
+                opacity: 1;
+                height: auto;
+            }
+        }
+
+        @keyframes arrows {
+            to {
+                opacity: 1;
+                transform: none;
+            }
+        }
+
+        @keyframes logo {
+            to{
+                width: 100%;
+                opacity: 1;
+            }
+        }
+
+        @keyframes text {
+            to{
+                opacity: 1;
+                transform: none;
+            }
         }
     </style>
     <script>
@@ -294,15 +367,15 @@
         <section id="welcome" class="max-w-screen-lg m-auto flex">
             <div class="flex justify-between w-full">
                 <div>
-                    <p class="font-din text-4xl"><span>WELCOME</span><span> to</span></p>
-                    <img width="400" src="imgs/logo.svg">
-                    <div class="flex justify-end items-center text-xl mt-6">
+                    <p class="font-din text-4xl"><span id="welcome-a">WELCOME</span><span id="to-a"> to</span></p>
+                    <img id="logo-a" width="400" src="imgs/logo.svg">
+                    <div id="arrows-a" class="flex justify-end items-center text-xl mt-6">
                         <div class="flex-grow border-t border-light-blue"></div>
                         <img class="h-text" src="./imgs/our-team/arrows.svg" />
                         <span class="ml-4 tracking-text">安創資訊</span>
                     </div>
                 </div>
-                <div style="max-width: 510px;">
+                <div id="text-a" style="max-width: 510px;">
                     <h2 class="font-din mb-4"><strong>Serve Security</strong> With More Than<br>Just Professionalism
                     </h2>
                     <p class="leading-9 text-justify">
