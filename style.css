@@ -1095,7 +1095,7 @@ header nav li:not(:hover) .submenu {
     }
 
     header nav li {
-        height: 1.5em;
+        height: 1.6em;
     }
 
     header nav li:not(.has-sub):hover::after {
