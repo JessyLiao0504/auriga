@@ -1168,9 +1168,17 @@ header nav li:not(:hover) .submenu {
         height: 22px;
     }
 
+    header.active #menu-toggle img{
+        transition: opacity 1s;
+        opacity: 1;
+    }
+
     header.active #menu-toggle img:not(.close),
     header:not(.active) #menu-toggle img.close{
-        display: none;
+        opacity: 0;
+        width: 0;
+        margin: 0;
+        position: absolute;
     }
 
     #auriga>main>section,
