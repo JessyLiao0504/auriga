@@ -1156,10 +1156,20 @@ header nav li:not(:hover) .submenu {
         align-self: flex-start;
     }
 
-    #auriga>header>img {
+    #menu-toggle {
         position: absolute;
         top: 0;
         right: 0;
+    }
+
+    #menu-toggle img{
+        width: auto;
+        height: 22px;
+    }
+
+    header.active #menu-toggle img:not(.close),
+    header:not(.active) #menu-toggle img.close{
+        display: none;
     }
 
     #auriga>main>section,
