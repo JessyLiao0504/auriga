@@ -112,7 +112,7 @@ header nav .submenu>li {
     margin-bottom: .4em;
 }
 
-header nav .has-sub:not(:hover)::after {
+header nav .has-sub>span::after {
     content: ">";
     display: inline-block;
     transform: rotate(90deg) scaleY(1.4) translateX(-2px);
@@ -1075,6 +1075,19 @@ i.hexagon::before {
     z-index: 10;
     cursor: pointer;
 }
+header nav li .submenu {
+    transition: all .8s;
+    overflow: hidden;
+    
+    height: 6em;
+}
+header nav li:not(:hover) .submenu {
+    position: relative;
+    transform: translateY(-.8em);
+    opacity: 0;
+    height: 0;
+    padding: 0;
+}
 
 @media (min-width: 768px) {
     .hidden\:lg {
@@ -1099,9 +1112,6 @@ i.hexagon::before {
     }
 
 
-    header nav li:not(:hover) .submenu {
-        display: none;
-    }
 
     #auriga>header>img {
         display: none;
@@ -1165,15 +1175,16 @@ i.hexagon::before {
         align-self: flex-start;
     }
 
-    header nav .has-sub:not(:hover)::after{
+    header nav .has-sub:not(:hover)::after {
         position: absolute;
     }
 
-    header nav .submenu{
+    header nav .submenu {
         padding-top: .8em;
         padding-bottom: 0;
     }
-    header nav .submenu>li{
+
+    header nav .submenu>li {
         margin-bottom: .6em;
     }
 
