@@ -88,7 +88,7 @@ header nav li::after {
     transition: width .4s;
 }
 
-header nav li.active::after {
+header nav>ul> li.active::after {
     content: "";
     position: absolute;
     left: 0;
@@ -1075,12 +1075,13 @@ i.hexagon::before {
     z-index: 10;
     cursor: pointer;
 }
+
 header nav li .submenu {
     transition: all .6s;
-    overflow: hidden;
-    
+    overflow: unset;
     height: 6em;
 }
+
 header nav li:not(:hover) .submenu {
     transition: all .15s;
     position: relative;
@@ -1090,7 +1091,7 @@ header nav li:not(:hover) .submenu {
     padding: 0;
 }
 
-.send button::before{
+.send button::before {
     content: "";
     position: absolute;
     left: 0;
@@ -1107,11 +1108,29 @@ header nav li:not(:hover) .submenu {
         display: none;
     }
 
+    header nav li .submenu {
+        backdrop-filter: blur(2px);
+        filter: drop-shadow(0px 0px 14px rgba(251, 73, 255, 0.25));
+        padding: 1.8em 1.4em 1.2em;
+        height: auto;
+    }
+
+    header nav li .submenu::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        background-color: rgba(22, 22, 22, 0.6);
+        clip-path: polygon(0% 10%, 40% 10%, 50% 0%, 60% 10%, 100% 10%, 100% 100%, 0% 100%);
+    }
+
     header nav li {
         height: 1.6em;
     }
 
-    header nav li:not(.has-sub):hover::after {
+    header nav>ul>li:not(.has-sub):hover::after {
         left: 0;
         bottom: -.3em;
         width: 100%;
@@ -1123,8 +1142,6 @@ header nav li:not(:hover) .submenu {
     header nav li.active.has-sub:hover::after {
         display: none;
     }
-
-
 
     #auriga>header>img,
     #menu-toggle {
@@ -1163,18 +1180,18 @@ header nav li:not(:hover) .submenu {
         right: 0;
     }
 
-    #menu-toggle img{
+    #menu-toggle img {
         width: auto;
         height: 22px;
     }
 
-    header.active #menu-toggle img{
+    header.active #menu-toggle img {
         transition: opacity 1s;
         opacity: 1;
     }
 
     header.active #menu-toggle img:not(.close),
-    header:not(.active) #menu-toggle img.close{
+    header:not(.active) #menu-toggle img.close {
         opacity: 0;
         width: 0;
         margin: 0;
