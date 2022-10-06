@@ -88,7 +88,7 @@ header nav li::after {
     transition: width .4s;
 }
 
-header nav>ul> li.active::after {
+header nav>ul>li.active::after {
     content: "";
     position: absolute;
     left: 0;
@@ -409,7 +409,7 @@ main>section:first-of-type {
 }
 
 .font-din.px-10 {
-    padding-left: 4rem;
+    padding-left: 3.4rem;
 }
 
 .px-12,
@@ -685,6 +685,10 @@ main>section:first-of-type {
 
 .last-justify {
     text-align-last: justify;
+}
+
+.underline {
+    text-decoration: underline;
 }
 
 .text-sm {

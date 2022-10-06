@@ -158,6 +158,13 @@
             margin-left: .2em;
         }
 
+        @media screen and (min-width: 768px) {
+            #time-to{
+                display: inline-block;
+                transform: rotate(90deg);
+            }
+        }
+
         @media screen and (max-width: 767px) {
             #job-info {
                 gap: 2%;
@@ -193,7 +200,6 @@
 
             #freelan>p {
                 max-width: 72%;
-                text-align: justify;
                 line-height: 1.8;
             }
 
@@ -340,7 +346,7 @@
                 <div class="border-2 border-light-green rounded-md px-6 py-8 flex flex-col bg-dark">
                     <h2 class="mb-4">上班時段</h2>
                     <div class="flex flex-col flex-grow items-center justify-evenly self-center">
-                        <p class="text-lg self-start:sm">10:00<br> ▸ <br>19:00</p>
+                        <p class="text-lg self-start:sm">10:00<br><span id="time-to"> ▸ </span><br>19:00</p>
                         <p>可自行選擇有效率且可與同事合作的八小時彈性時數工作</p>
                     </div>
                 </div>
@@ -352,7 +358,7 @@
         </section>
 
         <section id="freelan" class="max-w-screen-xl m-auto relative mb-24 text-center leading-9">
-            <p class="absolute inset-0 border-bg-p flex items-center justify-center">
+            <p class="absolute inset-0 border-bg-p flex items-center justify-center text-justify">
                 近期團隊因專案需求，需要徵求「資安工程師」、「資安產品工程師」等相關的正職人員或是自由工作者（Freelancer），我們擔心因為想像力不足而錯過了你，其實可以忽略下面我們先入為主的設定。<br>
                 如果你對資安有興趣﹐覺得自己可以在這個團隊中勝任某個角色或維持某種合作關係，請將你的想法與經歷與我們分享。</p>
             <picture>
@@ -364,7 +370,7 @@
         <div class="text-center mb-28">
             <p class="mb-4"><span>約聘</span><i class="hexagon p-1-before mx-6"></i><span>兼職</span><i
                     class="hexagon p-1-before mx-6"></i><span>專案制</span></p>
-            <p class="leading-loose">無預設合作模式，<a href="mailto:info@aurigasec.com">請先來信</a><br>讓我們有機會認識你與得知可能的配合方式</p>
+            <p class="leading-loose">無預設合作模式，<a class="light-green underline" href="mailto:info@aurigasec.com">請先來信</a><br>讓我們有機會認識你與得知可能的配合方式</p>
         </div>
 
         <section class="max-w-screen-xl m-auto mb-28 cards">
@@ -376,7 +382,7 @@
                 <div class="card-title"><span>SentinelOne Presale </span><span>顧問</span></div>
                 <div class="card-wrap">
                     <div class="card-block">
-                        <h3 class="quote font-din text-4xl mb-4">Job Description : </h3>
+                        <h3 class="quote font-din text-4xl mb-4">Job Description</h3>
                         <ul>
                             <li>專案規劃 ( Pre-sale )：提供產品技術 / 整合方案規劃文件及製作相關說明簡報</li>
                             <li>提供網路技術建議及技術諮詢</li>
@@ -387,7 +393,7 @@
                         </ul>
                     </div>
                     <div class="card-block">
-                        <h3 class="quote font-din text-4xl mb-4">Requirements : </h3>
+                        <h3 class="quote font-din text-4xl mb-4">Requirements</h3>
                         <ul>
                             <li>勇於溝通表達意見，邏輯思考表達能力佳</li>
                             <li>具資訊與資安相關知識與興趣</li>
@@ -414,7 +420,7 @@
                 <div class="card-title"><span>SentinelOne </span><span>資安產品工程師</span></div>
                 <div class="card-wrap">
                     <div class="card-block">
-                        <h3 class="quote font-din text-4xl mb-4">Job Description : </h3>
+                        <h3 class="quote font-din text-4xl mb-4">Job Description</h3>
                         <p>資安工程師是公司裹重要的一環﹐我們期待尋找好手一同加入我們</p>
                         <ul>
                             <li>協助客戶提升 SentinelOne 產品使用體驗 </li>
@@ -425,7 +431,7 @@
                         </ul>
                     </div>
                     <div class="card-block">
-                        <h3 class="quote font-din text-4xl mb-4">Requirements : </h3>
+                        <h3 class="quote font-din text-4xl mb-4">Requirements</h3>
                         <ul>
                             <li>勇於溝通表達意見，邏輯思考表達能力佳</li>
                             <li>具資訊與資安相關知識與興趣</li>
@@ -452,7 +458,7 @@
                 <div class="card-title"><span>Sales </span><span>業務</span></div>
                 <div class="card-wrap">
                     <div class="card-block">
-                        <h3 class="quote font-din text-4xl mb-4">Job Description : </h3>
+                        <h3 class="quote font-din text-4xl mb-4">Job Description</h3>
                         <p>喜歡產品、愛上產品﹐幫客戶解決問題是你一定要有的能力﹐跟我們跟你一起合作﹐賣最好的產品﹐做最棒的事！</p>
                         <ul>
                             <li>協助客戶提升產品使用體驗</li>
@@ -464,7 +470,7 @@
                         </ul>
                     </div>
                     <div class="card-block">
-                        <h3 class="quote font-din text-4xl mb-4">Requirements : </h3>
+                        <h3 class="quote font-din text-4xl mb-4">Requirements</h3>
                         <ul>
                             <li>勇於溝通表達意見，邏輯思考表達能力佳</li>
                             <li>具資訊與資安相關知識與興趣</li>
@@ -491,9 +497,9 @@
 
     <footer class="pb-20">
         <ul class="max-w-screen-xl m-auto flex justify-center gap-16 border-t border-light-green py-10">
-            <li class="flex"><img class="mr-6" src="./imgs/footer-marker.svg" />台北市和平東路二段163號10樓</li>
+            <li class="flex"><img class="mr-6" src="./imgs/footer-phone.svg" />+886 123-456-789</li>
             <li class="flex"><img class="mr-6" src="./imgs/footer-mail.svg" />sales@aurigasec.com</li>
-            <li class="flex"><img class="mr-6" src="./imgs/footer-phone.svg" />123-456-7890</li>
+            <li class="flex"><img class="mr-6" src="./imgs/footer-marker.svg" />台北市大安區和平東路二段163號10樓</li>
         </ul>
     </footer>
 </body>

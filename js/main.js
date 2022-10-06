@@ -53,79 +53,79 @@ function registerObserver(selector) {
     });
 }
 
-window.addEventListener('mousemove', e => {
-    aurigaConfigs.pointerX = e.pageX;
-    aurigaConfigs.pointerY = e.pageY;
+// window.addEventListener('mousemove', e => {
+//     aurigaConfigs.pointerX = e.pageX;
+//     aurigaConfigs.pointerY = e.pageY;
 
-    const elem = document.createElement('div');
-    const spread = Math.round(Math.random() * 8) + 3;
-    const blur = spread * (Math.round(Math.random() * 12) + 2);
-    const hue = Math.random() * 180;
-    const brightness = Math.random() + 0.35;
-    elem.classList.add('absolute', 'bg-light-green', 'inline-block', 'rounded-full', 'play-dot');
-    elem.style = `top: ${e.pageY}; left: ${e.pageX}; box-shadow: 0 0 ${blur}px ${spread}px rgba(57, 240, 185, .9); filter: hue-rotate(${hue}deg) brightness(${brightness});`;
+//     const elem = document.createElement('div');
+//     const spread = Math.round(Math.random() * 8) + 3;
+//     const blur = spread * (Math.round(Math.random() * 12) + 2);
+//     const hue = Math.random() * 180;
+//     const brightness = Math.random() + 0.35;
+//     elem.classList.add('absolute', 'bg-light-green', 'inline-block', 'rounded-full', 'play-dot');
+//     elem.style = `top: ${e.pageY}; left: ${e.pageX}; box-shadow: 0 0 ${blur}px ${spread}px rgba(57, 240, 185, .9); filter: hue-rotate(${hue}deg) brightness(${brightness});`;
 
-    document.getElementById('bg-play').append(elem);
-    setTimeout(function () {
-        elem.remove();
-    }, 1000);
-});
+//     document.getElementById('bg-play').append(elem);
+//     setTimeout(function () {
+//         elem.remove();
+//     }, 1000);
+// });
 
-window.addEventListener('pointerdown', holdingEffects);
-window.addEventListener('pointerup', holdingEffects);
+// window.addEventListener('pointerdown', holdingEffects);
+// window.addEventListener('pointerup', holdingEffects);
 
-var holdInt = [];
-function holdingEffects(e) {
-    if ('pointerdown' === e.type) {
-        aurigaConfigs.pointerX = e.pageX;
-        aurigaConfigs.pointerY = e.pageY;
-        holdInt.push(setInterval(() => {
-            const elem = document.createElement('div');
-            const spread = Math.round(Math.random() * 4) + 2;
-            const blur = spread * 1.5;
-            const hue = Math.random() * 180;
-            const brightness = Math.random() + 0.8;
+// var holdInt = [];
+// function holdingEffects(e) {
+//     if ('pointerdown' === e.type) {
+//         aurigaConfigs.pointerX = e.pageX;
+//         aurigaConfigs.pointerY = e.pageY;
+//         holdInt.push(setInterval(() => {
+//             const elem = document.createElement('div');
+//             const spread = Math.round(Math.random() * 4) + 2;
+//             const blur = spread * 1.5;
+//             const hue = Math.random() * 180;
+//             const brightness = Math.random() + 0.8;
 
-            // const posX = aurigaConfigs.pointerX + Math.round(Math.random() * 50) -25;
-            // const posY = aurigaConfigs.pointerY + Math.round(Math.random() * 60) -30;
-            const posX = aurigaConfigs.pointerX;
-            const posY = aurigaConfigs.pointerY;
+//             // const posX = aurigaConfigs.pointerX + Math.round(Math.random() * 50) -25;
+//             // const posY = aurigaConfigs.pointerY + Math.round(Math.random() * 60) -30;
+//             const posX = aurigaConfigs.pointerX;
+//             const posY = aurigaConfigs.pointerY;
 
-            const childElem = document.createElement('div');
-            childElem.classList.add('bg-light-green', 'rounded-full', 'play-dot-1');
-            childElem.style = `font-size: ${blur}px; box-shadow: 20px 0 ${blur}px ${spread}px rgba(100, 224, 255, 0.74); filter: hue-rotate(${hue}deg) brightness(${brightness});`;
+//             const childElem = document.createElement('div');
+//             childElem.classList.add('bg-light-green', 'rounded-full', 'play-dot-1');
+//             childElem.style = `font-size: ${blur}px; box-shadow: 20px 0 ${blur}px ${spread}px rgba(100, 224, 255, 0.74); filter: hue-rotate(${hue}deg) brightness(${brightness});`;
 
-            elem.classList.add('absolute', 'inline-block');
-            elem.style = `top: ${posY}; left: ${posX}; transform: rotate(${Math.random() * 360}deg);`;
-            elem.append(childElem);
-            document.getElementById('bg-play').append(elem);
-            setTimeout(function () {
-                elem.remove();
-            }, 1000);
-        }, 120));
-    } else {
-        holdInt.forEach(int => clearInterval(int));
-        holdInt = [];
-    }
-}
+//             elem.classList.add('absolute', 'inline-block');
+//             elem.style = `top: ${posY}; left: ${posX}; transform: rotate(${Math.random() * 360}deg);`;
+//             elem.append(childElem);
+//             document.getElementById('bg-play').append(elem);
+//             setTimeout(function () {
+//                 elem.remove();
+//             }, 1000);
+//         }, 120));
+//     } else {
+//         holdInt.forEach(int => clearInterval(int));
+//         holdInt = [];
+//     }
+// }
 
-window.addEventListener('contextmenu', () => {
-    holdInt.forEach(int => clearInterval(int));
-    holdInt = [];
-});
+// window.addEventListener('contextmenu', () => {
+//     holdInt.forEach(int => clearInterval(int));
+//     holdInt = [];
+// });
 
-window.addEventListener('lostpointercapture', () => {
-    holdInt.forEach(int => clearInterval(int));
-    holdInt = [];
-});
+// window.addEventListener('lostpointercapture', () => {
+//     holdInt.forEach(int => clearInterval(int));
+//     holdInt = [];
+// });
 
-function is_rightclick() {
-    var rightclick;
-    var e = window.event;
-    if (e.which) rightclick = (e.which == 3);
-    else if (e.button) rightclick = (e.button == 2);
-    return rightclick;
-}
+// function is_rightclick() {
+//     var rightclick;
+//     var e = window.event;
+//     if (e.which) rightclick = (e.which == 3);
+//     else if (e.button) rightclick = (e.button == 2);
+//     return rightclick;
+// }
 
 // Set things up
 window.addEventListener("load", () => {
