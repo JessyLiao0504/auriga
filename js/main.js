@@ -127,13 +127,6 @@ function registerObserver(selector) {
 //     return rightclick;
 // }
 
-// Set things up
-window.addEventListener("load", () => {
-    document.querySelectorAll(aurigaConfigs.obsSelector).forEach(e => {
-        //createObserver(e);
-    });
-}, false);
-
 document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('menu-toggle').onclick = e => {
         document.querySelector('#auriga>header').classList.toggle('active');
@@ -141,11 +134,19 @@ document.addEventListener('DOMContentLoaded', () => {
 
     document.querySelectorAll('.continue-btn').forEach(ele => ele.addEventListener('click', () => {
         window.scroll({
-            top: document.querySelector('main>section:first-of-type+*').offsetTop - 30,
+            top: document.querySelector('main>section:first-of-type+*').offsetTop - 108 - 30,
             behavior: 'smooth'
         });
         //document.querySelector('main>section:nth-of-type(2)').scrollIntoView({ behavior: "smooth" })
     }));
+
+    window.addEventListener('scroll', () => {
+        if(window.scrollY > 60){
+            document.querySelector('body>header').classList.add('bg');
+        }else{
+            document.querySelector('body>header').classList.remove('bg');
+        }
+    });
 });
 
 // window.addEventListener('scroll', () => {
