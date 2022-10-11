@@ -16,8 +16,10 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://use.typekit.net/jmd1jtv.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@100;400&family=Noto+Sans+TC&family=Roboto&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@100;400&family=Noto+Sans+TC&family=Roboto&display=swap"
+        rel="stylesheet">
     <script src="./js/main.min.js"></script>
 
     <style type="text/css">
@@ -49,7 +51,7 @@
         }
 
         #grid-blocks>div>:first-child {
-            font-size: 18px;
+            font-size: 19px;
             z-index: 10;
         }
 
@@ -133,7 +135,7 @@
 
         #grid-blocks>div p {
             transform: translateY(30%);
-            filter: brightness(0.8) opacity(0.9);
+            color: #d7d7d7;
         }
 
         #grid-blocks>div:not(:hover) .bg-hover {
@@ -234,28 +236,37 @@
         .icons-list>li .img {
             width: auto;
         }
+
+        .info-box {
+            padding: 0;
+            background-image: linear-gradient(106.81deg, #171032 5.35%, rgba(52, 44, 58, 0) 81.05%);
+        }
+
         @media screen and (max-width: 1600px) {
-            .auto-rows-6vw{
+            .auto-rows-6vw {
                 grid-auto-rows: 9vw;
             }
         }
-        @media screen and (min-width: 1151px){
-            #balls .img img{
+
+        @media screen and (min-width: 1151px) {
+            #balls .img img {
                 max-width: unset;
             }
-            #ruler{
+
+            #ruler {
                 padding: 0;
             }
         }
+
         @media screen and (max-width: 1150px) {
-            .info-box{
+            .info-box {
                 margin-left: 3%;
                 margin-right: 3%;
             }
         }
 
         @media (max-width: 1150px) and (min-width: 768px) {
-            .auto-rows-6vw{
+            .auto-rows-6vw {
                 grid-auto-rows: 16vw;
             }
         }
@@ -263,6 +274,22 @@
         @media screen and (min-width: 768px) {
             .icons-list>li>.img {
                 grid-row: 1 / span 2;
+            }
+
+            li:last-child .img img {
+                transform: translateX(-8px);
+            }
+
+            .info-box>* {
+                padding: 2em 2.4em;
+            }
+
+            .info-box>div:first-child {
+                padding-right: 3%;
+            }
+
+            .info-box>:last-child {
+                background-image: linear-gradient(106.81deg, rgba(14, 0, 28, 0.56) 5.35%, rgba(52, 44, 58, 0) 81.05%);
             }
         }
 
@@ -353,35 +380,40 @@
                 transform: translateY(-2.2em);
             }
 
-            #auriga #balls{
+            #auriga #balls {
                 display: block;
                 padding: 0 16%;
             }
 
-            #auriga #balls>div>img{
+            #auriga #balls>div>img {
                 margin-top: 0;
             }
-            #auriga #balls>div{
+
+            #auriga #balls>div {
                 margin-top: 6em;
                 margin-bottom: 8em;
             }
 
-            #dt-slider ul{
+            #dt-slider ul {
                 overflow: auto;
             }
-            .dot-purple-wrap{
+
+            .dot-purple-wrap {
                 display: flex;
                 align-items: center;
             }
-            #auriga .info-box{
+
+            #auriga .info-box {
                 display: block;
                 padding: 8%;
                 margin: 3em 6%;
             }
-            #auriga .info-box ul{
+
+            #auriga .info-box ul {
                 grid-template-columns: repeat(2, minmax(0, 1fr));
             }
-            .grid-list li:nth-child(even)>div::after{
+
+            .grid-list li:nth-child(even)>div::after {
                 display: none;
             }
         }
@@ -407,7 +439,7 @@
 
         window.addEventListener('scroll', () => {
             const para = document.querySelector('body main>section:first-of-type').getBoundingClientRect();
-            document.querySelector('body main>section:first-of-type').style = `background-position-y: ${50+100*-para.top/para.height}%`;
+            document.querySelector('body main>section:first-of-type').style = `background-position-y: ${50 + 100 * -para.top / para.height}%`;
         });
     </script>
 </head>
@@ -447,7 +479,8 @@
                 <p class="mb-20 leading-9">駭客攻擊與滲透手法一日千里，傳統事件處理與回應機制不足以面對快速進化的攻擊手法<br>
                     SentinelOne Singularity XDR 提供更快速、更全面、更即時的威脅回應機制<br>
                     採用全面自動化的 AI 偵測引擎，為使用者提供最精準、完善的防護</p>
-                <a href="https://attackevals.mitre-engenuity.org/enterprise/participants/?adversaries=wizard-spider-sandworm" target="_blank">
+                <a href="https://attackevals.mitre-engenuity.org/enterprise/participants/?adversaries=wizard-spider-sandworm"
+                    target="_blank">
                     <button type="button" class="py-4 px-16 btn-purple rounded mb-8">2022 MITRE ATT&CK® 結果</button>
                 </a>
             </div>
@@ -581,39 +614,42 @@
 
         <section id="balls" class="max-w-screen-lg m-auto mb-20 grid grid-cols-3">
             <div>
-                <img class="hidden:sm" onclick="scrollToTarget('#singularity-core')" src="./imgs/solutions/ball-1.png" />
+                <img class="hidden:sm" onclick="scrollToTarget('#singularity-core')"
+                    src="./imgs/solutions/ball-1.png" />
                 <div class="mt-12">
                     <div class="img">
                         <img src="./imgs/solutions/singularity-core.png" />
                     </div>
                     <div class="mt-4 mb-8">
-                        <p class="opacity-80 mb-1">Endpoint Protection</p>
+                        <p class="mb-1">Endpoint Protection</p>
                         <p>取代無效的傳統防毒軟體</p>
                     </div>
                     <p class="opacity-80">提供最核心的端點防護功能</p>
                 </div>
             </div>
             <div>
-                <img class="hidden:sm" onclick="scrollToTarget('#singularity-control')" src="./imgs/solutions/ball-2.png" />
+                <img class="hidden:sm" onclick="scrollToTarget('#singularity-control')"
+                    src="./imgs/solutions/ball-2.png" />
                 <div class="mt-12">
                     <div class="img">
                         <img src="./imgs/solutions/singularity-control.png" />
                     </div>
                     <div class="mt-4 mb-8">
-                        <p class="opacity-80 mb-1">IT OPS Hygiene</p>
+                        <p class="mb-1">IT OPS Hygiene</p>
                         <p>整合並強化端點軟硬體控管</p>
                     </div>
                     <p class="opacity-80">除了包含 Core License 的功能外，並提供對端點安全性及軟硬體控管等額外功能</p>
                 </div>
             </div>
             <div>
-                <img class="hidden:sm" onclick="scrollToTarget('#singularity-complete')" src="./imgs/solutions/ball-3.png" />
+                <img class="hidden:sm" onclick="scrollToTarget('#singularity-complete')"
+                    src="./imgs/solutions/ball-3.png" />
                 <div class="mt-12">
                     <div class="img">
                         <img src="./imgs/solutions/singularity-complete.png" />
                     </div>
                     <div class="mt-4 mb-8">
-                        <p class="opacity-80 mb-1">Security Operations</p>
+                        <p class="mb-1">Security Operations</p>
                         <p">增加EDR 功能以強化可見性、主動威脅獵捕及事件回應能力</p>
                     </div>
                     <p class="opacity-80">在 Core 及 Control 之上，更提供 Storyline™ 專利技術將端點系統的處理程序實時紀錄、儲存並自動進行關</p>
@@ -624,7 +660,9 @@
         <section class="mb-20 max-w-screen-xl m-auto">
             <header class="text-center mb-20">
                 <h2 class="text-4xl tracking-6">能力全開</h2>
-                <h3 class="border-b border-light-green inline-block mt-4 mb-10 px-6">SentinelOne Singularity Licenses <br class="hidden:lg" />詳細資訊</h3>
+                <h3 class="border-b border-light-green inline-block mt-4 mb-10 px-6">SentinelOne Singularity Licenses
+                    <br class="hidden:lg" />詳細資訊
+                </h3>
             </header>
 
             <div id="singularity-core" class="mb-24">
@@ -667,8 +705,10 @@
                         <img class="w-7/10" src="./imgs/solutions/ball-3.png" />
                     </div>
                     <img src="./imgs/solutions/singularity-complete.png" />
-                    <p class="mt-6 mb-2">Complete License 在 Core 及 Control License 之上，更提供 Storyline™ 專利技術將端點系統的處理程序實時紀錄、儲存並自動進行關聯，提供客戶日後進行調查，可減少資安團隊進行事件分析時所耗費的大量時間並快速提供事件相關資訊</p>
-                    <p class="mb-8">Complete License 透過將事件自動化進行關聯並整合 MITRE ATT&CK® 框架，降低資安人員、 SOC 分析團隊、 APT 分析人員和事件處理</p>
+                    <p class="mt-6 mb-2">Complete License 在 Core 及 Control License 之上，更提供 Storyline™
+                        專利技術將端點系統的處理程序實時紀錄、儲存並自動進行關聯，提供客戶日後進行調查，可減少資安團隊進行事件分析時所耗費的大量時間並快速提供事件相關資訊</p>
+                    <p class="mb-8">Complete License 透過將事件自動化進行關聯並整合 MITRE ATT&CK® 框架，降低資安人員、 SOC 分析團隊、 APT 分析人員和事件處理
+                    </p>
                     <ul class="leading-9 square-before-list bg-purple-before-list mr-4-before-list">
                         <li>專利 Storyline™ 技術　快速對事件進行根本原因分析 ( RCA ) 及事件重點關聯</li>
                         <li>整合 ActiveEDR® 可見性　整合端點正常行為與威脅事件資料</li>
@@ -713,7 +753,7 @@
 
         <section class="m-auto flex gap-4 mb-20 info-box">
             <div>
-                <h2 class="mb-8">Vigilance Respond</h2>
+                <h2 class="mb-8 tracking-widest">Vigilance Respond</h2>
                 <p class="mb-12 text-lg">Vigilance Respond MDR 透過精準資訊來降低資安團隊工作量</p>
                 <ul class="leading-9 square-before-list bg-purple-before-list mr-4-before-list mb-4-list">
                     <li>平台內事件處理與分析，不留未處理事件</li>
@@ -759,7 +799,7 @@
 
         <section class="m-auto flex gap-4 mb-20 info-box">
             <div>
-                <h2 class="mb-8">Vigilance Respond Pro</h2>
+                <h2 class="mb-8 tracking-widest">Vigilance Respond Pro</h2>
                 <p class="mb-12 text-lg">Vigilance Respond Pro 增加事件鑑識 ( Digital Forensics ) 與事件處理 ( Incident Response )
                     包含所有
                     Vigilance Respond 服務並額外提供：</p>
