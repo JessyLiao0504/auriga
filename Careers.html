@@ -116,7 +116,12 @@
             transform: translate(-3.5%, -1%) scale(1.05);
         }
 
-        .info-card ul>li::before {
+.info-card ul>li>i{
+    filter: drop-shadow(0px 0px 8px #39F0BA);
+}
+
+        .info-card ul>li>i::before,
+        .info-card .bonus li::before {
             content: "";
             display: inline-block;
             background-color: #39F0BA;
@@ -589,6 +594,9 @@
             <li class="flex"><img class="mr-6" src="./imgs/footer-marker.svg" />台北市大安區和平東路二段163號10樓</li>
         </ul>
     </footer>
+    <script>
+        document.querySelectorAll('.info-card .card-block li').forEach(e => e.prepend(document.createElement('i')));
+    </script>
 </body>
 
 </html>
