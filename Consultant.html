@@ -27,7 +27,7 @@
             font-size: 20px;
         }
 
-        #op{
+        #op {
             background-image: url(./imgs/consultant/bg-main.jpg);
             background-position: bottom;
             background-size: cover;
@@ -130,6 +130,7 @@
 
         #circles .bubble.white {
             z-index: 20;
+            transition: transform .4s;
         }
 
         #circles .bubble.white p {
@@ -140,13 +141,14 @@
 
         #circles .bubble.white+div {
             transition: all .4s .45s;
+            animation: draw .4s .45s forwards;
         }
 
-        #circles .bubble.white:not(:hover)+div {
+        /* #circles .bubble.white:not(:hover)+div {
             transform: translateY(.3em);
             opacity: 0;
             transition: none;
-        }
+        } */
 
         #circles #data-visual {
             left: 41.7%;
@@ -216,15 +218,19 @@
                 z-index: -1;
             }
 
-            #circles .bubble.white:not(:hover){
+            /* #circles .bubble.white:not(:hover) {
                 animation: zoom-in-out 2.2s ease-in-out infinite both alternate;
+            } */
+
+            #circles .bubble.white:hover{
+                transform: scale(1.15);
             }
 
-            #circles #parse{
+            #circles #parse {
                 animation-duration: 1.8s;
             }
 
-            #circles #qilk{
+            #circles #qilk {
                 animation-duration: 1.4s;
             }
 
@@ -345,6 +351,19 @@
                 line-height: 1.4;
             }
         }
+
+        @keyframes draw {
+            from {
+                transform: translateY(.3em);
+                opacity: 0;
+                transition: none;
+            }
+
+            to {
+                opacity: 1;
+                max-width: none !important;
+            }
+        }
     </style>
 </head>
 
@@ -462,7 +481,7 @@
                 <div class="bubble white" id="qlik">
                     <img src="./imgs/consultant/qlik.png">
                 </div>
-                <div class="absolute text-right" style="left: 18.7%; top: 2em;">
+                <div class="absolute text-right" style="left: 9.7%; top: 1.8em;">
                     <img class="hidden:lg" src="./imgs/consultant/qlik.png">
                     <p class="light-green">大數據分析解決方案</p>
                     <p>用於財務、官方報表、大資料量統計</p>
@@ -538,24 +557,100 @@
         document.addEventListener('DOMContentLoaded', () => {
             var canvas, ctx;
 
-            document.querySelectorAll('.bubble.white').forEach(ele => ele.addEventListener('mouseenter', e => {
-                if (window.innerWidth > 767) {
-                    canvas = document.createElement('canvas');
-                    canvas.setAttribute('width', document.getElementById('circles').clientWidth);
-                    canvas.setAttribute('height', document.getElementById('circles').clientHeight);
-                    canvas.classList.add('pointer-events-none', 'absolute', 'z-30', 'cus-shadow');
-                    document.getElementById('circles').append(canvas);
-                    ctx = canvas.getContext('2d');
-                    draw1(e.target);
-                }
-            }));
+            // document.querySelectorAll('.bubble.white').forEach(ele => ele.addEventListener('mouseenter', e => {
+            //     if (window.innerWidth > 767) {
+            //         canvas = document.createElement('canvas');
+            //         canvas.setAttribute('width', document.getElementById('circles').clientWidth);
+            //         canvas.setAttribute('height', document.getElementById('circles').clientHeight);
+            //         canvas.classList.add('pointer-events-none', 'absolute', 'z-30', 'cus-shadow');
+            //         document.getElementById('circles').append(canvas);
+            //         ctx = canvas.getContext('2d');
+            //         draw(e.target);
+            //     }
+            // }));
 
-            document.querySelectorAll('.bubble.white').forEach(ele => ele.addEventListener('mouseleave', e => {
-                //ctx.clearRect(0, 0, canvas.width, canvas.height);
-                if (canvas) {
-                    canvas.remove();
+            // document.querySelectorAll('.bubble.white').forEach(ele => ele.addEventListener('mouseleave', e => {
+            //     if (canvas) {
+            //         canvas.remove();
+            //     }
+            // }));
+
+            if (window.innerWidth > 767) {
+                canvas = document.createElement('canvas');
+                canvas.setAttribute('width', document.getElementById('circles').clientWidth);
+                canvas.setAttribute('height', document.getElementById('circles').clientHeight);
+                canvas.classList.add('pointer-events-none', 'absolute', 'z-30', 'cus-shadow');
+                document.getElementById('circles').append(canvas);
+                ctx = canvas.getContext('2d');
+
+                document.querySelectorAll('.bubble.white').forEach(ele => draw(ele));
+            }
+
+            function draw(target) {
+                const bounds = target.getBoundingClientRect();
+                const wrapper = target.closest('#circles');
+                const parent = wrapper.firstElementChild;
+                let x = target.offsetLeft + bounds.width / 2;
+                let y = target.offsetTop + parent.offsetTop + bounds.height / 2;
+                if (wrapper.clientHeight / 2 > y) {
+                    y -= bounds.height * 3 / 4;
+                } else {
+                    y += bounds.height * 3 / 4;
                 }
-            }));
+
+                const dest = target.nextElementSibling;
+                const destRect = dest.getBoundingClientRect();
+
+                let toX = dest.offsetLeft - 16;
+                if (wrapper.clientWidth / 2 > toX) {
+                    toX = dest.getBoundingClientRect().right + 16;
+                }
+                let toY = dest.offsetTop + parent.offsetTop + dest.querySelector('p:first-of-type').clientHeight / 2;
+
+                if ('qlik' === target.id) {
+                    AurigaConfigs.pts = [
+                        {
+                            x: x,
+                            y: y,
+                        }, {
+                            x: toX + 28,
+                            y: toY,
+                        }, {
+                            x: toX,
+                            y: toY,
+                        }
+                    ];
+                } else {
+                    AurigaConfigs.pts = [
+                        {
+                            x: x,
+                            y: y,
+                        }, {
+                            x: x,
+                            y: toY,
+                        }, {
+                            x: toX,
+                            y: toY,
+                        }
+                    ];
+                }
+
+                const ctx = canvas.getContext('2d');
+                ctx.beginPath();
+                ctx.strokeStyle = '#FFF';
+                ctx.fillStyle = '#FFF';
+                ctx.lineWidth = 2;
+
+                ctx.arc(x, y, 3, 0, Math.PI * 2);
+                ctx.fill();
+
+                for (let i = 0; i < AurigaConfigs.pts.length - 1; i++) {
+                    ctx.moveTo(AurigaConfigs.pts[i].x, AurigaConfigs.pts[i].y);
+                    ctx.lineTo(AurigaConfigs.pts[i + 1].x, AurigaConfigs.pts[i + 1].y);
+                    ctx.stroke();
+                    ctx.fill();
+                }
+            }
 
             function draw1(target) {
                 const bounds = target.getBoundingClientRect();
@@ -646,6 +741,7 @@
             var t = 1;
             function animate(timestamp) {
                 points = AurigaConfigs.points;
+                console.log(points)
                 if (t < points.length - 1) {
                     AurigaConfigs.animations = window.requestAnimationFrame(animate);
                 } else {
