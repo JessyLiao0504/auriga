@@ -819,7 +819,7 @@ main>section:first-of-type {
 }
 
 .font-din {
-    font-family: "DIN Condensed", "DIN-Condensed", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    font-family: "DIN-Condensed", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
 
 .light-green {
@@ -1069,7 +1069,7 @@ li {
 
 .info-box h2 {
     position: relative;
-    font-family: "DIN Condensed", "DIN-Condensed";
+    font-family: "DIN-Condensed";
     font-size: 40px;
 }
 
