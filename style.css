@@ -45,7 +45,7 @@ textarea {
     letter-spacing: .1em;
 }
 
-:focus-visible{
+:focus-visible {
     outline: none;
 }
 
@@ -565,6 +565,10 @@ main>section:first-of-type {
     margin-top: 2rem;
 }
 
+.mt-10 {
+    margin-top: 2.5rem;
+}
+
 .mt-12 {
     margin-top: 3rem;
 }
@@ -758,7 +762,7 @@ main>section:first-of-type {
     color: #FFF;
 }
 
-.bold{
+.bold {
     font-weight: bold;
 }
 
@@ -774,7 +778,7 @@ main>section:first-of-type {
     letter-spacing: .38em;
 }
 
-.tracking-6{
+.tracking-6 {
     letter-spacing: .6em;
 }
 
@@ -827,7 +831,7 @@ main>section:first-of-type {
     color: var(--light-green);
 }
 
-.gray{
+.gray {
     color: #d7d7d7;
 }
 
@@ -926,15 +930,15 @@ li {
     bottom: 0;
 }
 
-.left-0{
+.left-0 {
     left: 0;
 }
 
-.top-0{
+.top-0 {
     top: 0;
 }
 
-.bottom-0{
+.bottom-0 {
     bottom: 0;
 }
 
@@ -1163,11 +1167,11 @@ header nav li:not(:hover) .submenu {
     border-image-slice: 1;
 }
 
-.send{
+.send {
     transition: filter .6s;
 }
 
-.send:hover{
+.send:hover {
     filter: brightness(1.6);
 }
 
