@@ -76,7 +76,7 @@ h3 {
     font-weight: normal;
 }
 
-header {
+body>header {
     height: 108px;
     z-index: 100;
     position: relative;
