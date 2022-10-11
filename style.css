@@ -1094,7 +1094,7 @@ i.hexagon::before {
 
 .continue-btn {
     position: absolute;
-    top: calc(88vh - 108px);
+    top: 84vh;
     left: 50%;
     transform: translateX(-50%);
     animation: continue-btn .8s linear both infinite alternate;
@@ -1272,7 +1272,8 @@ header nav li:not(:hover) .submenu {
 
     #auriga>main>section,
     #auriga>footer {
-        padding: 0 6%;
+        padding-left: 6%;
+        padding-right: 6%;
     }
 
     #auriga>header {

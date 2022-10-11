@@ -21,19 +21,16 @@
     <script src="./js/main.min.js"></script>
 
     <style type="text/css">
-        #first-bg {
+        body main>section:first-of-type {
+            padding-top: 108px;
+            margin-bottom: 3%;
+            margin-top: -108px;
+            min-height: 95vh;
+
             background-image: linear-gradient(358.94deg, #1A183D 7.21%, rgba(0, 0, 0, 0) 64.59%), url(./imgs/tubes.png);
             background-blend-mode: lighten;
-            background-position: top center;
+            background-position: center;
             background-size: cover;
-            background-repeat: no-repeat;
-            top: -108px;
-        }
-
-        body main>section:first-of-type {
-            padding-top: 5%;
-            padding-bottom: 16%;
-            margin-bottom: 3%;
         }
 
         button {
@@ -215,16 +212,6 @@
             transform: translateX(2.5vw) rotate(135deg);
         }
 
-        #para-bg {
-            background-image: url(./imgs/tubes.png);
-            background-position: center;
-            height: 60%;
-            top: 15%;
-            mix-blend-mode: hue;
-            opacity: .5;
-            animation: para-bg 6s infinite both alternate;
-        }
-
         .icons-list {
             margin-top: 3em;
             margin-bottom: 4em;
@@ -289,7 +276,7 @@
                 overflow: hidden;
             }
 
-            #first-bg {
+            body main>section:first-of-type {
                 background-image: url(./imgs/solutions/bg-main-mobile.png);
             }
 
@@ -446,8 +433,8 @@
     </header>
     <main class="relative m-auto tracking-widest leading-normal text-base">
         <img class="continue-btn" src="./imgs/continue.svg" />
-        <section class="relative">
-            <div class="max-w-screen-lg m-auto">
+        <section class="relative flex">
+            <div class="max-w-screen-lg m-auto flex-grow">
                 <p class="border py-2 px-16 mb-16 inline-block text-4xl light-green font-din hidden:sm">New World ・ New
                     Cybersecurity</p>
                 <h2 class="font-din text-5xl">SentinelOne Singularity XDR</h2>
@@ -458,9 +445,6 @@
                 <a href="https://attackevals.mitre-engenuity.org/enterprise/participants/?adversaries=wizard-spider-sandworm" target="_blank">
                     <button type="button" class="py-4 px-16 btn-purple rounded mb-8">2022 MITRE ATT&CK® 結果</button>
                 </a>
-            </div>
-            <div class="absolute inset-0 -z-10" id="first-bg">
-                <!-- <div class="sticky w-full" id="para-bg"></div> -->
             </div>
         </section>
 
