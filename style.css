@@ -1130,6 +1130,13 @@ header nav li:not(:hover) .submenu {
     border-image-slice: 1;
 }
 
+@media (min-width: 768px) and (max-width: 1350px) {
+    main>section{
+        padding-left: 3%;
+        padding-right: 3%;
+    }
+}
+
 @media (min-width: 768px) {
     .hidden\:lg {
         display: none;
@@ -1194,11 +1201,6 @@ header nav li:not(:hover) .submenu {
     #auriga>header>img,
     #menu-toggle {
         display: none;
-    }
-
-    main>section{
-        padding-left: 3%;
-        padding-right: 3%;
     }
 }
 
