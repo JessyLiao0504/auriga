@@ -113,11 +113,11 @@ header nav .submenu>li {
     margin-bottom: .4em;
 }
 
-header nav li:not(:hover) .submenu>li{
+header nav li:not(:hover) .submenu>li {
     display: none;
 }
 
-header nav .has-sub>span{
+header nav .has-sub>span {
     z-index: 10;
     position: relative;
 }
@@ -155,7 +155,7 @@ main>section:first-of-type {
     background-image: linear-gradient(162.7deg, #2D2E46 10.24%, #1A1B2F 45.02%, #000000 98.1%);
 }
 
-.bg-grey{
+.bg-grey {
     background-color: rgb(25, 24, 55);
 }
 
@@ -347,6 +347,10 @@ main>section:first-of-type {
 
 .gap-12 {
     gap: 3rem;
+}
+
+.gap-14 {
+    gap: 3.5rem;
 }
 
 .gap-16 {
@@ -1131,7 +1135,7 @@ header nav li:not(:hover) .submenu {
 }
 
 @media (min-width: 768px) and (max-width: 1350px) {
-    main>section{
+    main>section {
         padding-left: 3%;
         padding-right: 3%;
     }
@@ -1185,7 +1189,7 @@ header nav li:not(:hover) .submenu {
         height: 1.6em;
     }
 
-    header .submenu li:hover{
+    header .submenu li:hover {
         color: #FFF;
     }
 
@@ -1253,7 +1257,7 @@ header nav li:not(:hover) .submenu {
         transition: opacity .7s;
     }
 
-    header.bg::after{
+    header.bg::after {
         opacity: 1;
     }
 
@@ -1288,7 +1292,7 @@ header nav li:not(:hover) .submenu {
         padding-bottom: .8em;
     }
 
-    main{
+    main {
         padding-top: 108px;
     }
 
@@ -1319,7 +1323,7 @@ header nav li:not(:hover) .submenu {
         padding-bottom: 0;
     }
 
-    header nav .submenu::before{
+    header nav .submenu::before {
         content: "";
         position: absolute;
         left: 0;
@@ -1329,7 +1333,7 @@ header nav li:not(:hover) .submenu {
         z-index: 10;
     }
 
-    header nav .has-sub:hover .submenu::before{
+    header nav .has-sub:hover .submenu::before {
         transition: transform 1s .3s;
     }
 
