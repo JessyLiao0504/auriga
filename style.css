@@ -42,6 +42,7 @@ textarea {
     line-height: inherit;
     color: inherit;
     font-size: 1em;
+    letter-spacing: .1em;
 }
 
 :focus-visible{
