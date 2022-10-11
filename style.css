@@ -301,6 +301,10 @@ main>section:first-of-type {
     grid-auto-rows: 6vw;
 }
 
+.auto-rows-9vw {
+    grid-auto-rows: 9vw;
+}
+
 .justify-between {
     justify-content: space-between;
 }
@@ -1190,6 +1194,11 @@ header nav li:not(:hover) .submenu {
     #auriga>header>img,
     #menu-toggle {
         display: none;
+    }
+
+    main>section{
+        padding-left: 3%;
+        padding-right: 3%;
     }
 }
 

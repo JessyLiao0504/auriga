@@ -158,10 +158,19 @@
             margin-left: .2em;
         }
 
+        @media (max-width: 1024px) {
+            #job-info{
+                gap: 3.5%;
+            }
+        }
+
         @media screen and (min-width: 768px) {
             #time-to{
                 display: inline-block;
                 transform: rotate(90deg);
+            }
+            .cards{
+                padding: 0;
             }
         }
 
@@ -363,7 +372,7 @@
                 如果你對資安有興趣﹐覺得自己可以在這個團隊中勝任某個角色或維持某種合作關係，請將你的想法與經歷與我們分享。</p>
             <picture>
                 <source srcset="./imgs/border-bg-mobile.svg" media="(max-width: 767px)" />
-                <img class="-z-10" src="./imgs/border-bg.svg" />
+                <img class="-z-10 w-full" src="./imgs/border-bg.svg" />
             </picture>
         </section>
 

@@ -27,8 +27,15 @@
             font-size: 20px;
         }
 
+        #op{
+            background-image: url(./imgs/consultant/bg-main.jpg);
+            background-position: bottom;
+            background-size: cover;
+        }
+
         #list-rows {
             line-height: 1.8;
+            padding-top: 2.2em;
         }
 
         #list-rows h2 {
@@ -85,7 +92,7 @@
 
         #circles {
             position: relative;
-            min-height: 900px;
+            min-height: 47vw;
             font-size: 1vw;
         }
 
@@ -252,6 +259,7 @@
         @media (max-width: 767px) {
             #auriga #op {
                 padding: 0;
+                background-image: url(./imgs/consultant/bg-main-mobile.png);
             }
 
             #op p:first-child {
@@ -362,8 +370,8 @@
     </header>
     <main class="relative m-auto tracking-widest leading-normal text-base">
         <img class="continue-btn" src="./imgs/continue.svg" />
-        <section id="op" class="relative" style="top: -108px">
-            <div class="absolute inset-0">
+        <section id="op" class="relative" style="margin-top: -108px">
+            <div>
                 <div class="max-w-screen-lg m-auto h-full flex items-center">
                     <div>
                         <p class="border py-2 px-16 inline-block text-4xl light-green font-din">New World ・ New
@@ -374,12 +382,6 @@
                         </p>
                     </div>
                 </div>
-            </div>
-            <div class="relative -z-10">
-                <picture>
-                    <source srcset="./imgs/consultant/bg-main-mobile.png" media="(max-width: 767px)">
-                    <img class="w-full:sm" src="./imgs/consultant/bg-main.jpg" />
-                </picture>
             </div>
         </section>
 

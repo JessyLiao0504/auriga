@@ -23,10 +23,16 @@
     <script src="./js/main.min.js"></script>
 
     <style type="text/css">
-        #welcome {
+        #auriga #welcome {
             position: relative;
             min-height: calc(100vh - 108px);
             align-items: center;
+            background-image: url(./imgs/our-team/bg-main.png);
+            background-size: cover;
+            margin-top: -108px;
+            padding-top: 108px;
+            padding-bottom: 1.4em;
+            mix-blend-mode: lighten;
         }
 
         #welcome h2 {
@@ -46,6 +52,10 @@
 
         .info-box:hover {
             transform: scale(1.02) translateY(15px);
+        }
+
+        .info-box>div {
+            padding-right: 1em;
         }
 
         #history {
@@ -144,14 +154,40 @@
             pointer-events: none;
         }
 
-        #shields h3{
+        #shields{
+            padding-top: 3.4em;
+            padding-bottom: 3.4em;
+        }
+
+        #shields h3 {
             letter-spacing: .1em;
         }
 
+        @media (min-width: 768px) and (max-width: 1350px) {
+            main>section {
+                padding-left: 2%;
+                padding-right: 2%;
+            }
+        }
+
+        @media (max-width: 1280px) {
+            #shields ul {
+                grid-template-columns: repeat(1, minmax(0, 1fr));
+                gap: 3rem;
+            }
+
+            #shields li {
+                max-width: 420px;
+                justify-self: center;
+            }
+        }
+
         @media (max-width: 767px) {
+            #auriga #welcome {
+                background-image: url(./imgs/our-team/bg-main-mobile.png);
+            }
+
             #welcome>div {
-                margin-top: 30px;
-                margin-bottom: 5em;
                 display: block;
             }
 
@@ -163,20 +199,12 @@
                 font-size: 24px;
             }
 
-            #welcome>div:first-child {
-                margin-bottom: 5em;
-            }
-
             #welcome>div>img {
                 width: 92%;
             }
 
             #shields ul {
                 display: block;
-            }
-
-            #shields li {
-                margin-bottom: 3.6em;
             }
 
             #shields li>img {
@@ -259,13 +287,13 @@
                 text-align: left;
             }
 
-            #welcome-a{
+            #welcome-a {
                 animation: welcome cubic-bezier(0.175, 0.885, 0.32, 1) var(--welcome-duration) forwards;
                 display: inline-block;
                 transform-origin: left;
             }
 
-            #to-a{
+            #to-a {
                 display: inline-block;
                 margin-left: .3em;
                 opacity: 0;
@@ -274,27 +302,27 @@
                 animation: to var(--to-duration) var(--welcome-duration) forwards;
             }
 
-            #arrows-a{
+            #arrows-a {
                 animation: arrows var(--arrows-duration) 2.1s forwards;
                 opacity: 0;
                 transform: translateY(50vh);
                 margin-bottom: 1.4em;
             }
 
-            #logo-a{
+            #logo-a {
                 opacity: 0;
                 width: 0;
                 animation: logo 1s 2.9s forwards;
             }
 
-            #text-a{
+            #text-a {
                 opacity: 0;
                 animation: text .8s 3.9s forwards;
                 transform: translateY(20vh);
             }
         }
 
-        :root{
+        :root {
             --welcome-duration: 1.4s;
             --to-duration: .7s;
             --arrows-duration: .8s;
@@ -307,7 +335,7 @@
         }
 
         @keyframes to {
-            to{
+            to {
                 transform: none;
                 opacity: 1;
                 height: auto;
@@ -322,14 +350,14 @@
         }
 
         @keyframes logo {
-            to{
+            to {
                 width: 100%;
                 opacity: 1;
             }
         }
 
         @keyframes text {
-            to{
+            to {
                 opacity: 1;
                 transform: none;
             }
@@ -342,10 +370,6 @@
 
 <body id="auriga" class="text-white relative">
     <div id="bg-play" class="absolute inset-0 pointer-events-none overflow-hidden z-10"></div>
-    <picture>
-        <source srcset="./imgs/our-team/bg-main-mobile.png" media="(max-width: 767px)" />
-        <img class="absolute -z-10 w-full" src="./imgs/our-team/bg-main.png" />
-    </picture>
     <header class="max-w-screen-xl flex justify-between py-8 px-10 m-auto">
         <div><a href="index.html"><img src="imgs/logo.svg"></a></div>
         <nav>
@@ -370,8 +394,8 @@
     </header>
     <main class="relative m-auto tracking-widest leading-normal text-base">
         <img class="continue-btn" src="./imgs/continue.svg" />
-        <section id="welcome" class="max-w-screen-lg m-auto flex">
-            <div class="flex justify-between w-full">
+        <section id="welcome" class="m-auto flex justify-center">
+            <div class="max-w-screen-lg flex justify-between w-full">
                 <div>
                     <p class="font-din text-4xl"><span id="welcome-a">WELCOME</span><span id="to-a"> to</span></p>
                     <img id="logo-a" width="400" src="imgs/logo.svg">
@@ -394,7 +418,7 @@
             </div>
         </section>
 
-        <section id="shields" class="max-w-screen-xl m-auto mb-28">
+        <section id="shields" class="max-w-screen-xl m-auto mb-20">
             <img class="absolute -z-10 r-0 w-1/2" src="./imgs/our-team/bg-wave.svg" />
             <ul class="grid grid-cols-3 gap-8 items-center">
                 <li class="info-box flex shrink-0">
@@ -426,7 +450,7 @@
             <div class="max-w-screen-lg m-auto">
                 <h2 class="text-center light-green text-5xl">OUR JOURNEY</h2>
                 <h3 class="text-center text-3xl">歷史沿革回顧</h3>
-                <ul class="my-56 leading-loose obs">
+                <ul class="py-10 my-8 leading-loose obs">
                     <li class="flex gap-4">
                         <div>
                             <p><span>2020</span><span class="crossline"></span></p>
