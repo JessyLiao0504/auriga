@@ -116,9 +116,9 @@
             transform: translate(-3.5%, -1%) scale(1.05);
         }
 
-.info-card ul>li>i{
-    filter: drop-shadow(0px 0px 8px #39F0BA);
-}
+        .info-card ul>li>i {
+            filter: drop-shadow(0px 0px 8px #39F0BA);
+        }
 
         .info-card ul>li>i::before,
         .info-card .bonus li::before {
@@ -179,6 +179,15 @@
 
         .card-wrap h3+p {
             margin-bottom: 1em;
+        }
+
+        @media screen and (min-width: 1450px) {
+            main {
+                background-image: url(./imgs/careers/bg-lines.svg);
+                background-size: 1400px;
+                background-repeat: no-repeat;
+                background-position: center 86%;
+            }
         }
 
         @media (max-width: 1300px) {
@@ -369,7 +378,8 @@
                 class="mx-auto mt-16 mb-20 inline-block border border-light-green light-green px-6 py-2 font-din tracking-4">
                 JOIN US!</h1>
             <p class="mb-8 tracking-4 text-left bold hidden:sm">我們是 Auriga Security，一群對資訊安全及資料分析有相當熱誠的夥伴所組成的團隊</p>
-            <p class="mb-28 tracking-4 text-left hidden:sm">我們是業界少數導入教練文化思維（Coaching Culture）的組織，對個人發展高度尊重<br>對結果產出有一定水準要求。上班時間彈性。
+            <p class="mb-28 tracking-4 text-left hidden:sm">我們是業界少數導入教練文化思維（Coaching
+                Culture）的組織，對個人發展高度尊重<br>對結果產出有一定水準要求。上班時間彈性。
             </p>
 
             <div id="job-info" class="grid grid-cols-3 gap-24 px-6 tracking-widest">
