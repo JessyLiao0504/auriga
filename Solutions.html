@@ -29,7 +29,7 @@
 
             background-image: linear-gradient(358.94deg, #1A183D 7.21%, rgba(0, 0, 0, 0) 64.59%), url(./imgs/tubes.png);
             background-blend-mode: lighten;
-            background-position: center;
+            background-position: center 50%;
             background-size: cover;
         }
 
@@ -404,6 +404,11 @@
                 behavior: 'smooth'
             });
         }
+
+        window.addEventListener('scroll', () => {
+            const para = document.querySelector('body main>section:first-of-type').getBoundingClientRect();
+            document.querySelector('body main>section:first-of-type').style = `background-position-y: ${50+100*-para.top/para.height}%`;
+        });
     </script>
 </head>
 
@@ -481,7 +486,7 @@
             </div>
         </section>
         <section id="ruler" class="max-w-screen-lg m-auto relative mb-24">
-            <p class="absolute inset-0 border-bg-p text-justify flex items-center justify-center">SentinelOne
+            <p class="absolute inset-0 border-bg-p text-justify flex items-center justify-center leading-9">SentinelOne
                 Singularity XDR
                 為端點防護、端點事件偵測與回應、IoT 設備防護、雲端防護與 IT 團隊的運作提供不同的解決方案，並將多種技術整合至統一的管理平台，針對 Windows、MacOS、Linux 與
                 Kubernetes 提供高效率的 Agent 並針對客戶不同環境架構（包含實體環境、虛擬環境、VDI、客戶資料中心、混合式資料中心與雲端服務供應商...等）進行佈署</p>
@@ -491,7 +496,7 @@
             </picture>
         </section>
         <section class="text-center">
-            <h2 class="text-4xl">脫穎而出</h2>
+            <h2 class="text-4xl tracking-6">脫穎而出</h2>
             <h3 class="border-b border-light-green inline-block mt-4 mb-10 px-6">使用 SentinelOne 降低風險並提高效率</h3>
             <div>
                 <p class="purple-quote">使用 SaaS 雲端平台進行統一管理，透過直覺化操作介面與彈性化管理方式，可滿足企業各項需求</p>
@@ -618,7 +623,7 @@
 
         <section class="mb-20 max-w-screen-xl m-auto">
             <header class="text-center mb-20">
-                <h2 class="text-4xl">能力全開</h2>
+                <h2 class="text-4xl tracking-6">能力全開</h2>
                 <h3 class="border-b border-light-green inline-block mt-4 mb-10 px-6">SentinelOne Singularity Licenses <br class="hidden:lg" />詳細資訊</h3>
             </header>
 
@@ -676,7 +681,7 @@
 
         <section class="max-w-screen-lg m-auto text-center mb-36">
             <h2>SentinelOne 至今己服務了超過上萬家的客戶<br>持續確保客戶的資訊安全無慮</h2>
-            <p class="mt-4">我們在數百萬個端點上保護數美金的企業價值，<br>您成功了，我們就成功了。</p>
+            <p class="mt-4 gray">我們在數百萬個端點上保護數美金的企業價值，<br>您成功了，我們就成功了。</p>
 
             <div id="dt-slider" class="my-12">
                 <ul class="flex max-w-full overflow-hidden gap-4 py-4">
