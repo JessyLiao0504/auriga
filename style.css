@@ -44,6 +44,10 @@ textarea {
     font-size: 1em;
 }
 
+:focus-visible{
+    outline: none;
+}
+
 ol,
 ul,
 menu {
