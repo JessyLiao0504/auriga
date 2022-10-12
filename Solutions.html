@@ -31,7 +31,7 @@
 
             background-image: linear-gradient(358.94deg, #1A183D 7.21%, rgba(0, 0, 0, 0) 64.59%), url(./imgs/tubes.png);
             background-blend-mode: lighten;
-            background-position: center 50%;
+            background-position-y: center -50%;
             background-size: cover;
         }
 
@@ -464,7 +464,7 @@
 
         window.addEventListener('scroll', () => {
             const para = document.querySelector('body main>section:first-of-type').getBoundingClientRect();
-            document.querySelector('body main>section:first-of-type').style = `background-position-y: ${50 + 360 * -para.top / para.height}%`;
+            document.querySelector('body main>section:first-of-type').style = `background-position-y: ${0 + 180 * -para.top / para.height}%`;
         });
     </script>
 </head>
