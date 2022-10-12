@@ -140,6 +140,14 @@ document.addEventListener('DOMContentLoaded', () => {
         //document.querySelector('main>section:nth-of-type(2)').scrollIntoView({ behavior: "smooth" })
     }));
 
+    document.querySelectorAll('.has-sub>a').forEach(ele => ele.addEventListener('click', e => {
+        if(e.target.nextElementSibling.clientHeight > 0){
+            e.target.classList.add('close');
+        }else{
+            e.target.classList.remove('close');
+        }
+    }));
+
     window.addEventListener('scroll', () => {
         if(window.scrollY > 60){
             document.querySelector('body>header').classList.add('bg');

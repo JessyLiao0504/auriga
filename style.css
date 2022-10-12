@@ -132,7 +132,7 @@ header nav li:not(:hover) .submenu>li {
 }
 
 header nav .has-sub>a {
-    z-index: 10;
+    z-index: 100;
     position: relative;
 }
 
@@ -1154,7 +1154,8 @@ header nav li .submenu {
     height: 6em;
 }
 
-header nav li:not(:hover) .submenu {
+header nav li:not(:hover) .submenu ,
+header nav a.close+.submenu {
     transition: all .15s;
     position: relative;
     transform: translateY(-.8em);
@@ -1404,6 +1405,9 @@ header nav li:not(:hover) .submenu {
         position: absolute;
         left: 0;
         width: 100%;
+        max-height: calc(100vh - 108px);
+        overflow: auto;
+        padding-top: 1.4em;
     }
 
     header nav ul {
