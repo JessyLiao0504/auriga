@@ -131,12 +131,12 @@ header nav li:not(:hover) .submenu>li {
     display: none;
 }
 
-header nav .has-sub>span {
+header nav .has-sub>a {
     z-index: 10;
     position: relative;
 }
 
-header nav .has-sub>span::after {
+header nav .has-sub>a::after {
     content: ">";
     display: inline-block;
     transform: rotate(90deg) scaleY(1.4) translateX(-2px);
@@ -1321,6 +1321,7 @@ header nav li:not(:hover) .submenu {
     header:not(.active) #menu-toggle img.close {
         opacity: 0;
         width: 0;
+        height: 0;
         margin: 0;
         position: absolute;
     }
@@ -1345,6 +1346,7 @@ header nav li:not(:hover) .submenu {
 
     main {
         padding-top: 108px;
+        overflow: hidden;
     }
 
     .continue-btn {
