@@ -114,8 +114,8 @@ header nav>ul>li.active::after {
     transform: scaleX(1.4);
 }
 
-header nav li:not(.active) {
-    color: #9F9F9F;
+header nav li:not(.active):not(:hover) {
+    opacity: .75;
 }
 
 header nav .submenu {
