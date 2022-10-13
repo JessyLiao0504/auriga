@@ -317,7 +317,7 @@
                 overflow: hidden;
             }
 
-            body main>section:first-of-type {
+            #main-bg {
                 background-image: url(./imgs/solutions/bg-main-mobile.png);
             }
 
@@ -328,10 +328,6 @@
             main>section:first-of-type p {
                 line-height: 2;
                 margin-bottom: 3.8em;
-            }
-
-            #para-bg {
-                background-image: url(./imgs/solutions/bg-main-mobile.png);
             }
 
             .icons-list>li {
@@ -485,7 +481,6 @@
         window.addEventListener('scroll', () => {
             const para = document.querySelector('body main>section:first-of-type').getBoundingClientRect();
             const pos = para.top / para.height;
-            console.log(pos);
             document.getElementById('main-bg').style = `opacity: ${1+pos}`;
             //document.querySelector('body main>section:first-of-type').style = `background-size: ${100 + 25 * -para.top / para.height}%; background-position-y: ${50 + 70 * -para.top / para.height}%; transform: translateY(${0 + 30 * para.top / para.height}%);`;
         });
@@ -517,7 +512,7 @@
     </header>
     <main class="relative m-auto tracking-widest leading-normal text-base">
         <img class="continue-btn" src="./imgs/continue.svg" />
-        <div id="main-bg" class="fixed w-full h-full -z-10"></div>
+        <div id="main-bg" class="fixed inset-0 -z-10"></div>
         <section class="relative flex">
             <div class="max-w-screen-lg m-auto flex-grow">
                 <p class="border py-2 px-16 mb-16 inline-block text-4xl light-green font-din hidden:sm">New World ・ New
