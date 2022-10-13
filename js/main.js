@@ -159,6 +159,14 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
+window.addEventListener('wheel', e => {
+    e.preventDefault();
+    window.scrollBy({
+        top: -e.wheelDelta,
+        behavior: 'smooth'
+    });
+}, { passive: false });
+
 // window.addEventListener('scroll', () => {
 //     document.body.style.setProperty('--scroll', window.scrollY / (document.body.offsetHeight - window.innerHeight));
 // }, false);

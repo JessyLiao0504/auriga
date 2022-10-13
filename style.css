@@ -137,14 +137,14 @@ header nav .has-sub>a {
 }
 
 header nav .has-sub>a::after {
-    content: ">";
+    content: url(./imgs/arrow-down.svg);
     display: inline-block;
-    transform: rotate(90deg) scaleY(1.4) translateX(-2px);
     margin-left: .6em;
     position: unset;
     width: 0;
     height: auto;
     background: none;
+    vertical-align: middle;
 }
 
 main>section:first-of-type {
