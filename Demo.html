@@ -4,7 +4,8 @@
     <title>SentinelOne 資安產品試用申請｜安創資訊</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta data-hid="description" name="description" content="馬上體驗SentinelOne高效率、全面性與高準確度的資訊安全服務,若您有興趣體驗 SentinelOne Singularity，歡迎與我們聯繫，我們將派專人為您服務， 謝謝">
+    <meta data-hid="description" name="description"
+        content="馬上體驗SentinelOne高效率、全面性與高準確度的資訊安全服務,若您有興趣體驗 SentinelOne Singularity，歡迎與我們聯繫，我們將派專人為您服務， 謝謝">
     <meta name="format-detection" content="telephone=no">
     <meta data-hid="charset" charset="utf-8">
     <meta data-hid="mobile-web-app-capable" name="mobile-web-app-capable" content="yes">
@@ -55,7 +56,7 @@
             margin-bottom: 36px;
         }
 
-        main>section:first-of-type{
+        main>section:first-of-type {
             min-height: auto;
         }
 
@@ -92,13 +93,15 @@
         }
 
         @media screen and (max-width: 767px) {
-            main>section:first-of-type{
+            main>section:first-of-type {
                 margin-top: 0;
                 line-height: 2;
             }
-            main>section:first-of-type h1{
+
+            main>section:first-of-type h1 {
                 font-size: 36px;
             }
+
             .form {
                 width: 100%;
                 margin-top: 4em;
@@ -108,7 +111,7 @@
                 margin-bottom: .4em;
             }
 
-            .send button{
+            .send button {
                 font-size: 24px;
                 width: 86%;
                 margin: 1.2em auto;
@@ -161,27 +164,27 @@
                     <div class="flex gap-8">
                         <p>
                             <label for="name">Name</label>
-                            <input type="text" id="name">
+                            <input type="text" id="name" name="entry.611233707" required>
                         </p>
                         <p>
                             <label for="phone">Phone</label>
-                            <input type="text" id="phone">
+                            <input type="text" id="phone" name="entry.2120536125" required>
                         </p>
                     </div>
                     <p>
                         <label for="company">Company</label>
-                        <input type="text" id="company">
+                        <input type="text" id="company" name="entry.307165956">
                     </p>
                     <p>
                         <label for="email">Email</label>
-                        <input type="email" id="email">
+                        <input type="email" id="email" name="entry.1594940781">
                     </p>
                     <p>
                         <label for="message">Message</label>
-                        <textarea name="message" rows="6"></textarea>
+                        <textarea id="message" name="entry.1607982112" rows="6"></textarea>
                     </p>
                     <div class="text-center send mt-2">
-                        <button type="button"
+                        <button type="submit"
                             class="relative w-7/10 px-10 py-2 font-din bg-none rounded-sm shadow-none r-4-after absolute-after tracking-text text-xl">SEND</button>
                     </div>
                     <p class="mt-10">通過點擊送出，我同意根據 Auriga Security, Inc. 隱私政策使用我的個人數據<br>Auriga Security, Inc.
@@ -198,6 +201,46 @@
             <li class="flex"><img class="mr-6" src="./imgs/footer-marker.svg" />台北市大安區和平東路二段163號10樓</li>
         </ul>
     </footer>
+
+    <script>
+        document.querySelector('.form>form').addEventListener('submit', e => {
+            e.preventDefault();
+            const ff = new FormData(document.querySelector('.form form'));
+
+            fetch("https://docs.google.com/forms/u/0/d/e/1FAIpQLSdIAacP813U06DOR8ykLtmpcAStxv40CnqRVyGWmb1TVyWdyQ/formResponse", {
+                "headers": {
+                    "accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9",
+                    "accept-language": "zh-TW,zh;q=0.9,en-US;q=0.8,en;q=0.7",
+                    "cache-control": "max-age=0",
+                    "content-type": "application/x-www-form-urlencoded",
+                    "sec-ch-ua": "\"Chromium\";v=\"106\", \"Google Chrome\";v=\"106\", \"Not;A=Brand\";v=\"99\"",
+                    "sec-ch-ua-arch": "\"x86\"",
+                    "sec-ch-ua-bitness": "\"64\"",
+                    "sec-ch-ua-full-version": "\"106.0.5249.103\"",
+                    "sec-ch-ua-full-version-list": "\"Chromium\";v=\"106.0.5249.103\", \"Google Chrome\";v=\"106.0.5249.103\", \"Not;A=Brand\";v=\"99.0.0.0\"",
+                    "sec-ch-ua-mobile": "?0",
+                    "sec-ch-ua-model": "\"\"",
+                    "sec-ch-ua-platform": "\"macOS\"",
+                    "sec-ch-ua-platform-version": "\"11.6.8\"",
+                    "sec-ch-ua-wow64": "?0",
+                    "sec-fetch-dest": "document",
+                    "sec-fetch-mode": "navigate",
+                    "sec-fetch-site": "same-origin",
+                    "sec-fetch-user": "?1",
+                    "upgrade-insecure-requests": "1",
+                    "x-client-data": "CKy1yQEIkLbJAQijtskBCMC2yQEIqZ3KAQjIgssBCJahywEI/5zMAQihvMwBCO28zAEI48vMAQiq3MwBCIvdzAEInN3MAQjx38wBCMThzAEIw+TMAQjG5swBCPnmzAE="
+                },
+                "referrer": "https://docs.google.com/forms/d/e/1FAIpQLSdIAacP813U06DOR8ykLtmpcAStxv40CnqRVyGWmb1TVyWdyQ/viewform?fbzx=-1641487948137351444",
+                "referrerPolicy": "strict-origin-when-cross-origin",
+                "body": new URLSearchParams(ff).toString(),
+                "method": "POST",
+                "mode": "no-cors",
+                "credentials": "include"
+            }).then((res) => {
+                location.reload();
+            });
+        });
+    </script>
 </body>
 
 </html>

@@ -45,6 +45,10 @@ textarea {
     letter-spacing: .1em;
 }
 
+input:-internal-autofill-selected{
+    background: none!important;
+}
+
 :focus-visible {
     outline: none;
 }
