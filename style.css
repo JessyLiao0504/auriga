@@ -222,6 +222,10 @@ main>section:first-of-type {
     position: absolute;
 }
 
+.fixed{
+    position: fixed;
+}
+
 .sticky {
     position: sticky;
 }

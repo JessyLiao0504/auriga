@@ -30,14 +30,14 @@
             margin-bottom: 3%;
             margin-top: -108px;
             min-height: 95vh;
+        }
 
+        #main-bg{
             background-image: linear-gradient(358.94deg, #1A183D 7.21%, rgba(0, 0, 0, 0) 64.59%), url(./imgs/tubes.png);
             background-blend-mode: lighten;
             background-position: center 50%;
             background-repeat: no-repeat;
             background-size: 100%;
-
-            transition: all .05s;
         }
 
         button {
@@ -484,7 +484,10 @@
 
         window.addEventListener('scroll', () => {
             const para = document.querySelector('body main>section:first-of-type').getBoundingClientRect();
-            document.querySelector('body main>section:first-of-type').style = `background-size: ${100 + 25 * -para.top / para.height}%; background-position-y: ${50 + 70 * -para.top / para.height}%; transform: translateY(${0 + 30 * para.top / para.height}%);`;
+            const pos = para.top / para.height;
+            console.log(pos);
+            document.getElementById('main-bg').style = `opacity: ${1+pos}`;
+            //document.querySelector('body main>section:first-of-type').style = `background-size: ${100 + 25 * -para.top / para.height}%; background-position-y: ${50 + 70 * -para.top / para.height}%; transform: translateY(${0 + 30 * para.top / para.height}%);`;
         });
     </script>
 </head>
@@ -514,6 +517,7 @@
     </header>
     <main class="relative m-auto tracking-widest leading-normal text-base">
         <img class="continue-btn" src="./imgs/continue.svg" />
+        <div id="main-bg" class="fixed w-full h-full -z-10"></div>
         <section class="relative flex">
             <div class="max-w-screen-lg m-auto flex-grow">
                 <p class="border py-2 px-16 mb-16 inline-block text-4xl light-green font-din hidden:sm">New World ・ New
