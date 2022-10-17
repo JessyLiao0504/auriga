@@ -162,7 +162,7 @@ document.addEventListener('DOMContentLoaded', () => {
 window.addEventListener('wheel', e => {
     e.preventDefault();
     window.scrollBy({
-        top: -e.wheelDelta,
+        top: -e.wheelDelta*1.2,
         behavior: 'smooth'
     });
 }, { passive: false });
