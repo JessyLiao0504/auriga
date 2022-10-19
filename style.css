@@ -45,8 +45,8 @@ textarea {
     letter-spacing: .1em;
 }
 
-input:-internal-autofill-selected{
-    background: none!important;
+input:-internal-autofill-selected {
+    background: none !important;
 }
 
 :focus-visible {
@@ -222,7 +222,7 @@ main>section:first-of-type {
     position: absolute;
 }
 
-.fixed{
+.fixed {
     position: fixed;
 }
 
@@ -1130,6 +1130,10 @@ li {
     cursor: pointer;
 }
 
+.obs-hover>div:first-child {
+    flex-shrink: 0;
+}
+
 .obs-hover:not(.active):hover {
     transform: translateX(-8px);
 }
@@ -1162,7 +1166,7 @@ header nav li .submenu {
     height: 6em;
 }
 
-header nav li:not(:hover) .submenu ,
+header nav li:not(:hover) .submenu,
 header nav a.close+.submenu {
     transition: all .15s;
     position: relative;
