@@ -276,6 +276,7 @@
             }).then((res) => {
                 document.querySelectorAll('form input, form textarea').forEach(ele => ele.value = '');
                 document.querySelector('#form-msg').classList.add('show');
+                window.scroll({ top: (document.querySelector('#form-msg').offsetTop - window.innerHeight / 2), behavior: 'smooth' });
             });
         });
     </script>
