@@ -396,6 +396,10 @@
                 <li><a href="https://medium.com/@Auriga_Security" target="_blank">Blog</a></li>
                 <li><a href="Careers.html">Careers</a></li>
                 <li><a href="Demo.html">Demo Request</a></li>
+                <li class="lang">
+                    <span class="zh">中</span>
+                    <a href="https://aurigasec.com/en/Consultant.html" class="en">EN</a>
+                </li>
             </ul>
         </nav>
         <div id="menu-toggle">
@@ -569,24 +573,6 @@
         document.addEventListener('DOMContentLoaded', () => {
             var canvas, ctx;
 
-            // document.querySelectorAll('.bubble.white').forEach(ele => ele.addEventListener('mouseenter', e => {
-            //     if (window.innerWidth > 767) {
-            //         canvas = document.createElement('canvas');
-            //         canvas.setAttribute('width', document.getElementById('circles').clientWidth);
-            //         canvas.setAttribute('height', document.getElementById('circles').clientHeight);
-            //         canvas.classList.add('pointer-events-none', 'absolute', 'z-30', 'cus-shadow');
-            //         document.getElementById('circles').append(canvas);
-            //         ctx = canvas.getContext('2d');
-            //         draw(e.target);
-            //     }
-            // }));
-
-            // document.querySelectorAll('.bubble.white').forEach(ele => ele.addEventListener('mouseleave', e => {
-            //     if (canvas) {
-            //         canvas.remove();
-            //     }
-            // }));
-
             if (window.innerWidth > 767) {
                 canvas = document.createElement('canvas');
                 canvas.setAttribute('width', document.getElementById('circles').clientWidth);
@@ -733,20 +719,7 @@
                         });
                     }
                 }
-                // for (var i = 1; i < vertices.length; i++) {
-                //     var pt0 = vertices[i - 1];
-                //     var pt1 = vertices[i];
-                //     var dx = pt1.x - pt0.x;
-                //     var dy = pt1.y - pt0.y;
-                //     for (var j = 0; j < cnt; j++) {
-                //         var x = pt0.x + dx * j / cnt;
-                //         var y = pt0.y + dy * j / cnt;
-                //         waypoints.push({
-                //             x: x,
-                //             y: y
-                //         });
-                //     }
-                // }
+                
                 return (waypoints);
             }
 
