@@ -164,6 +164,8 @@
 
         #shields h3 {
             letter-spacing: .1em;
+            line-height: 1.2;
+            margin-bottom: .3em;
         }
 
         #shields li>img {
@@ -422,7 +424,7 @@
     </header>
     <main class="relative m-auto tracking-widest leading-normal text-base">
         <img class="continue-btn" src="./imgs/continue.svg" />
-        <section id="welcome" class="m-auto flex justify-center">
+        <section id="welcome" class="m-auto flex flex-col items-center justify-center">
             <div class="max-w-screen-lg flex justify-between w-full">
                 <div>
                     <p class="font-din text-4xl"><span id="welcome-a">WELCOME</span><span id="to-a"> to</span></p>
@@ -436,12 +438,16 @@
                 <div id="text-a" style="max-width: 510px;">
                     <h2 class="font-din mb-4"><strong>Serve Security</strong> <br>With More Than Just Professionalism
                     </h2>
-                    <p class="leading-9 text-justify">
+                    <p class="leading-9 text-justify hidden:lg">
                         Our core values include recognition, professionalism, and responsibility by implementing coaching communication into the organization.<br>
                         Our mission is to carefully select security products with excellent technology, supplemented by independent development capabilities, and continuously adapt to the latest cybersecurity threats and defensive technologies to eliminate errors and response time by reducing human intervention.
                     </p>
                 </div>
             </div>
+            <p class="leading-9 text-justify max-w-screen-lg mt-10 hidden:sm">
+                Our core values include recognition, professionalism, and responsibility by implementing coaching communication into the organization.<br>
+                Our mission is to carefully select security products with excellent technology, supplemented by independent development capabilities, and continuously adapt to the latest cybersecurity threats and defensive technologies to eliminate errors and response time by reducing human intervention.
+            </p>
         </section>
 
         <section id="shields" class="max-w-screen-xl m-auto mb-20">
@@ -450,7 +456,7 @@
                 <li class="info-box flex shrink-0">
                     <img src="./imgs/our-team/shield.png" />
                     <div>
-                        <img src="./imgs/our-team/singularity-xdr.png" />
+                        <h3 class="font-din text-4xl">Singularity™ XDR</h3>
                         <p>Empower autonomous, real-time actions against cyber attacks and threats.</p>
                     </div>
                 </li>
