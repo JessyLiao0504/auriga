@@ -849,6 +849,10 @@ main>section:first-of-type {
     line-height: 2;
 }
 
+.nowrap{
+    white-space: nowrap;
+}
+
 .rounded-sm {
     border-radius: .125rem;
 }
