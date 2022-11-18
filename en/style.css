@@ -380,6 +380,10 @@ main>section:first-of-type {
     align-items: center;
 }
 
+.items-start {
+    align-items: flex-start;
+}
+
 .self-center {
     align-self: center;
 }
@@ -826,7 +830,7 @@ main>section:first-of-type {
 }
 
 .tracking-4 {
-    letter-spacing: .38em;
+    letter-spacing: .3em;
 }
 
 .tracking-6 {
