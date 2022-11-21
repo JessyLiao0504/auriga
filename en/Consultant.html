@@ -226,7 +226,7 @@
                 animation: zoom-in-out 2.2s ease-in-out infinite both alternate;
             } */
 
-            #circles .bubble.white:hover{
+            #circles .bubble.white:hover {
                 transform: scale(1.15);
             }
 
@@ -417,7 +417,8 @@
                             Cybersecurity</p>
                         <h2 class="font-din text-5xl mt-16">Consultant</h2>
                         <h3 class="font-din text-xl mb-12">The Future of Cybersecurity is Autonomous</h3>
-                        <p class="mb-20"><strong>Enterprise Information Security</strong><br>Build & Deploy Endpoint Protection Platform<br>Big Data Analysis & Solutions
+                        <p class="mb-20"><strong>Enterprise Information Security</strong><br>Build & Deploy Endpoint
+                            Protection Platform<br>Big Data Analysis & Solutions
                         </p>
                     </div>
                 </div>
@@ -430,7 +431,8 @@
                 <div>
                     <h2>Solution</h2>
                     <h3>Security Products & Solutions Deployment</h3>
-                    <p>Enhancing enterprise information security through<br>building and deploying the most suitable information security platform.</p>
+                    <p>Enhancing enterprise information security through<br>building and deploying the most suitable
+                        information security platform.</p>
                 </div>
             </section>
             <section class="flex items-center justify-center row-reverse">
@@ -439,7 +441,8 @@
                     <div>
                         <h2>Support</h2>
                         <h3>Product Support & Consultant Service</h3>
-                        <p>Decades of professional experience in the industry for<br>guaranteed assurance of the most efficient & effective deployment of products.</p>
+                        <p>Decades of professional experience in the industry for<br>guaranteed assurance of the most
+                            efficient & effective deployment of products.</p>
                     </div>
                 </div>
             </section>
@@ -448,7 +451,8 @@
                 <div>
                     <h2>Consultant</h2>
                     <h3>Security Incidents Constultant Service</h3>
-                    <p>Fast & accurate assessment of possible threats and incidents<br>to ensure enterprise and properly respond to & mitigate all security breaches.
+                    <p>Fast & accurate assessment of possible threats and incidents<br>to ensure enterprise and properly
+                        respond to & mitigate all security breaches.
                     </p>
                 </div>
             </section>
@@ -458,7 +462,8 @@
                     <div>
                         <h2>Security</h2>
                         <h3>Cross-platform Security</h3>
-                        <p>Integration of diverse products and platforms<br>to ensure the security of enterprise environment and systems.</p>
+                        <p>Integration of diverse products and platforms<br>to ensure the security of enterprise
+                            environment and systems.</p>
                     </div>
                 </div>
             </section>
@@ -531,7 +536,8 @@
         <div class="text-center mb-32">
             <a href="Demo.html">
                 <button type="button"
-                    class="relative py-3 px-10 px-12:hover btn-purple-1 rounded-sm shadow-none arrow-after r-4-after absolute-after">LEARN MORE</button>
+                    class="relative py-3 px-10 px-12:hover btn-purple-1 rounded-sm shadow-none arrow-after r-4-after absolute-after">LEARN
+                    MORE</button>
             </a>
         </div>
     </main>
@@ -597,7 +603,9 @@
                 document.getElementById('circles').append(canvas);
                 ctx = canvas.getContext('2d');
 
-                document.querySelectorAll('.bubble.white').forEach(ele => draw(ele));
+                setTimeout(() => {
+                    document.querySelectorAll('.bubble.white').forEach(ele => draw(ele));
+                }, 350);
             }
 
             function draw(target) {
@@ -781,9 +789,12 @@
 
     <footer class="pb-20 px-8">
         <ul class="max-w-screen-xl m-auto flex justify-center gap-16 border-t border-light-green py-10">
-            <li class="flex items-center"><img class="mr-6" src="./imgs/footer-phone.svg" /><a href="tel:+886228224970">+886-2-2822-4970</a></li>
-            <li class="flex items-center"><img class="mr-6" src="./imgs/footer-mail.svg" /><a href="mailto:sales@aurigasec.com">sales@aurigasec.com</a></li>
-            <li class="flex items-center"><img class="mr-6" src="./imgs/footer-marker.svg" />10F., No. 163, Sec. 2, Heping E. Rd., Da’an Dist., Taipei City , Taiwan (R.O.C.)</li>
+            <li class="flex items-center"><img class="mr-6" src="./imgs/footer-phone.svg" /><a
+                    href="tel:+886228224970">+886-2-2822-4970</a></li>
+            <li class="flex items-center"><img class="mr-6" src="./imgs/footer-mail.svg" /><a
+                    href="mailto:sales@aurigasec.com">sales@aurigasec.com</a></li>
+            <li class="flex items-center"><img class="mr-6" src="./imgs/footer-marker.svg" />10F., No. 163, Sec. 2,
+                Heping E. Rd., Da’an Dist., Taipei City , Taiwan (R.O.C.)</li>
         </ul>
     </footer>
 </body>

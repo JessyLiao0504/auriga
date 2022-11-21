@@ -581,7 +581,9 @@
                 document.getElementById('circles').append(canvas);
                 ctx = canvas.getContext('2d');
 
-                document.querySelectorAll('.bubble.white').forEach(ele => draw(ele));
+                setTimeout(() => {
+                    document.querySelectorAll('.bubble.white').forEach(ele => draw(ele));
+                }, 350);
             }
 
             function draw(target) {
