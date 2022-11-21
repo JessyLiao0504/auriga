@@ -35,7 +35,7 @@
             min-height: 95vh;
         }
 
-        #main-bg{
+        #main-bg {
             background-image: linear-gradient(358.94deg, #1A183D 7.21%, rgba(0, 0, 0, 0) 64.59%), url(./imgs/tubes.png);
             background-blend-mode: lighten;
             background-position: center 50%;
@@ -227,7 +227,7 @@
             margin-bottom: 4em;
         }
 
-        .icons-list h3{
+        .icons-list h3 {
             font-weight: bold;
             margin-bottom: .3em;
         }
@@ -255,8 +255,8 @@
             background-image: linear-gradient(106.81deg, #171032 5.35%, rgba(52, 44, 58, 0) 81.05%);
         }
 
-        .grid-list.items-start::before {
-            top: 44%;
+        .grid-list li>div {
+            align-items: stretch;
         }
 
         @media screen and (max-width: 1600px) {
@@ -272,6 +272,11 @@
 
             #ruler {
                 padding: 0;
+            }
+
+
+            .grid-list li {
+                height: 10em;
             }
         }
 
@@ -488,7 +493,7 @@
         window.addEventListener('scroll', () => {
             const para = document.querySelector('body main>section:first-of-type').getBoundingClientRect();
             const pos = para.top / para.height;
-            document.getElementById('main-bg').style = `opacity: ${1+pos}`;
+            document.getElementById('main-bg').style = `opacity: ${1 + pos}`;
             //document.querySelector('body main>section:first-of-type').style = `background-size: ${100 + 25 * -para.top / para.height}%; background-position-y: ${50 + 70 * -para.top / para.height}%; transform: translateY(${0 + 30 * para.top / para.height}%);`;
         });
     </script>
@@ -539,11 +544,15 @@
                     Cybersecurity</p>
                 <h2 class="font-din text-5xl">SentinelOne Singularity XDR</h2>
                 <h3 class="font-din text-xl mt-2 mb-20">The Future of Cybersecurity is Autonomous</h3>
-                <p class="mb-20 leading-9">Today’s cyber attackers move fast. Fast enough that 1-10-60 has become an obsolete model for effective detection, investigation, and response.
-                    Singularity XDR is the only cybersecurity platform empowering modern enterprises to take autonomous, real-time action with greater visibility of their dynamic attack surface and cross-platform security analytics.</p>
+                <p class="mb-20 leading-9">Today’s cyber attackers move fast. Fast enough that 1-10-60 has become an
+                    obsolete model for effective detection, investigation, and response.
+                    Singularity XDR is the only cybersecurity platform empowering modern enterprises to take autonomous,
+                    real-time action with greater visibility of their dynamic attack surface and cross-platform security
+                    analytics.</p>
                 <a href="https://attackevals.mitre-engenuity.org/enterprise/participants/?adversaries=wizard-spider-sandworm"
                     target="_blank">
-                    <button type="button" class="py-4 px-16 btn-purple rounded mb-8">2022 MITRE Evaluaton Results</button>
+                    <button type="button" class="py-4 px-16 btn-purple rounded mb-8">2022 MITRE Evaluaton
+                        Results</button>
                 </a>
             </div>
         </section>
@@ -554,7 +563,8 @@
             </div>
             <div class="w-1/2 pl-8 w-full:sm p-0:sm">
                 <img src="./imgs/xdr.png" />
-                <p>Stops Breaches Faster Than Any Human Could<br>Responds at machine speed without human intervention.</p>
+                <p>Stops Breaches Faster Than Any Human Could<br>Responds at machine speed without human intervention.
+                </p>
                 <ul class="icons-list">
                     <li class="flex">
                         <div class="img">
@@ -583,7 +593,8 @@
         <section id="ruler" class="max-w-screen-lg m-auto relative mb-24">
             <p class="absolute inset-0 border-bg-p text-justify flex items-center justify-center leading-9">
                 SentinelOne Singularity XDR
-                Takes the Next Leap in the Evolution of EDR. Extend Beyond the Endpoint With End-to-End Enterprise Visibility, Endpoint Protection, and Incident Response.
+                Takes the Next Leap in the Evolution of EDR. Extend Beyond the Endpoint With End-to-End Enterprise
+                Visibility, Endpoint Protection, and Incident Response.
             </p>
             <picture>
                 <source srcset="./imgs/solutions/border-bg-mobile.png" media="(max-width: 767px)" />
@@ -592,9 +603,11 @@
         </section>
         <section class="text-center">
             <h2 class="text-4xl tracking-4">EXCELLENCY</h2>
-            <h3 class="border-b border-light-green inline-block mt-4 mb-10 px-6">MORE EFFECTIVENESS, MORE EFFECIENCY, LESS EXPOSURE</h3>
+            <h3 class="border-b border-light-green inline-block mt-4 mb-10 px-6">MORE EFFECTIVENESS, MORE EFFECIENCY,
+                LESS EXPOSURE</h3>
             <div>
-                <p class="purple-quote">INTUITIVE SaaS MANAGEMENT PLATFORM WITH CUSTOMIZABLE FUNCTIONS TO SERVE ALL NEEDS</p>
+                <p class="purple-quote">INTUITIVE SaaS MANAGEMENT PLATFORM WITH CUSTOMIZABLE FUNCTIONS TO SERVE ALL
+                    NEEDS</p>
             </div>
         </section>
 
@@ -714,7 +727,8 @@
                         <p class="mb-1 underline">Security Operations</p>
                         <p>One Agent for Consolidated Cybersecurity</p>
                     </div>
-                    <p class="opacity-80">More Capability with Less Complexity. Bring Together Best-in-Class EPP & EDR in One Agent, One Platform.</p>
+                    <p class="opacity-80">More Capability with Less Complexity. Bring Together Best-in-Class EPP & EDR
+                        in One Agent, One Platform.</p>
                 </div>
             </div>
         </section>
@@ -722,7 +736,8 @@
         <section class="mb-20 max-w-screen-xl m-auto">
             <header class="text-center mb-20">
                 <h2 class="text-4xl tracking-4">SentinelOne License</h2>
-                <h3 class="border-b border-light-green inline-block mt-4 mb-10 px-6">SentinelOne Singularity Licenses Information
+                <h3 class="border-b border-light-green inline-block mt-4 mb-10 px-6">SentinelOne Singularity Licenses
+                    Information
                 </h3>
             </header>
 
@@ -732,12 +747,17 @@
                         <img class="w-7/10" src="./imgs/solutions/ball-1.png" />
                     </div>
                     <img src="./imgs/solutions/singularity-core.png" />
-                    <p class="mt-6 mb-8 text-left">Singularity Core is an easy-to-deploy, easy-to-manage cloud-native NGAVand EPP.<br>Establish an endpoint security bedrock for your enterprise.<br>Today's Organizations Should expect more From NGAV; Singularity Core Delivers：</p>
+                    <p class="mt-6 mb-8 text-left">Singularity Core is an easy-to-deploy, easy-to-manage cloud-native
+                        NGAVand EPP.<br>Establish an endpoint security bedrock for your enterprise.<br>Today's
+                        Organizations Should expect more From NGAV; Singularity Core Delivers：</p>
                     <ul class="leading-9 square-before-list bg-purple-before-list mr-4-before-list text-left">
-                        <li>NGAV & Behavioal AI Prevention - protects against ransomware, known and unknown malware, trojans, and living off the land attacks.</li>
-                        <li>Incident Forensics & Reporting - quickly orients analysts about wha happened, when it happened, and who was affected. 
+                        <li>NGAV & Behavioal AI Prevention - protects against ransomware, known and unknown malware,
+                            trojans, and living off the land attacks.</li>
+                        <li>Incident Forensics & Reporting - quickly orients analysts about wha happened, when it
+                            happened, and who was affected.
                         </li>
-                        <li>1-Click Remediation & Recovery - automates threat resolution to reduce administrative workload.</li>
+                        <li>1-Click Remediation & Recovery - automates threat resolution to reduce administrative
+                            workload.</li>
                     </ul>
                 </div>
             </div>
@@ -748,12 +768,16 @@
                         <img class="w-7/10" src="./imgs/solutions/ball-2.png" />
                     </div>
                     <img src="./imgs/solutions/singularity-control.png" />
-                    <p class="mt-6 mb-8 text-left">ingularity Control empowers your enterprise with best-of-brand cybersecurity and native suite features：
+                    <p class="mt-6 mb-8 text-left">ingularity Control empowers your enterprise with best-of-brand
+                        cybersecurity and native suite features：
                     </p>
                     <ul class="leading-9 square-before-list bg-purple-before-list mr-4-before-list text-left">
-                        <li>Control networl Flows - centralize and customize policy-based control with hierarchical inheritance.</li>
-                        <li>Control USB & Bluetooth - enable granular device control for USB and Bluetooth on Windows and macOS.</li>
-                        <li>Ensures 100% Deploymeny - rogue device discovery identifies any rogue endpoints that are not yet protected by SentinelOne.</li>
+                        <li>Control networl Flows - centralize and customize policy-based control with hierarchical
+                            inheritance.</li>
+                        <li>Control USB & Bluetooth - enable granular device control for USB and Bluetooth on Windows
+                            and macOS.</li>
+                        <li>Ensures 100% Deploymeny - rogue device discovery identifies any rogue endpoints that are not
+                            yet protected by SentinelOne.</li>
                     </ul>
                 </div>
             </div>
@@ -764,15 +788,21 @@
                         <img class="w-7/10" src="./imgs/solutions/ball-3.png" />
                     </div>
                     <img src="./imgs/solutions/singularity-complete.png" />
-                    <p class="mt-6 mb-2 text-left">Achieve greater cross-surface visibility and take action in real time with one agent
-                        for automated, enterprise-grade prevention, detection, response, and hunting across endpoint, cloud, and identity.</p>
-                    <p class="mb-8">Singularity Complete reduces alert fatigue and manual triage for SOC & IT analysts by automatically correlating telemetry and mapping it to the MITRE ATT&CK® framework.
+                    <p class="mt-6 mb-2 text-left">Achieve greater cross-surface visibility and take action in real time
+                        with one agent
+                        for automated, enterprise-grade prevention, detection, response, and hunting across endpoint,
+                        cloud, and identity.</p>
+                    <p class="mb-8">Singularity Complete reduces alert fatigue and manual triage for SOC & IT analysts
+                        by automatically correlating telemetry and mapping it to the MITRE ATT&CK® framework.
                     </p>
                     <ul class="leading-9 square-before-list bg-purple-before-list mr-4-before-list text-left">
-                        <li>Storyline creates context in real time: Windows, macOS, Linux, and Kubenetes cloud-native workloads.</li>
+                        <li>Storyline creates context in real time: Windows, macOS, Linux, and Kubenetes cloud-native
+                            workloads.</li>
                         <li>Storyline Active Response™ (STAR) keeps a constant watch for noteworthy events.</li>
-                        <li>High performance, industry leading historical EDR data retention for up to 3 years of visibility.</li>
-                        <li>Easy pivoting and hunting with 100’s of available MITRE ATT&amp;CK® tactics and techniques.</li>
+                        <li>High performance, industry leading historical EDR data retention for up to 3 years of
+                            visibility.</li>
+                        <li>Easy pivoting and hunting with 100’s of available MITRE ATT&amp;CK® tactics and techniques.
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -780,7 +810,8 @@
 
         <section class="max-w-screen-lg m-auto text-center mb-36">
             <h2>The World's Leading and Largest<br>Enterprises Trust SentinelOne</h2>
-            <p class="mt-4 gray">Including 3 of the Fortune 10 and hundreds of the global 2000<br>Trusted By Leading IT Experts</p>
+            <p class="mt-4 gray">Including 3 of the Fortune 10 and hundreds of the global 2000<br>Trusted By Leading IT
+                Experts</p>
 
             <div id="dt-slider" class="my-12">
                 <ul class="flex max-w-full overflow-hidden gap-4 py-4">
@@ -806,14 +837,17 @@
         <section class="max-w-screen-lg m-auto text-center mb-24">
             <div class="mb-4"><img src="./imgs/solutions/vigilance.png" /></div>
             <p class="dot-purple-wrap mb-12">24/7 Managed Detection & Response</p>
-            <p>Call for backup with Vigilance Respond, SentinelOne’s global Managed Detection and Response (MDR) service.
-                Vigilance Respond enlists our in-house experts to review, act upon, and document every product-identified threat.</p>
+            <p>Call for backup with Vigilance Respond, SentinelOne’s global Managed Detection and Response (MDR)
+                service.
+                Vigilance Respond enlists our in-house experts to review, act upon, and document every
+                product-identified threat.</p>
         </section>
 
         <section class="m-auto flex gap-4 mb-20 info-box">
             <div>
                 <h2 class="mb-8 tracking-widest">Vigilance Respond</h2>
-                <p class="mb-12 text-lg">Rely on machine-speed technology run by dedicated analysts to adapt to today’s threat landscape.</p>
+                <p class="mb-12 text-lg">Rely on machine-speed technology run by dedicated analysts to adapt to today’s
+                    threat landscape.</p>
                 <ul class="leading-9 square-before-list bg-purple-before-list mr-4-before-list mb-4-list">
                     <li>Monitor 24x7x365 for changes to your environment, and are prepared to respond.</li>
                     <li>Add human context to Storyline™ technology, saving even more time.</li>
@@ -839,7 +873,7 @@
                 </li>
                 <li>
                     <div><img src="./imgs/solutions/respond-5.svg"></div>
-                    <p>Triage &Aacute; Event<br>Prioritization</p>
+                    <p>Triage & Event<br>Prioritization</p>
                 </li>
                 <li>
                     <div><img src="./imgs/solutions/respond-6.svg"></div>
@@ -859,13 +893,14 @@
         <section class="m-auto flex gap-4 mb-20 info-box">
             <div>
                 <h2 class="mb-8 tracking-widest">Vigilance Respond Pro</h2>
-                <p class="mb-12 text-lg">Respond Pro augments the fastest MDR on the planet with world-class investigation and response</p>
+                <p class="mb-12 text-lg">Respond Pro augments the fastest MDR on the planet with world-class
+                    investigation and response</p>
                 <ul class="leading-9 square-before-list bg-purple-before-list mr-4-before-list mb-4-list">
                     <li>Security Assessment</li>
                     <li>Digital Forensics Investigation & Malware Analysis</li>
                 </ul>
             </div>
-            <ul class="grid grid-cols-4 text-center grid-list w-1/2 w-full:sm shrink-0 gap-y-12 items-start">
+            <ul class="grid grid-cols-4 text-center grid-list w-1/2 w-full:sm shrink-0 gap-y-12 items-center">
                 <li>
                     <div><img src="./imgs/solutions/respond-1.svg"></div>
                     <p>Annual<br>Retainer Hours</p>
@@ -904,16 +939,20 @@
         <div class="text-center my-32">
             <a href="https://www.sentinelone.com/platform/">
                 <button type="button"
-                    class="relative py-3 px-10 px-12:hover btn-purple-1 rounded-sm shadow-none arrow-after r-4-after absolute-after">LEARN MORE</button>
+                    class="relative py-3 px-10 px-12:hover btn-purple-1 rounded-sm shadow-none arrow-after r-4-after absolute-after">LEARN
+                    MORE</button>
             </a>
         </div>
     </main>
 
     <footer class="pb-20 px-8">
         <ul class="max-w-screen-xl m-auto flex justify-center gap-16 border-t border-light-green py-10">
-            <li class="flex items-center"><img class="mr-6" src="./imgs/footer-phone.svg" /><a href="tel:+886228224970">+8862-2822-4970</a></li>
-            <li class="flex items-center"><img class="mr-6" src="./imgs/footer-mail.svg" /><a href="mailto:sales@aurigasec.com">sales@aurigasec.com</a></li>
-            <li class="flex items-center"><img class="mr-6" src="./imgs/footer-marker.svg" />10F., No. 163, Sec. 2, Heping E. Rd., Da’an Dist., Taipei City , Taiwan (R.O.C.)</li>
+            <li class="flex items-center"><img class="mr-6" src="./imgs/footer-phone.svg" /><a
+                    href="tel:+886228224970">+886-2-2822-4970</a></li>
+            <li class="flex items-center"><img class="mr-6" src="./imgs/footer-mail.svg" /><a
+                    href="mailto:sales@aurigasec.com">sales@aurigasec.com</a></li>
+            <li class="flex items-center"><img class="mr-6" src="./imgs/footer-marker.svg" />10F., No. 163, Sec. 2,
+                Heping E. Rd., Da’an Dist., Taipei City , Taiwan (R.O.C.)</li>
         </ul>
     </footer>
 </body>
