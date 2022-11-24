@@ -87,7 +87,7 @@ body>header {
     text-align: center;
 }
 
-#auriga>header .lang{
+#auriga>header .lang {
     background-color: #1A193E;
     box-shadow: 0px 0px 8px rgba(177, 79, 255, 0.25);
     border-radius: .5em;
@@ -100,11 +100,11 @@ body>header {
     align-self: center;
 }
 
-#auriga>header .lang::after{
+#auriga>header .lang::after {
     display: none;
 }
 
-#auriga>header .lang > *{
+#auriga>header .lang>* {
     display: inline-block;
     width: 50%;
     padding-top: .6em;
@@ -114,7 +114,7 @@ body>header {
     color: #7B7B7B;
 }
 
-#auriga>header .lang > span{
+#auriga>header .lang>span {
     background-color: #6B0AEA;
     border-radius: .5em;
     color: #FFF;
@@ -848,7 +848,7 @@ main>section:first-of-type {
     line-height: 2;
 }
 
-.nowrap{
+.nowrap {
     white-space: nowrap;
 }
 
@@ -1332,6 +1332,10 @@ header nav a.close+.submenu {
 
     .self-start\:sm {
         align-self: flex-start;
+    }
+
+    .items-start\:sm {
+        align-items: flex-start;
     }
 
     #menu-toggle {
