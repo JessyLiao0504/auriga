@@ -22,8 +22,7 @@
     <link rel="stylesheet" href="https://use.typekit.net/jmd1jtv.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;400;700&family=Roboto&display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;400;700&family=Roboto&display=swap"
         rel="stylesheet">
     <script src="./js/main.min.js"></script>
 
@@ -35,7 +34,7 @@
             min-height: 95vh;
         }
 
-        #main-bg{
+        #main-bg {
             background-image: linear-gradient(358.94deg, #1A183D 7.21%, rgba(0, 0, 0, 0) 64.59%), url(./imgs/tubes.png);
             background-blend-mode: lighten;
             background-position: center 50%;
@@ -227,7 +226,7 @@
             margin-bottom: 4em;
         }
 
-        .icons-list h3{
+        .icons-list h3 {
             font-weight: bold;
             margin-bottom: .3em;
         }
@@ -289,6 +288,10 @@
                 grid-row: 1 / span 2;
             }
 
+            .icons-list img {
+                max-width: 90px;
+            }
+
             .info-box>* {
                 padding: 2em 2.4em;
             }
@@ -334,7 +337,7 @@
                 margin-top: 1.8em;
             }
 
-            .icons-list h3{
+            .icons-list h3 {
                 font-size: 1.2em;
             }
 
@@ -342,7 +345,7 @@
                 text-align: center;
             }
 
-            .icons-list>li:not(:last-child)::after{
+            .icons-list>li:not(:last-child)::after {
                 width: 95%;
             }
 
@@ -476,7 +479,7 @@
         window.addEventListener('scroll', () => {
             const para = document.querySelector('body main>section:first-of-type').getBoundingClientRect();
             const pos = para.top / para.height;
-            document.getElementById('main-bg').style = `opacity: ${1+pos}`;
+            document.getElementById('main-bg').style = `opacity: ${1 + pos}`;
             //document.querySelector('body main>section:first-of-type').style = `background-size: ${100 + 25 * -para.top / para.height}%; background-position-y: ${50 + 70 * -para.top / para.height}%; transform: translateY(${0 + 30 * para.top / para.height}%);`;
         });
     </script>
@@ -532,7 +535,8 @@
                     採用全面自動化的 AI 偵測引擎，為使用者提供最精準、完善的防護</p>
                 <a href="https://attackevals.mitre-engenuity.org/enterprise/participants/?adversaries=wizard-spider-sandworm"
                     target="_blank">
-                    <button type="button" class="py-4 px-16 btn-purple rounded mb-8">2022 MITRE ATT&CK<sup>®</sup> 結果</button>
+                    <button type="button" class="py-4 px-16 btn-purple rounded mb-8">2022 MITRE ATT&CK<sup>®</sup>
+                        結果</button>
                 </a>
             </div>
         </section>
@@ -852,7 +856,8 @@
 
         <section class="m-auto flex gap-4 mb-20 info-box">
             <div>
-                <h2 class="mb-8 tracking-widest"><img class="mb-2" src="./imgs/solutions/vigilance-respond-pro.png" /></h2>
+                <h2 class="mb-8 tracking-widest"><img class="mb-2" src="./imgs/solutions/vigilance-respond-pro.png" />
+                </h2>
                 <p class="mb-12 text-lg">Vigilance Respond Pro 增加事件鑑識 ( Digital Forensics ) 與事件處理 ( Incident Response )
                     包含所有
                     Vigilance Respond 服務並額外提供：</p>
@@ -907,8 +912,10 @@
 
     <footer class="pb-20">
         <ul class="max-w-screen-xl m-auto flex justify-center gap-16 border-t border-light-green py-10">
-            <li class="flex"><img class="mr-6" src="./imgs/footer-phone.svg" /><a href="tel:0228224970">+886-2-2822-4970</a></li>
-            <li class="flex"><img class="mr-6" src="./imgs/footer-mail.svg" /><a href="mailto:sales@aurigasec.com">sales@aurigasec.com</a></li>
+            <li class="flex"><img class="mr-6" src="./imgs/footer-phone.svg" /><a
+                    href="tel:0228224970">+886-2-2822-4970</a></li>
+            <li class="flex"><img class="mr-6" src="./imgs/footer-mail.svg" /><a
+                    href="mailto:sales@aurigasec.com">sales@aurigasec.com</a></li>
             <li class="flex"><img class="mr-6" src="./imgs/footer-marker.svg" />台北市大安區和平東路二段163號10樓</li>
         </ul>
     </footer>
