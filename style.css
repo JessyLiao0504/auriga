@@ -214,6 +214,10 @@ main>section:first-of-type {
     background: none;
 }
 
+.max-w-screen-2xl {
+    max-width: 1440px;
+}
+
 .max-w-screen-xl {
     max-width: 1280px;
 }
