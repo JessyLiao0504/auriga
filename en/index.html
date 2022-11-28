@@ -28,7 +28,7 @@
     <style type="text/css">
         #auriga #welcome {
             position: relative;
-            min-height: calc(100vh - 108px);
+            min-height: 100vh;
             align-items: center;
             background-image: url(./imgs/our-team/bg-main.png);
             background-size: cover;
@@ -220,11 +220,10 @@
             }
 
             #shields ul {
-                display: block;
+               grid-auto-rows: 1fr;
             }
 
             #shields li {
-                margin-bottom: 2.8em;
                 align-items: center;
             }
 
@@ -459,21 +458,21 @@
             <img class="absolute -z-10 r-0 w-1/2" src="./imgs/our-team/bg-wave.svg" />
             <ul class="grid grid-cols-3 gap-8">
                 <li class="info-box flex shrink-0">
-                    <img src="./imgs/our-team/shield.svg" />
+                    <img src="./imgs/our-team/shield.png" />
                     <div>
                         <h3 class="font-din text-4xl">Singularity™ XDR</h3>
                         <p>Empower autonomous, real-time actions against cyber attacks and threats.</p>
                     </div>
                 </li>
                 <li class="info-box flex shrink-0">
-                    <img src="./imgs/our-team/storyline.svg" />
+                    <img src="./imgs/our-team/storyline.png" />
                     <div>
                         <h3 class="font-din text-4xl">Storyline™</h3>
                         <p>Automatically connect & correlate begign / malicious events in one illustrtive view.</p>
                     </div>
                 </li>
                 <li class="info-box flex shrink-0">
-                    <img src="./imgs/our-team/vigilance.svg" />
+                    <img src="./imgs/our-team/shield-3.png" />
                     <div>
                         <h3 class="font-din text-4xl">VILLIGANCE</h3>
                         <p>Assist enterprises with proper incident response against malicious events.</p>
