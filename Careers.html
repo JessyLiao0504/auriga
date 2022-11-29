@@ -21,14 +21,17 @@
     <link rel="stylesheet" href="https://use.typekit.net/jmd1jtv.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;400;700&family=Roboto&display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;400;700&family=Roboto&display=swap"
         rel="stylesheet">
     <script src="./js/main.min.js"></script>
 
     <style type="text/css">
         .bg-dark {
             background-image: linear-gradient(180deg, rgba(27, 27, 65, 0.8) 0%, rgba(17, 0, 29, 0.8) 100%);
+        }
+
+        main>section:first-of-type {
+            min-height: unset;
         }
 
         .info-card {
@@ -197,10 +200,6 @@
                 background-repeat: no-repeat;
                 background-position: center 86%;
             }
-
-            main>section:first-of-type{
-                min-height: unset;
-            }
         }
 
         @media (max-width: 1300px) {
@@ -217,9 +216,10 @@
         }
 
         @media screen and (min-width: 768px) and (max-width: 1024px) {
-            .card-title{
+            .card-title {
                 top: -1.2em;
             }
+
             .info-card .card-wrap::after {
                 top: 20%;
                 bottom: 20%;
@@ -630,8 +630,10 @@
 
     <footer class="pb-20">
         <ul class="max-w-screen-xl m-auto flex justify-center gap-16 border-t border-light-green py-10">
-            <li class="flex"><img class="mr-6" src="./imgs/footer-phone.svg" /><a href="tel:0228224970">+886-2-2822-4970</a></li>
-            <li class="flex"><img class="mr-6" src="./imgs/footer-mail.svg" /><a href="mailto:sales@aurigasec.com">sales@aurigasec.com</a></li>
+            <li class="flex"><img class="mr-6" src="./imgs/footer-phone.svg" /><a
+                    href="tel:0228224970">+886-2-2822-4970</a></li>
+            <li class="flex"><img class="mr-6" src="./imgs/footer-mail.svg" /><a
+                    href="mailto:sales@aurigasec.com">sales@aurigasec.com</a></li>
             <li class="flex"><img class="mr-6" src="./imgs/footer-marker.svg" />台北市大安區和平東路二段163號10樓</li>
         </ul>
     </footer>
