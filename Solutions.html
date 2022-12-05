@@ -181,7 +181,7 @@
             left: -28px;
         }
 
-        #balls .light-green{
+        #balls .light-green {
             width: 110%;
         }
 
@@ -256,6 +256,12 @@
         .info-box {
             padding: 0;
             background-image: linear-gradient(106.81deg, #171032 5.35%, rgba(52, 44, 58, 0) 81.05%);
+        }
+
+        @media screen and (min-width: 1601px) {
+            .icons-list>li {
+                grid-template-columns: 160px auto;
+            }
         }
 
         @media screen and (max-width: 1600px) {
