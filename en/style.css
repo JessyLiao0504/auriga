@@ -1017,6 +1017,10 @@ li {
     z-index: 30;
 }
 
+.translate3d-0{
+    transform: translate3d(0,0,0);
+}
+
 .border-bg-p {
     width: 86%;
     margin: auto;
